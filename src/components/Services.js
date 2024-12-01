@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Solutions() {
   const solutions = [
@@ -7,16 +8,19 @@ export default function Solutions() {
       image: "/images/website-development.jpg",
       title: "Website Development",
       description: "Leaders Network Ventures Ltd offer services in Digital Information, Work Flow evaluation, Project Management, Scanning, Capturing and ....",
+      link: "/pages/web-dev"
     },
     {
       image: "/images/staff-recruitment.jpg",
       title: "Staff Recruitment",
       description: "Leaders Network offers Staff Recruitment as a service. We follow all the basic processes of identifying, attracting, interviewing, selecting, hiring,  ....",
+      link: "/pages/staff-recruit"
     },
     {
       image: "/images/sdlc-software-development.jpg",
       title: "SDLC Software Development",
       description: "Leaders Network is experienced in Human resource outsourcing for Information Technology and Management jobs whereby an employer transfers ....",
+      link: "/pages/sdlc"
     }
   ]
 
@@ -25,16 +29,19 @@ export default function Solutions() {
       image: "/images/data-analysis.jpg",
       title: "Data Analysis",
       description: "In view of the fact that the present social media platforms being used by politicians in Nigeria now rely so much on followership ....",
+      link: "/pages/data-analysis"
     },
     {
       image: "/images/social-media-ad.jpg",
       title: "Social Media Adverts",
       description: "We train on the following: Leadership Training,Time Management and Human Development Training ....",
+      link: "/pages/social-media-advert"
     },
     {
       image: "/images/mobile-app-development.avif",
       title: "Mobile Apps Development",
       description: "Leaders Network offers solution for clients through the Smartcard technology. This comprise of smartcards and card readers....",
+      link: "/pages/mobile-app"
     }
   ]
 
@@ -51,22 +58,24 @@ export default function Solutions() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
-              <div key={index} className="flex flex-col gap-6 md:gap-10 p-6 md:p-16 bg-[#071263] rounded-xl hover:transform hover:scale-105 transition-all duration-300 h-full">
-                <div className="flex justify-center flex-1">
-                  <Image
-                    src={solution.image}
-                    alt="about-img"
-                    width={"500"}
-                    height={"500"}
-                    className="object-cover w-full h-[200px] rounded-lg hover:opacity-90 transition-opacity"
-                  />
+              <Link href={solution.link} key={index}>
+                <div className="flex flex-col gap-6 md:gap-10 p-6 md:p-16 bg-[#071263] rounded-xl hover:transform hover:scale-105 transition-all duration-300 h-full">
+                  <div className="flex justify-center flex-1">
+                    <Image
+                      src={solution.image}
+                      alt="about-img"
+                      width={"500"}
+                      height={"500"}
+                      className="object-cover w-full h-[200px] rounded-lg hover:opacity-90 transition-opacity"
+                    />
+                  </div>
+                  <h2 className="text-xl md:text-2xl font-semibold text-[#EC5E2A]">{solution.title}</h2>
+                  <p className="text-sm md:text-base text-gray-300 flex-1">
+                    {solution.description}
+                  </p>
+                  <button className="bg-transparent rounded-full border-2 border-[#EC5E2A] text-white px-8 md:px-12 py-3 md:py-4 hover:bg-[#EC5E2A] transition-all duration-300 font-medium mt-auto">READ MORE</button>
                 </div>
-                <h2 className="text-xl md:text-2xl font-semibold text-[#EC5E2A]">{solution.title}</h2>
-                <p className="text-sm md:text-base text-gray-300 flex-1">
-                  {solution.description}
-                </p>
-                <button className="bg-transparent rounded-full border-2 border-[#EC5E2A] text-white px-8 md:px-12 py-3 md:py-4 hover:bg-[#EC5E2A] transition-all duration-300 font-medium mt-auto">READ MORE</button>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -74,22 +83,24 @@ export default function Solutions() {
         <div className="mt-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {additionalSolutions.map((solution, index) => (
-              <div key={index} className="flex flex-col gap-6 md:gap-10 p-6 md:p-16 bg-[#071263] rounded-xl hover:transform hover:scale-105 transition-all duration-300 h-full">
-                <div className="flex justify-center flex-1">
-                  <Image
-                    src={solution.image}
-                    alt="about-img"
-                    width={"500"}
-                    height={"500"}
-                    className="object-cover w-full h-[200px] rounded-lg hover:opacity-90 transition-opacity"
-                  />
+              <Link href={solution.link} key={index}>
+                <div className="flex flex-col gap-6 md:gap-10 p-6 md:p-16 bg-[#071263] rounded-xl hover:transform hover:scale-105 transition-all duration-300 h-full">
+                  <div className="flex justify-center flex-1">
+                    <Image
+                      src={solution.image}
+                      alt="about-img"
+                      width={"500"}
+                      height={"500"}
+                      className="object-cover w-full h-[200px] rounded-lg hover:opacity-90 transition-opacity"
+                    />
+                  </div>
+                  <h2 className="text-xl md:text-2xl font-semibold text-[#EC5E2A]">{solution.title}</h2>
+                  <p className="text-sm md:text-base text-gray-300 flex-1">
+                    {solution.description}
+                  </p>
+                  <button className="bg-transparent rounded-full border-2 border-[#EC5E2A] text-white px-8 md:px-12 py-3 md:py-4 hover:bg-[#EC5E2A] transition-all duration-300 font-medium mt-auto">READ MORE</button>
                 </div>
-                <h2 className="text-xl md:text-2xl font-semibold text-[#EC5E2A]">{solution.title}</h2>
-                <p className="text-sm md:text-base text-gray-300 flex-1">
-                  {solution.description}
-                </p>
-                <button className="bg-transparent rounded-full border-2 border-[#EC5E2A] text-white px-8 md:px-12 py-3 md:py-4 hover:bg-[#EC5E2A] transition-all duration-300 font-medium mt-auto">READ MORE</button>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
