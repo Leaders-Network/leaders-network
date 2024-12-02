@@ -7,19 +7,19 @@ export default function Solutions() {
     {
       image: "/images/website-development.jpg",
       title: "Website Development",
-      description: "Leaders Network Ventures Ltd offer services in Digital Information, Work Flow evaluation, Project Management, Scanning, Capturing and ....",
+      description: "Website development refers to the process of creating, designing, building, and maintaining websites. It involves several aspects...",
       link: "/pages/web-dev"
     },
     {
       image: "/images/staff-recruitment.jpg",
       title: "Staff Recruitment",
-      description: "Leaders Network offers Staff Recruitment as a service. We follow all the basic processes of identifying, attracting, interviewing, selecting, hiring,  ....",
+      description: "Leaders Network offers Staff Recruitment as a service. We follow all the basic processes of identifying, attracting, interviewing...",
       link: "/pages/staff-recruit"
     },
     {
       image: "/images/sdlc-software-development.jpg",
       title: "SDLC Software Development",
-      description: "Leaders Network is experienced in Human resource outsourcing for Information Technology and Management jobs whereby an employer transfers ....",
+      description: "Leaders Network utilizes Software Development Life Cycle (SDLC) which is a process used by the software industry to design...",
       link: "/pages/sdlc"
     }
   ]
