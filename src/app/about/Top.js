@@ -34,7 +34,7 @@ export default function Hero() {
           </div>
           <div className="flex-1 w-full">
             <Image
-              src={"/images/about-leaders-network.png"}
+              src={"/images/about-leaders-network.jpg"}
               alt="About Leaders Network"
               width={600}
               height={600}
