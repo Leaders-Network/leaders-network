@@ -8,13 +8,13 @@ export default function page() {
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <Navbar />
 
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-stretch gap-12 py-24 px-6 md:px-10">
-        <div className="w-full md:w-[50%] space-y-10">
-          <div className="space-y-8">
-            <h2 className="text-5xl font-bold text-primary bg-clip-text text-[#EC5E2A]">
+      <div className="container mx-auto flex flex-col justify-between items-stretch gap-8 py-12 px-4">
+        <div className="w-full space-y-6">
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold text-primary bg-clip-text text-[#EC5E2A]">
               About Website Development Service
             </h2>
-            <p className="text-lg leading-relaxed text-gray-700 animate-fade-in">
+            <p className="text-base leading-relaxed text-gray-700 animate-fade-in">
               Website development refers to the process of creating, designing,
               building, and maintaining websites. It involves several aspects,
               including web design, web content development, client-side and
@@ -24,10 +24,10 @@ export default function page() {
               features.
             </p>
 
-            <h2 className="text-4xl font-bold text-primary bg-clip-text text-[#EC5E2A] mt-12">
+            <h2 className="text-2xl font-bold text-primary bg-clip-text text-[#EC5E2A] mt-8">
               Our Strong Team
             </h2>
-            <ul className="space-y-6 list-none pl-6 text-gray-700">
+            <ul className="space-y-4 list-none pl-4 text-gray-700">
               {[
                 "Web Developers: Front-end (HTML, CSS, JavaScript), back-end (PHP, Python, Ruby, Node.js), and full-stack developers",
                 "UI/UX Designers: Professionals who specialize in designing visually appealing and user-friendly interfaces.",
@@ -39,11 +39,11 @@ export default function page() {
               ].map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-start space-x-3 transform hover:translate-x-2 transition-transform duration-300"
+                  className="flex items-start space-x-2 transform hover:translate-x-2 transition-transform duration-300"
                 >
-                  <span className="text-[#EC5E2A] mt-1.5">
+                  <span className="text-[#EC5E2A] mt-1">
                     <svg
-                      className="w-5 h-5"
+                      className="w-4 h-4"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -54,31 +54,31 @@ export default function page() {
                       />
                     </svg>
                   </span>
-                  <span className="text-lg">{item}</span>
+                  <span className="text-base">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <div className="w-full md:w-[40%] flex items-center">
-          <div className="relative w-full h-full">
+        <div className="w-full">
+          <div className="relative w-full h-[300px]">
             <Image
               src="/images/about-web-dev-2.jpg"
               alt="Web Development Team"
               width={500}
               height={700}
               priority
-              className="rounded-2xl shadow-2xl w-full h-full object-cover"
+              className="rounded-xl shadow-lg w-full h-full object-cover"
             />
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="mb-16">
-          <h2 className="text-5xl font-bold mb-8 text-[#EC5E2A]">Our Web Development Offerings</h2>
-          <ul className="space-y-4 list-none pl-6">
+      <div className="px-4 py-8">
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold mb-6 text-[#EC5E2A]">Our Web Development Offerings</h2>
+          <ul className="space-y-4 list-none pl-4">
             {[
               "Custom Web Development: Building unique, tailored websites based on client requirements.",
               "E-commerce Development: Creating online stores with features like product catalogs, shopping carts, and payment gateways.",
@@ -89,23 +89,23 @@ export default function page() {
               "Maintenance & Support: Providing ongoing support to update, secure, and manage websites after launch.",
               "SEO & Digital Marketing: Offering services like SEO optimization, content marketing, and social media integration to improve visibility."
             ].map((item, index) => (
-              <li key={index} className="flex items-start space-x-3 text-gray-700 transform hover:translate-x-2 transition-transform duration-300">
-                <span className="text-[#EC5E2A] mt-1.5">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <li key={index} className="flex items-start space-x-2 text-gray-700 transform hover:translate-x-2 transition-transform duration-300">
+                <span className="text-[#EC5E2A] mt-1">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
                   </svg>
                 </span>
-                <span className="text-lg">{item}</span>
+                <span className="text-base">{item}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-12">
+        <div className="space-y-8">
+          <div className="space-y-8">
             <div>
-              <h2 className="text-4xl font-bold mb-6 text-[#EC5E2A]">Our Tools & Technologies</h2>
-              <ul className="space-y-4 list-none pl-6">
+              <h2 className="text-2xl font-bold mb-4 text-[#EC5E2A]">Our Tools & Technologies</h2>
+              <ul className="space-y-4 list-none pl-4">
                 {[
                   "Development Frameworks: React, Angular, Vue.js for front-end development; Node.js, Django, Laravel for back-end development.",
                   "CMS Platforms: WordPress, Shopify, Magento, Wix for client websites requiring easy content management.",
@@ -113,53 +113,53 @@ export default function page() {
                   "Prototyping Tools: Figma, Sketch, or Adobe XD for UI/UX design.",
                   "Testing Tools: Selenium, Cypress, or manual testing processes for ensuring quality assurance."
                 ].map((item, index) => (
-                  <li key={index} className="flex items-start space-x-3 text-gray-700 transform hover:translate-x-2 transition-transform duration-300">
-                    <span className="text-[#EC5E2A] mt-1.5">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <li key={index} className="flex items-start space-x-2 text-gray-700 transform hover:translate-x-2 transition-transform duration-300">
+                    <span className="text-[#EC5E2A] mt-1">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
                       </svg>
                     </span>
-                    <span className="text-lg">{item}</span>
+                    <span className="text-base">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h2 className="text-4xl font-bold mb-6 text-[#EC5E2A]">Our Moderate Rates</h2>
-              <ul className="space-y-4 list-none pl-6">
-                <li className="flex items-start space-x-3 text-gray-700">
-                  <span className="text-[#EC5E2A] mt-1.5">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <h2 className="text-2xl font-bold mb-4 text-[#EC5E2A]">Our Moderate Rates</h2>
+              <ul className="space-y-4 list-none pl-4">
+                <li className="flex items-start space-x-2 text-gray-700">
+                  <span className="text-[#EC5E2A] mt-1">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
                     </svg>
                   </span>
-                  <span className="text-lg">Our rates are according to the various features, such as basic websites, e-commerce sites, or premium custom-built sites.</span>
+                  <span className="text-base">Our rates are according to the various features, such as basic websites, e-commerce sites, or premium custom-built sites.</span>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 className="text-4xl font-bold mb-6 text-[#EC5E2A]">Support and Maintenance Packages</h2>
-              <ul className="space-y-4 list-none pl-6">
-                <li className="flex items-start space-x-3 text-gray-700">
-                  <span className="text-[#EC5E2A] mt-1.5">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <h2 className="text-2xl font-bold mb-4 text-[#EC5E2A]">Support and Maintenance Packages</h2>
+              <ul className="space-y-4 list-none pl-4">
+                <li className="flex items-start space-x-2 text-gray-700">
+                  <span className="text-[#EC5E2A] mt-1">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
                     </svg>
                   </span>
-                  <span className="text-lg">We offer support after the website is launched. This can be for regular updates, security patches, bug fixes, and performance optimization.</span>
+                  <span className="text-base">We offer support after the website is launched. This can be for regular updates, security patches, bug fixes, and performance optimization.</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative h-[250px]">
             <Image
               src="/images/about-web-dev.jpg"
               alt="Web Development Team"
               width={500}
               height={300}
               priority
-              className="rounded-2xl shadow-2xl w-full h-full object-cover"
+              className="rounded-xl shadow-lg w-full h-full object-cover"
             />
           </div>
         </div>

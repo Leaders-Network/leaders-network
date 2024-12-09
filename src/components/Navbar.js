@@ -56,6 +56,8 @@ export default function Navbar() {
                   About Us
                 </li>
               </Link>
+
+
               <div className="relative group">
                 <Link href="/services">
                   <li className="w-full md:w-auto text-center py-2 md:py-0 hover:text-gray-300 hover:bg-blue-900 md:hover:bg-transparent px-4 rounded-md transition-all duration-200 ease-in-out transform hover:scale-105">
@@ -77,48 +79,45 @@ export default function Navbar() {
                   </li>
                 </Link>
 
-                <ul className="absolute md:absolute static md:hidden group-hover:block w-full md:w-48 bg-[#040F4E] shadow-lg rounded-md mt-2 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 hover:block group-hover:delay-[1000ms] hover:delay-1000">
+                <ul className="absolute md:absolute static md:hidden group-hover:block w-full md:w-48 bg-[#040F4E] shadow-lg rounded-md mt-2 transition-all duration-1000 ease-in-out opacity-0 group-hover:opacity-100 hover:block [&:not(:hover)]:delay-1000">
                   <li className="px-4 py-2 hover:bg-blue-900 rounded-t-md transition-colors duration-200">
-                    <Link href="/service1" className="block w-full">
+                    <Link href="/pages/web-dev" className="block w-full">
                       Website Development
                     </Link>
                   </li>
                   <li className="px-4 py-2 hover:bg-blue-900 transition-colors duration-200">
-                    <Link href="/service2" className="block w-full">
+                    <Link href="/pages/staff-recruit" className="block w-full">
                       Staff Recruitment
                     </Link>
                   </li>
 
                   <li className="px-4 py-2 hover:bg-blue-900 transition-colors duration-200">
-                    <Link href="/service3" className="block w-full">
+                    <Link href="/pages/sdlc" className="block w-full">
                       SDLC Software Development
                     </Link>
                   </li>
 
                   <li className="px-4 py-2 hover:bg-blue-900 transition-colors duration-200">
-                    <Link href="/service3" className="block w-full">
+                    <Link href="/pages/data-analysis" className="block w-full">
                       Data Analysis
                     </Link>
                   </li>
 
                   <li className="px-4 py-2 hover:bg-blue-900 transition-colors duration-200">
-                    <Link href="/service3" className="block w-full">
+                    <Link href="/pages/social-media-advert" className="block w-full">
                       Social Media Adverts
                     </Link>
                   </li>
 
                   <li className="px-4 py-2 hover:bg-blue-900 transition-colors duration-200">
-                    <Link href="/service3" className="block w-full">
+                    <Link href="/pages/mobile-app" className="block w-full">
                       Mobile Apps Development
-                    </Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-blue-900 rounded-b-md transition-colors duration-200">
-                    <Link href="/service3" className="block w-full">
-                      Document Management
                     </Link>
                   </li>
                 </ul>
               </div>{" "}
+
+              
               <Link href="/solutions">
                 {" "}
                 {/* <li className="w-full md:w-auto text-center py-2 md:py-0 hover:text-grayhover:bg-blue-900 md:hover:bg-transparent px-4 rounded-md transition-all durationease-in-out transform hover:scale-105"> */}
