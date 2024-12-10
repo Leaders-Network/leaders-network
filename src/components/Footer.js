@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -9,17 +11,17 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="transform hover:scale-105 transition-transform duration-300">
               <h3 className="text-2xl font-bold mb-6 border-b-2 border-[#EC5E2A] pb-2 inline-block">About Us</h3>
-              <p className="text-gray-300 leading-relaxed hover:text-white transition-colors duration-300">Leaders Network has been delivering trusted technology solutions for Corporate Bodies, Government, Telecommunication, Educational, Insurance and Financial Services all over the world.</p>
+              <p className="text-gray-300 font-quicksand leading-relaxed hover:text-white transition-colors duration-300">Leaders Network has been delivering trusted technology solutions for Corporate Bodies, Government, Telecommunication, Educational.</p>
             </div>
             <div className="transform hover:scale-105 transition-transform duration-300">
               <h3 className="text-2xl font-bold mb-6 border-b-2 border-[#EC5E2A] pb-2 inline-block">Quick Links</h3>
-              <ul className="space-y-4">
-                <li><a href="/" className="hover:text-[#EC5E2A] transition-colors duration-300 flex items-center"><span className="mr-2">→</span>Home</a></li>
-                <li><a href="/services" className="hover:text-[#EC5E2A] transition-colors duration-300 flex items-center"><span className="mr-2">→</span>Services</a></li>
-                <li><a href="/contactus" className="hover:text-[#EC5E2A] transition-colors duration-300 flex items-center"><span className="mr-2">→</span>Contact</a></li>
+              <ul className="font-quicksand space-y-4">
+                <li><Link href="/" className="hover:text-[#EC5E2A] transition-colors duration-300 flex items-center"><span className="mr-2">→</span>Home</Link></li>
+                <li><Link href="/services" className="hover:text-[#EC5E2A] transition-colors duration-300 flex items-center"><span className="mr-2">→</span>Services</Link></li>
+                <li><Link href="/contactus" className="hover:text-[#EC5E2A] transition-colors duration-300 flex items-center"><span className="mr-2">→</span>Contact</Link></li>
               </ul>
             </div>
-            <div className="transform hover:scale-105 transition-transform duration-300">
+            <div className="transform font-quicksand hover:scale-105 transition-transform duration-300">
               <h3 className="text-2xl font-bold mb-6 border-b-2 border-[#EC5E2A] pb-2 inline-block">Contact Info</h3>
               <ul className="space-y-4 text-gray-300">
                 <li className="hover:text-white transition-colors duration-300 flex items-center">

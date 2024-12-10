@@ -14,7 +14,7 @@ export default function page() {
                   Contact Leaders Network Limited
                 </h2>
                 <div className="mt-4">
-                  <p className="text-lg text-gray-600">
+                  <p className="text-lg font-quicksand text-gray-600">
                     We&apos;re here to help and answer any questions you might have. We look forward to hearing from you.
                   </p>
                 </div>

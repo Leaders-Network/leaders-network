@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="bg-[#040F4E] text-white shadow-lg fixed top-0 left-0 right-0 z-50">
+      <div className="bg-[#040F4E] text-white font-quicksand shadow-lg fixed top-0 left-0 right-0 z-50">
         <nav className="flex flex-col md:flex-row items-center justify-between px-4 md:px-16 h-auto md:h-12 py-4 md:py-10 transition-all duration-300 ease-in-out">
           <div className="flex items-center justify-between w-full md:w-auto mb-4 md:mb-0">
             <Link href="/">
@@ -124,22 +124,22 @@ export default function Navbar() {
                 {/* Solutions */}
                 {/* </li> */}
               </Link>
-              <li className="w-full md:w-auto text-center py-2 md:py-0 hover:text-gray-300 hover:bg-blue-900 md:hover:bg-transparent px-4 rounded-md transition-all duration-200 ease-in-out transform hover:scale-105">
+              {/* <li className="w-full md:w-auto text-center py-2 md:py-0 hover:text-gray-300 hover:bg-blue-900 md:hover:bg-transparent px-4 rounded-md transition-all duration-200 ease-in-out transform hover:scale-105">
                 Products
-              </li>
+              </li> */}
               <Link href="/contactus">
                 <li className="w-full md:w-auto text-center py-2 md:py-0 hover:text-grayhover:bg-blue-900 md:hover:bg-transparent px-4 rounded-md transition-all durationease-in-out transform hover:scale-105">
                   Contact Us
                 </li>
               </Link>
-              <Link href="/blogs">
+              {/* <Link href="">
                 <li className="w-full md:w-auto text-center py-2 md:py-0 hover:text-grayhover:bg-blue-900 md:hover:bg-transparent px-4 rounded-md transition-all durationease-in-out transform hover:scale-105">
                   Case Studies
                 </li>
-              </Link>
-              <Link href="">
+              </Link> */}
+              <Link href="/blogs">
                 <li className="w-full md:w-auto text-center py-2 md:py-0 hover:text-grayhover:bg-blue-900 md:hover:bg-transparent px-4 rounded-md transition-all durationease-in-out transform hover:scale-105">
-                  Technologies
+                  Blogs
                 </li>
               </Link>
               <Link href="/adminn">

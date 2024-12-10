@@ -85,7 +85,7 @@ export default function Hero() {
         </div>
 
         <div>
-          <p className="text-slate-600 text-base md:text-lg">Get the email newsletter and unlock access to members-only content and updates</p>
+          <p className="text-slate-600 text-base md:text-lg font-quicksand">Get the email newsletter and unlock access to members-only content and updates</p>
         </div>
       </div>
 
@@ -105,11 +105,11 @@ export default function Hero() {
               />
               <div className="flex flex-wrap gap-2 mt-4 mb-3">
                 {post.tags.map((tag, tagIndex) => (
-                  <p key={tagIndex} className="bg-slate-800 px-4 py-1 rounded-full text-white text-xs md:text-sm transform transition-all duration-300 hover:scale-105 hover:bg-slate-700">{tag}</p>
+                  <p key={tagIndex} className="bg-slate-800 font-quicksand px-4 py-1 rounded-full text-white text-xs md:text-sm transform transition-all duration-300 hover:scale-105 hover:bg-slate-700">{tag}</p>
                 ))}
               </div>
               <h2 className="text-xl text-[#EC5E2A] sm:text-2xl md:text-3xl font-bold mb-3 line-clamp-2">{post.title}</h2>
-              <p className="text-base md:text-lg text-slate-600 line-clamp-3">{post.description}</p>
+              <p className="text-base md:text-lg text-slate-600 line-clamp-3 font-quicksand">{post.description}</p>
               <button className="bg-slate-800 text-white px-4 py-1 rounded-lg mt-4">Read More</button>
             </div>
           ))}
@@ -175,11 +175,11 @@ export default function Hero() {
               />
               <div className="flex flex-wrap gap-2 mt-4 mb-3">
                 {post.tags.map((tag, tagIndex) => (
-                  <p key={tagIndex} className="bg-slate-800 px-4 py-1 rounded-full text-white text-xs md:text-sm transform transition-all duration-300 hover:scale-105 hover:bg-slate-700">{tag}</p>
+                  <p key={tagIndex} className="bg-slate-800 px-4 font-quicksand py-1 rounded-full text-white text-xs md:text-sm transform transition-all duration-300 hover:scale-105 hover:bg-slate-700">{tag}</p>
                 ))}
               </div>
               <h2 className="text-xl sm:text-2xl md:text-3xl text-[#EC5E2A] font-bold mb-3 line-clamp-2 hover:text-slate-700 transition-colors duration-300">{post.title}</h2>
-              <p className="text-base md:text-lg text-slate-600 line-clamp-3">{post.description}</p>
+              <p className="text-base md:text-lg text-slate-600 line-clamp-3 font-quicksand">{post.description}</p>
               <button className="bg-slate-800 text-white px-4 py-1 rounded-lg mt-4">Read More</button>
             </div>
           ))}

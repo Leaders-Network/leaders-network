@@ -10,7 +10,7 @@ export default function Hero() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 md:mb-8">
               About Leaders Network
             </h1>
-            <div className="space-y-4 sm:space-y-6">
+            <div className="space-y-4 font-quicksand font-bold sm:space-y-6">
               <p className="text-base sm:text-lg text-gray-700">
                 Since the year 2005, Leaders Network has been delivering trusted
                 technology solutions for Corporate Bodies, Government,
@@ -34,7 +34,7 @@ export default function Hero() {
           </div>
           <div className="flex-1 w-full">
             <Image
-              src={"/images/about-leaders-network.jpg"}
+              src={"/images/about-software.jpg"}
               alt="About Leaders Network"
               width={600}
               height={600}
@@ -51,7 +51,7 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="flex-1 w-full md:w-1/2">
             <Image
-              src={"/images/software.png"}
+              src={"/images/software-2.jpg"}
               alt="About Leaders Network"
               width={600}
               height={600}
@@ -61,7 +61,7 @@ export default function Hero() {
           </div>
           <div className="flex-1 md:w-1/2 space-y-6 px-4 sm:px-6 md:px-0">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#EC5E2A] tracking-tight">Our services are as follows:</h2>
-            <ol className="space-y-4 text-base sm:text-lg text-gray-700">
+            <ol className="space-y-4 font-quicksand font-bold  text-base sm:text-lg text-gray-700">
               <li className="flex items-center gap-3 hover:text-blue-600 transition-colors duration-200">
                 <span className="w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse"></span>
                 Website Development
@@ -87,7 +87,7 @@ export default function Hero() {
                 Mobile Apps Development
               </li>
             </ol>
-            <p className="mt-8 text-base sm:text-lg text-gray-700 leading-relaxed">
+            <p className="mt-8 text-base font-quicksand font-bold sm:text-lg text-gray-700 leading-relaxed">
                 Our goal is to assist corporate bodies, states and organizations
                 to motivate and inspire their employees to peak performance as
                 evidence has shown this to be the key drive for successful

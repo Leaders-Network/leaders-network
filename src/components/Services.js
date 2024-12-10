@@ -51,7 +51,7 @@ export default function Solutions() {
         <div>
           <div className="text-center flex-col space-y-6 mb-16">
             <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-[#EC5E2A] to-white bg-clip-text text-transparent">Our Services</h2>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl font-quicksand md:text-2xl text-gray-300 max-w-3xl mx-auto">
               We have the following solutions to solve challenges being faced by governments
             </p>
           </div>
@@ -70,7 +70,7 @@ export default function Solutions() {
                     />
                   </div>
                   <h2 className="text-xl md:text-2xl font-semibold text-[#EC5E2A]">{solution.title}</h2>
-                  <p className="text-sm md:text-base text-gray-300 flex-1">
+                  <p className="text-sm md:text-base text-gray-300 flex-1 font-['Quicksand']">
                     {solution.description}
                   </p>
                   <button className="bg-transparent rounded-full border-2 border-[#EC5E2A] text-white px-8 md:px-12 py-3 md:py-4 hover:bg-[#EC5E2A] transition-all duration-300 font-medium mt-auto">READ MORE</button>
@@ -95,7 +95,7 @@ export default function Solutions() {
                     />
                   </div>
                   <h2 className="text-xl md:text-2xl font-semibold text-[#EC5E2A]">{solution.title}</h2>
-                  <p className="text-sm md:text-base text-gray-300 flex-1">
+                  <p className="text-sm md:text-base text-gray-300 flex-1 font-['Quicksand']">
                     {solution.description}
                   </p>
                   <button className="bg-transparent rounded-full border-2 border-[#EC5E2A] text-white px-8 md:px-12 py-3 md:py-4 hover:bg-[#EC5E2A] transition-all duration-300 font-medium mt-auto">READ MORE</button>
