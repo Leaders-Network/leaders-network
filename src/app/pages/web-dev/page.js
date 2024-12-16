@@ -137,7 +137,7 @@ export default function page() {
           <div className="space-y-12">
             <div className="relative h-[300px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/about-web-dev.jpg"
+                src="/images/about-web-dev2.jpg"
                 alt="Web Development Team"
                 fill
                 priority

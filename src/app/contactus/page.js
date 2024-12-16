@@ -10,7 +10,7 @@ export default function page() {
           <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-lg mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-12">
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                <h2 className="text-3xl font-extrabold text-[#EC5E2A] sm:text-4xl">
                   Contact Leaders Network Limited
                 </h2>
                 <div className="mt-4">
@@ -82,7 +82,7 @@ export default function page() {
                   <div>
                     <button 
                       type="submit" 
-                      className="w-full inline-flex justify-center items-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
+                      className="w-full inline-flex justify-center items-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-lg text-white bg-[#EC5E2A] hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
                     >
                       Send Message
                     </button>
