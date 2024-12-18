@@ -13,13 +13,13 @@ export default function Solutions() {
     {
       image: "/images/staff-recruitment.jpg",
       title: "Staff Recruitment",
-      description: "Leaders Network offers Staff Recruitment as a service. We follow all the basic processes of identifying, attracting, interviewing...",
+      description: "Leaders Network offers Staff Recruitment as a service. We follow all the basic processes of identifying, attracting....",
       link: "/pages/staff-recruit"
     },
     {
       image: "/images/sdlc-software-development.jpg",
       title: "SDLC Software Development",
-      description: "Leaders Network utilizes Software Development Life Cycle (SDLC) which is a process used by the software industry to design...",
+      description: "Leaders Network utilizes Software Development Life Cycle (SDLC) which is a process used by the software industry to design....",
       link: "/pages/sdlc"
     }
   ]
@@ -28,20 +28,26 @@ export default function Solutions() {
     {
       image: "/images/data-analysis.jpg",
       title: "Data Analysis",
-      description: "In view of the fact that the present social media platforms being used by politicians in Nigeria now rely so much on followership ....",
+      description: "Data Processing stands as a pivotal element within any prosperous business strategy, encompassing the collection....",
       link: "/pages/data-analysis"
     },
     {
       image: "/images/social-media-ad.jpg",
       title: "Social Media Adverts",
-      description: "We train on the following: Leadership Training,Time Management and Human Development Training ....",
+      description: "Social media platforms are indispensable tools for modern communication, entertainment, and business marketing.....",
       link: "/pages/social-media-advert"
     },
     {
       image: "/images/mobile-app-development.avif",
       title: "Mobile Apps Development",
-      description: "Leaders Network offers solution for clients through the Smartcard technology. This comprise of smartcards and card readers....",
+      description: "Mobile app development services refer to the process of designing, creating, testing, and deploying mobile applications....",
       link: "/pages/mobile-app"
+    },
+    {
+      image: "/images/doc-mgt.jpg",
+      title: "Document Management",
+      description: "Leaders Network offers Document Management Services (DMS) as a service with a clear strategy, a combination of technologies.....",
+      link: "/pages/doc-mgt"
     }
   ]
 
