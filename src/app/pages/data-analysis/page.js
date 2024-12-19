@@ -19,11 +19,23 @@ export default function page() {
               <p className="text-lg mb-4">
                 Whether you're a small startup or a big company, we can help you with data, analytics, and AI/ML services to achieve your business goals. We offer innovative and affordable solutions to our clients.
               </p>
-              <Link href="/pages/datatools">
-                <button className="bg-[#EC5E2A] text-white px-6 py-2 rounded-lg hover:bg-[#d54e1f] transition-colors animate-bounce">
-                  Our Data Analysis Tools Includes →
-                </button>
-              </Link>
+              <div className="flex flex-col space-y-4">
+                <Link href="/pages/datatools">
+                  <button className="bg-[#EC5E2A] text-white px-6 py-2 rounded-lg hover:bg-[#d54e1f] transition-colors animate-bounce w-full">
+                    Our Data Analysis Tools Includes →
+                  </button>
+                </Link>
+                <Link href="/pages/major-users">
+                  <button className="bg-[#EC5E2A] text-white px-6 py-2 rounded-lg hover:bg-[#d54e1f] transition-colors w-full">
+                    Major Users →
+                  </button>
+                </Link>
+                <Link href="/pages/data-analysis-sectors">
+                  <button className="bg-[#EC5E2A] text-white px-6 py-2 rounded-lg hover:bg-[#d54e1f] transition-colors w-full">
+                    Other Data Analysis Sectors →
+                  </button>
+                </Link>
+              </div>
             </div>
             <div className="w-full md:w-1/2 mt-6 md:mt-0">
               <Image 
