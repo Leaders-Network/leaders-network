@@ -9,7 +9,7 @@ export default function page() {
       <Navbar />
       <div className="container mx-auto px-4 py-8">
         <div className="mb-12">
-          <h1 className="text-3xl font-bold mb-6">Telecoms Companies</h1>
+          <h1 className="text-3xl text-[#EC5E2A] font-bold mb-6">Telecoms Companies</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="prose">
               <p>
@@ -43,7 +43,7 @@ export default function page() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">
+          <h2 className="text-2xl text-[#EC5E2A] font-bold mb-6">
             Customer Experience and Churn Prediction
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -82,7 +82,7 @@ export default function page() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">
+          <h2 className="text-2xl text-[#EC5E2A] font-bold mb-6">
             Network Performance and Optimization
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -120,7 +120,7 @@ export default function page() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">Operational Efficiency</h2>
+          <h2 className="text-2xl text-[#EC5E2A] font-bold mb-6">Operational Efficiency</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="prose">
               <ul>
@@ -157,7 +157,7 @@ export default function page() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">
+          <h2 className="text-2xl text-[#EC5E2A] font-bold mb-6">
             Revenue and Pricing Strategy
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -196,7 +196,7 @@ export default function page() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">
+          <h2 className="text-2xl text-[#EC5E2A] font-bold mb-6">
             5G and New Technologies
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -231,7 +231,7 @@ export default function page() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">
+          <h2 className="text-2xl text-[#EC5E2A] font-bold mb-6">
             Regulatory Compliance and Risk Management
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -7,13 +7,13 @@ export default function page() {
     <div className="text-black">
       <Navbar />
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8">
+        <h1 className="text-3xl text-[#EC5E2A] font-bold mb-8">
           Data Analysis For Government
         </h1>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">
-            1. Policy Development and Evaluation
+          <h2 className="text-2xl text-[#EC5E2A] font-semibold mb-4">
+            Policy Development and Evaluation
           </h2>
           <div className="mb-6">
             {/* Image placeholder */}
@@ -40,8 +40,8 @@ export default function page() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">
-            2. Public Health and Safety
+          <h2 className="text-2xl text-[#EC5E2A] font-semibold mb-4">
+            Public Health and Safety
           </h2>
           <div className="mb-6">
             {/* Image placeholder */}
@@ -67,8 +67,8 @@ export default function page() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">
-            3. Economic Planning and Forecasting
+          <h2 className="text-2xl text-[#EC5E2A] font-semibold mb-4">
+            Economic Planning and Forecasting
           </h2>
           <div className="mb-6">
             {/* Image placeholder */}
@@ -94,8 +94,8 @@ export default function page() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">
-            4. Social Services and Welfare
+          <h2 className="text-2xl text-[#EC5E2A] font-semibold mb-4">
+            Social Services and Welfare
           </h2>
           <div className="mb-6">
             {/* Image placeholder */}
@@ -115,8 +115,8 @@ export default function page() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">
-            5. Environmental Management
+          <h2 className="text-2xl text-[#EC5E2A] font-semibold mb-4">
+            Environmental Management
           </h2>
           <div className="mb-6">
             {/* Image placeholder */}
@@ -142,8 +142,8 @@ export default function page() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">
-            6. Public Infrastructure and Transportation
+          <h2 className="text-2xl text-[#EC5E2A] font-semibold mb-4">
+            Public Infrastructure and Transportation
           </h2>
           <div className="mb-6">
             {/* Image placeholder */}
@@ -167,7 +167,7 @@ export default function page() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">7. Education</h2>
+          <h2 className="text-2xl text-[#EC5E2A] font-semibold mb-4">Education</h2>
           <div className="mb-6">
             {/* Image placeholder */}
             <div className="w-full h-64 bg-gray-200 mb-4"></div>
@@ -185,8 +185,8 @@ export default function page() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">
-            8. Transparency and Accountability
+          <h2 className="text-2xl text-[#EC5E2A] font-semibold mb-4">
+            Transparency and Accountability
           </h2>
           <div className="mb-6">
             {/* Image placeholder */}
@@ -205,7 +205,7 @@ export default function page() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">9. Citizen Engagement</h2>
+          <h2 className="text-2xl text-[#EC5E2A] font-semibold mb-4">Citizen Engagement</h2>
           <div className="mb-6">
             {/* Image placeholder */}
             <div className="w-full h-64 bg-gray-200 mb-4"></div>
