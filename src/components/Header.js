@@ -9,7 +9,7 @@ export default function Header() {
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-16 max-w-7xl mx-auto w-full">
         <div className="flex-1 space-y-6 lg:space-y-8">
           <div className="space-y-6">
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-extrabold leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-[poppins] font-bold leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#EC5E2A] to-orange-600">
                 Information Technology & Software Development Solutions
               </span>

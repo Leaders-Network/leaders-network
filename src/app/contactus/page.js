@@ -26,7 +26,7 @@ export default function page() {
                       </svg>
                     </div>
                     <div className="ml-4 text-base text-gray-600 font-medium">
-                      +44 (0) 123 456 7890
+                      (234) 708-701-3213
                     </div>
                   </div>
                   <div className="flex items-center">

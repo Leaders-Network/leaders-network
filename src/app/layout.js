@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Outfit, Syne } from "next/font/google";
+import { Outfit, Syne, Poppins } from "next/font/google";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -15,6 +15,13 @@ const syne = Syne({
   variable: "--font-syne",
 });
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+  variable: "--font-poppins",
+});
+
 export const metadata = {
   title: "Leaders Network Limited",
   description: "",
@@ -23,7 +30,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${outfit.className} ${outfit.variable} ${syne.variable} bg-white`}>{children}</body>
+      <body className={`${outfit.className} ${outfit.variable} ${syne.variable} ${poppins.variable} bg-white`}>{children}</body>
     </html>
   );
 }

@@ -5,6 +5,7 @@ export default function Body() {
   return (
     <div className="px-4 sm:px-8 md:px-16 lg:px-20 py-8 md:py-12 bg-gradient-to-b from-gray-100 to-white">
       <div className="bg-[#040F4E] text-white px-4 sm:px-6 md:px-8 lg:px-10 rounded-2xl shadow-2xl">
+
         <div className="p-6 md:p-10 text-center flex-col space-y-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-purple-300">About Leaders Network Limited</h2>
           <p className="text-base font-quicksand md:text-lg lg:text-xl py-2 md:py-3 text-gray-300 font-light tracking-wide">
