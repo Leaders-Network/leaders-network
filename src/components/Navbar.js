@@ -45,20 +45,54 @@ export default function Navbar() {
             </button>
           </div>
 
+
+
+
           <div
             className={`fixed md:static top-16 left-0 h-[calc(100vh-4rem)] md:h-auto bg-[#040F4E] w-3/4 md:w-auto md:bg-transparent md:mr-20 ${
               isOpen ? "translate-x-0" : "-translate-x-full"
-            } md:translate-x-0 transition-transform duration-300 ease-in-out z-50`}
-          >
+            } md:translate-x-0 transition-transform duration-300 ease-in-out z-50`} >
             <ul className="flex flex-col md:flex-row gap-4 md:gap-5 items-center p-4 md:p-0">
               <Link href="/about">
                 <li className="w-full md:w-auto text-center py-2 md:py-0 hover:text-gray-300 hover:bg-blue-900 md:hover:bg-transparent px-4 rounded-md transition-all duration-200 ease-in-out transform hover:scale-105">
-                  About Us
+                  About
                 </li>
               </Link>
+              <div className='container mx-auto font-bold px-4 py-8 hidden md:block border-t overflow-visible'>
 
+          <div className='animate-scroll whitespace-nowrap'>
+            <ul className='inline-flex space-x-8 text-gray-600'>
+              <li className='relative group'>
+                <a href='/services' className='text-white'>Services <svg
+                      className="w-4 h-4 ml-1 inline-block"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg></a>
+                <ul className='absolute hidden group-hover:block bg-white shadow-lg rounded-md py-2 w-50 z-50'>
+                  <li><a href='/pages/web-dev' className='block py-2 hover:bg-blue-900 transition-colors duration-200 px-4  hover:text-white'>Website Development</a></li>
+                  <li><a href='/pages/staff-recruit' className='block py-2 hover:bg-blue-900 transition-colors duration-200 px-4  hover:text-white'>Staff Recruitment</a></li>
+                  <li><a href='/pages/sdlc' className='block py-2 hover:bg-blue-900 transition-colors duration-200 px-4  hover:text-white'>SDLC Software Development</a></li>
+                  <li><a href='/pages/data-analysis' className='block py-2 hover:bg-blue-900 transition-colors duration-200 px-4  hover:text-white'>Data Analysis</a></li>
+                  <li><a href='/pages/social-media-advert' className='block py-2 hover:bg-blue-900 transition-colors duration-200 px-4  hover:text-white'>Social Media Adverts</a></li>
+                  <li><a href='/pages/mobile-app' className='block py-2 hover:bg-blue-900 transition-colors duration-200 px-4  hover:text-white'>Mobile Apps Development</a></li>
+                </ul>
+              </li>
+            </ul>          
+            </div>
+        </div>
 
-              <div className="relative group">
+              
+
+              {/* <div className="relative group">
                 <Link href="/services">
                   <li className="w-full md:w-auto text-center py-2 md:py-0 hover:text-gray-300 hover:bg-blue-900 md:hover:bg-transparent px-4 rounded-md transition-all duration-200 ease-in-out transform hover:scale-105">
                     Services
@@ -115,7 +149,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                 </ul>
-              </div>{" "}
+              </div>{" "} */}
 
               
               <Link href="/solutions">
@@ -129,7 +163,7 @@ export default function Navbar() {
               </li> */}
               <Link href="/contactus">
                 <li className="w-full md:w-auto text-center py-2 md:py-0 hover:text-grayhover:bg-blue-900 md:hover:bg-transparent px-4 rounded-md transition-all durationease-in-out transform hover:scale-105">
-                  Contact Us
+                  Contact
                 </li>
               </Link>
               {/* <Link href="">
