@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ThemeToggler from "./Helper/ThemeToggler";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,7 +78,7 @@ export default function Navbar() {
                           />
                         </svg>
                       </a>
-                      <ul className='md:absolute hidden group-hover:block bg-white shadow-lg rounded-md py-2 w-full w-60 md:w-50 z-50'>
+                      <ul className='md:absolute hidden group-hover:block bg-white shadow-lg rounded-md py-2 w-full md:w-64 z-50'>
                         <li><a href='/pages/web-dev' className='block py-2 hover:bg-blue-900 transition-colors duration-200 px-4 hover:text-white'>Website Development</a></li>
                         <li><a href='/pages/staff-recruit' className='block py-2 hover:bg-blue-900 transition-colors duration-200 px-4 hover:text-white'>Staff Recruitment</a></li>
                         <li><a href='/pages/sdlc' className='block py-2 hover:bg-blue-900 transition-colors duration-200 px-4 hover:text-white'>SDLC Software Development</a></li>
@@ -123,6 +124,7 @@ export default function Navbar() {
                   </svg>
                 </li>
               </Link>
+              <ThemeToggler />
             </ul>
           </div>
         </nav>

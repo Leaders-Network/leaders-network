@@ -52,8 +52,9 @@ export default function Solutions() {
   ]
 
   return (
-    <div className='px-4 md:px-20 py-10'>
-      <div className='bg-[#040F4E] text-white px-4 md:px-10 py-12 md:py-16 rounded-2xl shadow-2xl'>
+    <div className='px-4 md:px-20 py-10 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-950 transition-colors duration-300'>
+  <div className='bg-[#040F4E] dark:bg-[#0B132B] text-white px-4 md:px-10 py-12 md:py-16 rounded-2xl shadow-2xl'>
+
         <div>
           <div className="text-center flex-col space-y-6 mb-16">
             <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-[#EC5E2A] to-white bg-clip-text text-transparent">Our Services</h2>

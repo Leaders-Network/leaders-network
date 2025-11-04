@@ -5,24 +5,24 @@ import Image from 'next/image'
 
 export default function Page() {
   return (
-    <div className='bg-gradient-to-b from-white to-gray-50 text-gray-800'>
+    <div className='bg-gradient-to-b from-white to-gray-50 text-gray-800  dark:from-gray-950 dark:to-gray-900'>
       <Navbar/>
-      <div className="container mx-auto px-4 py-16 max-w-7xl">
+      <div className="container mx-auto px-4 py-16 max-w-7xl ">
         <h1 className="text-5xl font-bold mb-12 text-center text-[#EC5E2A] leading-tight">About Leaders Mobile App Services</h1>
 
         <div className="mb-16 max-w-4xl mx-auto">
-          <p className="text-xl leading-relaxed mb-8 text-gray-700">Mobile app development services refer to the process of designing, creating, testing, and deploying mobile applications for smartphones, tablets, and other mobile devices. These services can be offered by specialized mobile app development agencies or independent developers, and they typically cover both the front-end (user interface) and back-end (server-side) development of apps.</p>
+          <p className="text-xl leading-relaxed mb-8 text-gray-700 dark:text-gray-200">Mobile app development services refer to the process of designing, creating, testing, and deploying mobile applications for smartphones, tablets, and other mobile devices. These services can be offered by specialized mobile app development agencies or independent developers, and they typically cover both the front-end (user interface) and back-end (server-side) development of apps.</p>
 
-          <p className="text-xl leading-relaxed mb-8 text-gray-700">Mobile app development services encompass a wide range of offerings, from initial strategy and design to post-launch support and marketing. Whether you're building a simple app or a complex platform, Leaders Network will select a development team with expertise in your industry and goals. Once we understand the goals and scope of the project, we will ensure you have a prudent budgeting effective for a successful app launch.</p>
+          <p className="text-xl leading-relaxed mb-8 text-gray-700 dark:text-gray-200">Mobile app development services encompass a wide range of offerings, from initial strategy and design to post-launch support and marketing. Whether you're building a simple app or a complex platform, Leaders Network will select a development team with expertise in your industry and goals. Once we understand the goals and scope of the project, we will ensure you have a prudent budgeting effective for a successful app launch.</p>
         </div>
 
-        <div className="mb-24">
+        <div className="mb-24 ">
           <h2 className="text-4xl font-bold mb-8 text-[#EC5E2A] text-center">Consultation & Strategy</h2>
           <div className="mb-8 hover:transform hover:scale-105 transition-transform duration-300">
             <Image src="/images/Picture 1.jpg" alt="Consultation and Strategy" width={1200} height={800} className="w-full h-[500px] object-cover rounded-2xl shadow-2xl mb-8"/>
           </div>
-          <p className="text-xl mb-6 text-center text-gray-700">We will discuss with you to understand the following:</p>
-          <ul className="list-disc pl-8 mb-6 space-y-4 text-xl text-gray-700 max-w-4xl mx-auto">
+          <p className="text-xl mb-6 text-center text-gray-700 dark:text-gray-200">We will discuss with you to understand the following:</p>
+          <ul className="list-disc pl-8 mb-6 space-y-4 text-xl text-gray-700 max-w-4xl mx-auto dark:text-gray-200">
             <li>Market Research: Understanding your target audience, competitors, and industry trends.</li>
             <li>App Strategy: Defining the app's objectives, features, and monetization model.</li>
             <li>Technical Consultation: Selecting the right technologies, platforms (iOS, Android, or cross-platform), and frameworks.</li>
@@ -34,8 +34,8 @@ export default function Page() {
           <div className="mb-8 hover:transform hover:scale-105 transition-transform duration-300">
             <Image src="/images/Picture 2.jpg" alt="UI/UX Design" width={1200} height={800} className="w-full h-[500px] object-cover rounded-2xl shadow-2xl mb-8"/>
           </div>
-          <p className="text-xl mb-6 text-center text-gray-700">After this we will do focus on the following:</p>
-          <ul className="list-disc pl-8 mb-6 space-y-4 text-xl text-gray-700 max-w-4xl mx-auto">
+          <p className="text-xl mb-6 text-center text-gray-700 dark:text-gray-200">After this we will do focus on the following:</p>
+          <ul className="list-disc pl-8 mb-6 space-y-4 text-xl text-gray-700 max-w-4xl mx-auto dark:text-gray-200">
             <li>Wireframing & Prototyping: Creating mockups and interactive prototypes of the app.</li>
             <li>User Interface (UI) Design: Designing the look and feel of the app, including its colors, typography, icons, and layout.</li>
             <li>User Experience (UX) Design: Ensuring the app is intuitive and user-friendly by focusing on navigation, functionality, and overall usability.</li>
@@ -47,8 +47,8 @@ export default function Page() {
           <div className="mb-8 hover:transform hover:scale-105 transition-transform duration-300">
             <Image src="/images/Picture 3.jpg" alt="Mobile App Development" width={1200} height={800} className="w-full h-[500px] object-cover rounded-2xl shadow-2xl mb-8"/>
           </div>
-          <p className="text-xl mb-6 text-center text-gray-700">The decision to build depends on the following:</p>
-          <ul className="list-disc pl-8 mb-6 space-y-4 text-xl text-gray-700 max-w-4xl mx-auto">
+          <p className="text-xl mb-6 text-center text-gray-700 dark:text-gray-200">The decision to build depends on the following:</p>
+          <ul className="list-disc pl-8 mb-6 space-y-4 text-xl text-gray-700 max-w-4xl dark:text-gray-200 mx-auto">
             <li>Native App Development: Building apps for specific platforms (iOS or Android) using native programming languages.</li>
             <li>Cross-Platform Development: Using frameworks like React Native, Flutter, or Xamarin.</li>
             <li>Backend Development: Setting up servers, databases, and APIs.</li>
@@ -57,11 +57,11 @@ export default function Page() {
         </div>
 
         <div className="mb-24">
-          <h2 className="text-4xl font-bold mb-8 text-[#EC5E2A] text-center">App Testing & Quality Assurance (QA)</h2>
+          <h2 className="text-4xl font-bold mb-8 text-[#EC5E2A] text-center ">App Testing & Quality Assurance (QA)</h2>
           <div className="mb-8 hover:transform hover:scale-105 transition-transform duration-300">
             <Image src="/images/Picture 4.jpg" alt="App Testing" width={1200} height={800} className="w-full h-[500px] object-cover rounded-2xl shadow-2xl mb-8"/>
           </div>
-          <ul className="list-disc pl-8 mb-6 space-y-4 text-xl text-gray-700 max-w-4xl mx-auto">
+          <ul className="list-disc pl-8 mb-6 space-y-4 text-xl text-gray-700 max-w-4xl mx-auto dark:text-gray-200">
             <li>Functional Testing: Ensuring the app's features work as intended.</li>
             <li>Performance Testing: Testing the app's performance under different conditions.</li>
             <li>Security Testing: Identifying and addressing security vulnerabilities.</li>
@@ -75,7 +75,7 @@ export default function Page() {
           <div className="mb-8 hover:transform hover:scale-105 transition-transform duration-300">
             <Image src="/images/Picture 5.jpg" alt="App Deployment" width={1200} height={800} className="w-full h-[500px] object-cover rounded-2xl shadow-2xl mb-8"/>
           </div>
-          <ul className="list-disc pl-8 mb-6 space-y-4 text-xl text-gray-700 max-w-4xl mx-auto">
+          <ul className="list-disc pl-8 mb-6 space-y-4 text-xl text-gray-700 max-w-4xl dark:text-gray-200 mx-auto">
             <li>App Store Optimization (ASO)</li>
             <li>Deployment to App Stores</li>
             <li>Beta Testing</li>
@@ -87,7 +87,7 @@ export default function Page() {
           <div className="mb-8 hover:transform hover:scale-105 transition-transform duration-300">
             <Image src="/images/Picture 6.jpg" alt="Post-Launch Support" width={1200} height={800} className="w-full h-[500px] object-cover rounded-2xl shadow-2xl mb-8"/>
           </div>
-          <ul className="list-disc pl-8 mb-6 space-y-4 text-xl text-gray-700 max-w-4xl mx-auto">
+          <ul className="list-disc pl-8 mb-6 space-y-4 text-xl dark:text-gray-200 text-gray-700 max-w-4xl mx-auto">
             <li>Bug Fixes & Updates</li>
             <li>App Analytics</li>
             <li>User Feedback</li>
@@ -100,8 +100,8 @@ export default function Page() {
           <div className="mb-8 hover:transform hover:scale-105 transition-transform duration-300">
             <Image src="/images/Picture 1.jpg" alt="App Marketing" width={1200} height={800} className="w-full h-[500px] object-cover rounded-2xl shadow-2xl mb-8"/>
           </div>
-          <p className="text-xl mb-6 text-center text-gray-700">We also render the post development services of social media advertisement</p>
-          <ul className="list-disc pl-8 mb-6 space-y-4 text-xl text-gray-700 max-w-4xl mx-auto">
+          <p className="text-xl mb-6 text-center text-gray-700 dark:text-gray-200">We also render the post development services of social media advertisement</p>
+          <ul className="list-disc pl-8 mb-6 space-y-4 text-xl text-gray-700 dark:text-gray-200 max-w-4xl mx-auto">
             <li>Social Media Marketing</li>
             <li>Paid Advertising</li>
             <li>Email Marketing</li>

@@ -5,7 +5,12 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <div className="text-black px-4 pt-10 sm:pt-0 sm:px-8 lg:px-20 bg-gradient-to-br from-white to-gray-100 min-h-[70vh] flex items-center justify-center">
+    <div className="px-4 pt-10 sm:pt-0 sm:px-8 lg:px-20 
+      min-h-[70vh] flex items-center justify-center
+      bg-gradient-to-br from-white to-gray-100 
+      dark:from-gray-900 dark:to-gray-800
+      text-gray-900 dark:text-gray-100
+      transition-colors duration-500">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-16 max-w-7xl mx-auto w-full">
         <div className="flex-1 space-y-6 lg:space-y-8">
           <div className="space-y-6">
@@ -15,7 +20,7 @@ export default function Header() {
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl font-parkinsans lg:text-1xl text-gray-700 font-medium max-w-2xl">
+            <p className="text-lg sm:text-xl font-parkinsans lg:text-1xl dark:text-gray-400 text-gray-700 font-medium max-w-2xl">
               Empowering businesses with innovative technology <br /> solutions
               and expert software development services.
             </p>

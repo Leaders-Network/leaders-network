@@ -4,13 +4,13 @@ import React from 'react'
 
 export default function page() {
     return (
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col dark:bg-gray-900">
         <Navbar/>
-        <div className="flex-grow bg-gray-50">
+        <div className="flex-grow bg-gray-50 dark:bg-gray-800">
           <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-lg mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-12">
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h2 className="text-3xl font-extrabold text-[#EC5E2A] sm:text-4xl">
+              <div className="bg-white dark:bg-gray-300 p-8 rounded-lg shadow-lg">
+                <h2 className="text-3xl font-extrabold text-[#EC5E2A] dark:text-orange-400 sm:text-4xl">
                   Contact Leaders Network Limited
                 </h2>
                 <div className="mt-4">
@@ -42,7 +42,7 @@ export default function page() {
                 </div>
               </div>
               <div className="mt-12 md:mt-0">
-                <form className="bg-white p-8 rounded-lg shadow-lg space-y-6">
+                <form className="bg-white dark:bg-gray-300 p-8 rounded-lg shadow-lg space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700">Full Name</label>
                     <div className="mt-1">
@@ -50,7 +50,7 @@ export default function page() {
                         type="text" 
                         name="name" 
                         id="name" 
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-lg transition duration-150"
+                        className="py-3 px-4 block w-full shadow-lg focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-lg transition duration-150"
                         placeholder="Enter your name"
                       />
                     </div>
@@ -62,7 +62,7 @@ export default function page() {
                         type="email" 
                         name="email" 
                         id="email" 
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-lg transition duration-150"
+                        className="py-3 px-4 block w-full shadow-lg focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-lg transition duration-150"
                         placeholder="Enter your email"
                       />
                     </div>
@@ -74,7 +74,7 @@ export default function page() {
                         id="message" 
                         name="message" 
                         rows="4" 
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-lg transition duration-150"
+                        className="py-3 px-4 block w-full shadow-lg focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-lg transition duration-150"
                         placeholder="How can we help you?"
                       ></textarea>
                     </div>

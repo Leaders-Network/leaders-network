@@ -55,8 +55,8 @@ export default function Hero() {
   ];
 
   return (
-    <div className="text-[#EC5E2A] px-4 sm:px-8 md:px-16 max-w-[1440px] mx-auto">
-      <div className="text-3xl sm:text-5xl md:text-7xl py-4 sm:py-6 md:py-8 font-bold">
+    <div className="text-[#EC5E2A] dark:text-orange-400 px-4 sm:px-8 md:px-16 max-w-[1440px] mx-auto">
+      <div className="text-3xl sm:text-5xl md:text-7xl py-4 sm:py-6 md:py-8 font-bold dark:text-white">
         <h1 className="leading-tight">
           Hey, we are Leaders Network. See our thoughts, stories and ideas.
         </h1>
@@ -66,7 +66,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 mb-4">
           <div className="w-full sm:w-80">
             <input 
-              className={`px-6 py-3 rounded-lg border-2 ${error ? 'border-red-500' : 'border-slate-300'} focus:border-slate-500 outline-none w-full transition-all duration-300 hover:shadow-md`}
+              className={`px-6 py-3 rounded-lg border-2 ${error ? 'border-red-500' : 'border-slate-300 dark:border-slate-600'} focus:border-slate-500 outline-none w-full transition-all duration-300 hover:shadow-md dark:bg-gray-800 dark:text-white`}
               type="text" 
               value={email}
               onChange={(e) => {
@@ -79,13 +79,13 @@ export default function Hero() {
           </div>
           <button 
             onClick={handleSubscribe}
-            className="rounded-lg px-8 py-3 bg-slate-800 text-white hover:bg-slate-700 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">
+            className="rounded-lg px-8 py-3 bg-slate-800 dark:bg-slate-700 text-white hover:bg-slate-700 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5 dark:hover:bg-slate-600">
             Subscribe
           </button>
         </div>
 
         <div>
-          <p className="text-slate-600 text-base md:text-lg font-quicksand">Get the email newsletter and unlock access to members-only content and updates</p>
+          <p className="text-slate-600 text-base md:text-lg dark:text-gray-300 font-quicksand">Get the email newsletter and unlock access to members-only content and updates</p>
         </div>
       </div>
 
@@ -109,8 +109,8 @@ export default function Hero() {
                 ))}
               </div>
               <h2 className="text-xl text-[#EC5E2A] sm:text-2xl md:text-3xl font-bold mb-3 line-clamp-2">{post.title}</h2>
-              <p className="text-base md:text-lg text-slate-600 line-clamp-3 font-quicksand">{post.description}</p>
-              <button className="bg-slate-800 text-white px-4 py-1 rounded-lg mt-4">Read More</button>
+              <p className="text-base md:text-lg text-slate-600 line-clamp-3 dark:text-gray-300 font-quicksand">{post.description}</p>
+              <button className="bg-slate-800 dark:text-white text-white px-4 py-1 rounded-lg mt-4">Read More</button>
             </div>
           ))}
         </div>
@@ -179,8 +179,8 @@ export default function Hero() {
                 ))}
               </div>
               <h2 className="text-xl sm:text-2xl md:text-3xl text-[#EC5E2A] font-bold mb-3 line-clamp-2 hover:text-slate-700 transition-colors duration-300">{post.title}</h2>
-              <p className="text-base md:text-lg text-slate-600 line-clamp-3 font-quicksand">{post.description}</p>
-              <button className="bg-slate-800 text-white px-4 py-1 rounded-lg mt-4">Read More</button>
+              <p className="text-base md:text-lg dark:text-gray-300 text-slate-600 line-clamp-3 font-quicksand">{post.description}</p>
+              <button className="bg-slate-800 text-white px-4 dark:text-white py-1 rounded-lg mt-4">Read More</button>
             </div>
           ))}
         </div>

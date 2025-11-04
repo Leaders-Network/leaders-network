@@ -6,12 +6,14 @@ export default function Footer() {
   return (
     <div>
       
-      <footer className="bg-gradient-to-b from-[#040F4E] to-[#02072B] text-white py-16">
+      <footer className="bg-gradient-to-b from-[#040F4E] to-gray-950 
+                        dark:to-black 
+                       text-white dark:text-gray-200 py-16 transition-colors duration-500">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="transform hover:scale-105 transition-transform duration-300">
               <h3 className="text-2xl font-bold mb-6 border-b-2 border-[#EC5E2A] pb-2 inline-block">About Us</h3>
-              <p className="text-gray-300 font-quicksand leading-relaxed hover:text-white transition-colors duration-300">Leaders Network has been delivering trusted technology solutions for Corporate Bodies, Government, Telecommunication, Educational.</p>
+              <p className="text-gray-300 dark:text-gray-400 font-quicksand leading-relaxed hover:text-white transition-colors duration-300">Leaders Network has been delivering trusted technology solutions for Corporate Bodies, Government, Telecommunication, Educational.</p>
             </div>
             <div className="transform hover:scale-105 transition-transform duration-300">
               <h3 className="text-2xl font-bold mb-6 border-b-2 border-[#EC5E2A] pb-2 inline-block">Quick Links</h3>
@@ -40,7 +42,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-12 pt-8 text-center">
-            <p className="text-gray-400 hover:text-white transition-colors duration-300">© 2024 LeadersNetworkLimited. All rights reserved.</p>
+            <p className="text-gray-400 hover:text-white transition-colors duration-300">© 2025 LeadersNetworkLimited. All rights reserved.</p>
           </div>
         </div>
       </footer>

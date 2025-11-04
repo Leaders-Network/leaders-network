@@ -5,14 +5,14 @@ import Image from "next/image";
 
 export default function page() {
   return (
-    <div className="min-h-screen bg-gradient-to-b  from-white to-gray-100">
+    <div className="min-h-screen bg-gradient-to-b  from-white to-gray-100  dark:from-gray-950 dark:to-gray-900 ">
       <Navbar />
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="space-y-8">
-          <h2 className="text-4xl font-bold text-gray-800 mb-6 text-center">
+          <h2 className="text-4xl font-bold text-[#EC5E2A]  mb-6 text-center">
             Advertising on Social Media Platforms
           </h2>
-          <div className="prose prose-lg max-w-none text-gray-600 space-y-6">
+          <div className="prose prose-lg max-w-none text-gray-600 space-y-6 dark:text-gray-300">
             <p className="leading-relaxed">
               Social media platforms are indispensable tools for modern
               communication, entertainment, and business marketing. They allow
@@ -40,12 +40,12 @@ export default function page() {
                 />
               </div>
             </div>
-            <p className="font-semibold text-gray-700">
+            <p className="font-semibold text-gray-700 dark:text-gray-300">
               Choosing the right platforms for your goals depends on your target
               audience and the type of content you plan to create. Here's a
               brief overview of the various social media platforms:
             </p>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none dark:text-gray-800">
               <li className="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                 <span className="font-semibold text-blue-600">
                   Facebook and Instagram:
@@ -94,7 +94,7 @@ export default function page() {
                 engagement.
               </li>
             </ul>
-            <p className="text-gray-700 font-medium text-center italic">
+            <p className="text-gray-700 dark:text-gray-300 font-medium text-center italic">
               This concise overview provides foundational insights for effective
               social media advertising.
             </p>
@@ -102,7 +102,7 @@ export default function page() {
         </div>
 
         <div className="mt-12 space-y-12">
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white dark:bg-gray-200 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">
               Our Expertise Across Platforms
             </h2>
@@ -161,7 +161,7 @@ export default function page() {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white dark:bg-gray-200 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h3 className="text-2xl font-semibold text-pink-600 mb-4">
               Instagram
             </h3>
@@ -218,7 +218,7 @@ export default function page() {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white dark:bg-gray-200 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h3 className="text-2xl font-semibold text-blue-600 mb-4">
               Twitter
             </h3>
@@ -262,7 +262,7 @@ export default function page() {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white dark:bg-gray-200 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h3 className="text-2xl font-semibold text-pink-600 mb-4">
             LinkedIn
             </h3>
@@ -306,7 +306,7 @@ export default function page() {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white dark:bg-gray-200 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h3 className="text-2xl font-semibold text-blue-600 mb-4">
             TikTok
             </h3>
@@ -350,7 +350,7 @@ export default function page() {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white dark:bg-gray-200 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h3 className="text-2xl font-semibold text-pink-600 mb-4">
               Youtube
             </h3>
@@ -397,7 +397,7 @@ export default function page() {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white dark:bg-gray-200 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h3 className="text-2xl font-semibold text-blue-600 mb-4">
               Snapchat
             </h3>
@@ -444,7 +444,7 @@ export default function page() {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white dark:bg-gray-200 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h3 className="text-2xl font-semibold text-pink-600 mb-4">
               Pinterest
             </h3>
@@ -488,7 +488,7 @@ export default function page() {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white dark:bg-gray-200 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h3 className="text-2xl font-semibold text-blue-600 mb-4">
               Whatsapp
             </h3>
@@ -532,7 +532,7 @@ export default function page() {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white dark:bg-gray-200 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h3 className="text-2xl font-semibold text-pink-600 mb-4">
               Telegram
             </h3>
@@ -576,7 +576,7 @@ export default function page() {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white dark:bg-gray-200 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h3 className="text-2xl font-semibold text-blue-600 mb-4">
               Email Marketing
             </h3>
@@ -612,7 +612,7 @@ export default function page() {
             </p>
           </div>
 
-          <div className="text-black">
+          <div className="text-black dark:text-gray-200">
             <h2>Why Choose Leaders Network?</h2>
             <p>At Leaders Network, we combine creativity, innovation, and analytics-driven approaches to provide exceptional social media marketing solutions. Our commitment to delivering high-quality, result-oriented strategies ensures your brand thrives in the competitive digital arena.</p>
             <p>Take the next step. Partner with Leaders Network to transform your social media presence into a dynamic driver of growth and success. Contact us today to get started.</p>

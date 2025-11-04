@@ -1,3 +1,4 @@
+import Provider from "@/components/Hoc/Provider";
 import "./globals.css";
 import { Outfit, Syne, Poppins } from "next/font/google";
 
@@ -29,8 +30,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${outfit.className} ${outfit.variable} ${syne.variable} ${poppins.variable} bg-white`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${outfit.className} ${outfit.variable} ${syne.variable} ${poppins.variable} 
+        bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-500`} // ✅ Added dark classes
+      >
+        <Provider>
+        {children}
+        </Provider>
+        </body>
     </html>
   );
 }

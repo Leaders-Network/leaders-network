@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function page() {
   return (
-    <div className="min-h-screen bg-gradient-to-b text-black from-white to-gray-100">
+    <div className="min-h-screen bg-gradient-to-b text-black from-white to-gray-100 dark:from-gray-950 dark:to-gray-900 dark:text-gray-100">
       <Navbar />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -15,7 +15,7 @@ export default function page() {
               <h1 className="text-4xl md:text-5xl font-bold text-[#EC5E2A] leading-tight">
                 About Website Development Service
               </h1>
-              <p className="text-lg font-quicksand font-bold leading-relaxed text-gray-700 animate-fade-in">
+              <p className="text-lg font-quicksand font-bold leading-relaxed text-gray-400 animate-fade-in">
                 Website development refers to the process of creating, designing,
                 building, and maintaining websites. It involves several aspects,
                 including web design, web content development, client-side and
@@ -54,7 +54,7 @@ export default function page() {
                 ].map((item, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-3 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 font-quicksand font-bold"
+                    className="flex items-start gap-3 p-4 dark:text-gray-700 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 font-quicksand font-bold"
                   >
                     <span className="text-[#EC5E2A] mt-1 flex-shrink-0">
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -112,7 +112,7 @@ export default function page() {
                   "Prototyping Tools: Figma, Sketch, or Adobe XD for UI/UX design.",
                   "Testing Tools: Selenium, Cypress, or manual testing processes for ensuring quality assurance."
                 ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
+                  <li key={index} className="flex items-start gap-3 p-4 dark:text-gray-800 bg-gray-50 rounded-lg">
                     <span className="text-[#EC5E2A] mt-1 flex-shrink-0">
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
