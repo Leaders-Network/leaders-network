@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Help() {
@@ -15,7 +16,9 @@ export default function Help() {
           transition-colors duration-300'>
                         Do you need help from Leaders Network?</h2>
         <p className='text-2xl text-gray-600 font-light dark:text-gray-300  max-w-3xl mx-auto leading-relaxed'>Kindly, contact us for more information about our services and solutions</p>
+        <Link href="/contactus">
         <button className='bg-transparent hover:bg-[#EC5E2A] hover:text-white transition-all duration-300 ease-in-out rounded-full border-2 border-[#EC5E2A] text-[#EC5E2A] px-14 py-5 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105'>Contact Us</button>
+        </Link>
       </div>
     </div>
   )

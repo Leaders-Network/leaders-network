@@ -26,15 +26,17 @@ export default function Header() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <Link href="/about">
               <button className="px-8 py-4 bg-[#EC5E2A] rounded-lg text-white font-semibold hover:bg-opacity-90 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                Get Started
+                Learn More
               </button>
+              </Link>
 
-              <Link href="/about">
+              {/* <Link href="/about">
                 <button className="px-8 py-4 bg-white rounded-lg border-2 border-[#EC5E2A] text-[#EC5E2A] font-semibold hover:bg-[#EC5E2A] hover:text-white transition-all duration-300 hover:shadow-xl">
                   Learn More
                 </button>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
