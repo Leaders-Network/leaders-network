@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import ParticleConstellation from '../ui/ParticleConstellation'
 
 // Project cards data for infinite scroll
 const leftColumnProjects = [
@@ -60,12 +61,8 @@ const rightColumnProjects = [
   },
 ]
 
-const MOBILE_VIDEO =
-  'https://res.cloudinary.com/yaovkmpi/video/upload/f_auto,q_auto,w_720/v1790777503/mobile-herobg_ugtjyk.mp4'
-const MOBILE_POSTER =
-  'https://res.cloudinary.com/yaovkmpi/image/upload/v1790778602/mobile-herobg_oeyozh.png'
-
-  // True only below the md breakpoint (768px), so desktop never loads the video
+// True only below the md breakpoint (768px), so desktop never mounts the
+// canvas and mobile never renders the project columns' work.
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false)
 
@@ -151,26 +148,7 @@ export default function HeroSection() {
   const isMobile = useIsMobile()
 
   return (
-    <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-gray-900 pb-12 pt-28 transition-colors duration-300 sm:pt-32 md:bg-white md:dark:bg-dark-950">
-      {/* Mobile-only background video */}
-      {isMobile && (
-        <div aria-hidden="true" className="absolute inset-0">
-          <video
-            className="h-full w-full object-cover"
-            src={MOBILE_VIDEO}
-            poster={MOBILE_POSTER}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-          />
-          {/* Dark overlay so the white text stays readable */}
-          <div className="absolute inset-0 bg-black/55" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />
-        </div>
-      )}
-
+    <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-black pb-12 pt-28 transition-colors duration-300 sm:pt-32 md:bg-white md:dark:bg-dark-950">
       <div className="absolute inset-0 hidden bg-[radial-gradient(ellipse_at_top_left,_rgba(0,0,0,0.03),_transparent_55%)] md:block dark:bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.06),_transparent_55%)]" />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8">
@@ -223,7 +201,14 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right: project images (unchanged), shown from md up */}
+          {/* Mobile: particle constellation under the text (mounted only below md) */}
+          {isMobile && (
+            <div className="relative h-[340px] w-full sm:h-[420px]">
+              <ParticleConstellation />
+            </div>
+          )}
+
+          {/* Desktop: project images (unchanged), shown from md up */}
           <div className="relative mx-auto hidden h-[460px] w-full max-w-xl md:block md:h-[540px] lg:mx-0 lg:h-[min(640px,72svh)] lg:max-w-none">
             <div className="flex h-full gap-3 sm:gap-4 md:gap-6">
               <Column projects={leftColumnProjects} keyPrefix="left" className="" />
