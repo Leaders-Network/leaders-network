@@ -8,24 +8,24 @@ import { motion } from 'framer-motion'
 const teamMembers = [
   {
     id: "andrew-gold",
-    name: "Andrew Gold",
+    name: "Ademoye Olatunde",
     role: "Chief Executive Officer",
     bio: "Visionary leader with 20+ years driving digital transformation across enterprise, government, and financial sectors.",
-    image: "/images/Picture-1.jpg"
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790354810/images_1_nfjqho.jpg"
   },
   {
     id: "cto-member",
-    name: "Dr. Sarah Chen",
+    name: "Ambimbola",
     role: "Chief Technology Officer",
     bio: "Technical architect specializing in scalable cloud solutions, enterprise software, and emerging technology integration.",
-    image: "/images/Picture-2.jpg"
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790354810/Free-Elegant-Interior-Laptop-Website-Mockup_skyxkk.jpg"
   },
   {
     id: "operations-head",
-    name: "Michael Rodriguez",
+    name: "Ibrahim Ibrahim",
     role: "Head of Operations",
     bio: "Operations expert ensuring seamless project delivery, client success, and organizational excellence across all initiatives.",
-    image: "/images/Picture 3.jpg"
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355509/analytics-on-display-stockcake_nzpyen.jpg"
   }
 ]
 
