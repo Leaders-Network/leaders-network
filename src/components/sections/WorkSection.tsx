@@ -6,29 +6,36 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const projects = [
-  {
+    {
     id: 1,
-    title: "Builders Liability",
-    subtitle: " Builders Insurace platform",
-    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355642/Screenshot_2026-09-25_180020_lvyj7p.png",
-    href: "/work/builders-liability", // TODO: replace with the real project page URL
+    title: "Resume Checker",
+    subtitle: "Resume Checker Site",
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791062792/resume-checker_qgw6mq.png",
+    href: "https://www.leaderscvchecker.com/",
   },
   {
     id: 2,
+    title: "Builders Liability",
+    subtitle: " Builders Insurace platform",
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791063083/builders-liability_cu9esu.png",
+    href: "https://www.ammcbuildersinsurance.com/", // TODO: replace with the real project page URL
+  },
+  {
+    id: 3,
     title: "Government Portal System",
     subtitle: "Digital government initiative", 
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355394/809a3ec9730cc3e650de40d95e201a74_qro9xu.webp",
     href: "/work/government-portal-system",
   },
   {
-    id: 3,
+    id: 4,
     title: "Healthcare Management Suite",
     subtitle: "Hospital operations optimization",
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355394/Analytics-footfall-UI-Macbook-_pofflp.webp", 
     href: "/work/healthcare-management-suite",
   },
   {
-    id: 4,
+    id: 5,
     title: "Smart Card Identity System", 
     subtitle: "Secure authentication platform",
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355115/hire_y78jar.webp",

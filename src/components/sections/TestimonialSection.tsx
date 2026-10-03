@@ -9,29 +9,29 @@ const testimonials = [
     quote: "Leaders Network completely transformed our digital infrastructure. Their expertise in enterprise solutions helped us modernize our operations and improve efficiency by 60%. The team's professionalism and technical depth exceeded our expectations.",
     author: "Dr. Adebayo Ogundimu",
     role: "CTO, First Bank Nigeria",
-    avatar: "/images/placeholder-avatar-1.jpg"
+    avatar: "/images/Picture-1.jpg"
   },
   {
     quote: "The staff recruitment services provided by Leaders Network helped us build a world-class technology team. Their understanding of both local and international talent markets is unmatched in the industry.",
     author: "Sarah Chen",
     role: "HR Director, MTN Nigeria",
-    avatar: "/images/placeholder-avatar-2.jpg"
+    avatar: "/images/Picture-2.jpg"
   },
   {
     quote: "From concept to deployment, Leaders Network delivered our government portal system ahead of schedule. The solution now serves over 500,000 citizens daily with 99.9% uptime.",
     author: "Engr. Mohammed Yusuf",
     role: "Director, Lagos State ICT",
-    avatar: "/images/placeholder-avatar-3.jpg"
+    avatar: "/images/Picture 3.jpg"
   }
 ]
 
 const clientAvatars = [
-  "/images/placeholder-avatar-1.jpg",
-  "/images/placeholder-avatar-2.jpg",
-  "/images/placeholder-avatar-3.jpg",
-  "/images/placeholder-avatar-4.jpg",
-  "/images/placeholder-avatar-5.jpg",
-  "/images/placeholder-avatar-6.jpg"
+  "/images/Picture 1.jpg",
+  "/images/Picture 2.jpg",
+  "/images/Picture 3.jpg",
+  "/images/Picture 4.jpg",
+  "/images/Picture 5.jpg",
+  "/images/Picture 6.jpg"
 ]
 
 function Star({ className = 'h-7 w-7' }: { className?: string }) {

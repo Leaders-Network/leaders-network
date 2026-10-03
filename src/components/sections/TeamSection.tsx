@@ -11,21 +11,21 @@ const teamMembers = [
     name: "Andrew Gold",
     role: "Chief Executive Officer",
     bio: "Visionary leader with 20+ years driving digital transformation across enterprise, government, and financial sectors.",
-    image: "/images/placeholder-team-1.jpg"
+    image: "/images/Picture-1.jpg"
   },
   {
     id: "cto-member",
     name: "Dr. Sarah Chen",
     role: "Chief Technology Officer",
     bio: "Technical architect specializing in scalable cloud solutions, enterprise software, and emerging technology integration.",
-    image: "/images/placeholder-team-2.jpg"
+    image: "/images/Picture-2.jpg"
   },
   {
     id: "operations-head",
     name: "Michael Rodriguez",
     role: "Head of Operations",
     bio: "Operations expert ensuring seamless project delivery, client success, and organizational excellence across all initiatives.",
-    image: "/images/placeholder-team-3.jpg"
+    image: "/images/Picture 3.jpg"
   }
 ]
 
