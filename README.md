@@ -28,39 +28,39 @@ Leaders Network is a modern, enterprise-grade website showcasing comprehensive t
 ## 📸 Screenshots
 
 ### Homepage - Hero Section
-![Homepage Hero](https://github.com/user-attachments/assets/homepage-hero.jpg)
+![Homepage Hero](https://res.cloudinary.com/yaovkmpi/image/upload/v1791067375/Screenshot1_fy9q5h.png)
 *Dynamic hero section with particle constellation background and service highlights*
 
 ### Services Overview
-![Services Page](https://github.com/user-attachments/assets/services-overview.jpg)
+![Services Page](https://res.cloudinary.com/yaovkmpi/image/upload/v1791067375/Screenshot2_gl9b5c.png)
 *Comprehensive services section showcasing Software Development, Consulting, and Staff Recruitment*
 
 ### Portfolio Showcase
-![Work Portfolio](https://github.com/user-attachments/assets/work-portfolio.jpg)
+![Work Portfolio](https://res.cloudinary.com/yaovkmpi/image/upload/v1791067376/Screenshot3_tyhzwa.png)
 *Featured projects including Resume Checker platform and Builders Liability insurance system*
 
 ### Company Values
-![Why Choose Us](https://github.com/user-attachments/assets/why-choose-us.jpg)
+![Why Choose Us](https://res.cloudinary.com/yaovkmpi/image/upload/v1791067375/Screenshot_4_hfvd0v.png)
 *Enterprise Experience, Rapid Delivery, and Secure & Reliable solutions highlighted*
 
 ### Client Testimonials
-![Testimonials](https://github.com/user-attachments/assets/testimonials.jpg)
+![Testimonials](https://res.cloudinary.com/yaovkmpi/image/upload/v1791067375/Screenshot5_ipwbtx.png)
 *Real client testimonials featuring industry leaders and transformation stories*
 
 ### Results & Statistics
-![Company Results](https://github.com/user-attachments/assets/company-stats.jpg)
+![Company Results](https://res.cloudinary.com/yaovkmpi/image/upload/v1791067375/Screenshot6_ngazqv.png)
 *500+ Projects Delivered, 98% Client Satisfaction, 19+ Years of Excellence*
 
 ### FAQ Section
-![FAQ Section](https://github.com/user-attachments/assets/faq-section.jpg)
+![FAQ Section](https://res.cloudinary.com/yaovkmpi/image/upload/v1791067376/Screenshot7_nvfpjw.png)
 *Comprehensive FAQ addressing common client inquiries*
 
 ### Contact & CTA
-![Contact Section](https://github.com/user-attachments/assets/contact-cta.jpg)
+![Contact Section](https://res.cloudinary.com/yaovkmpi/image/upload/v1791067376/Screenshot8_sxtzlw.png)
 *Professional contact form with clear call-to-action*
 
 ### Footer
-![Website Footer](https://github.com/user-attachments/assets/footer-section.jpg)
+![Website Footer](https://res.cloudinary.com/yaovkmpi/image/upload/v1791067376/Screenshot9_kku7kx.png)
 *Complete footer with company links, services, and social media integration*
 
 ## 🛠️ Technology Stack
