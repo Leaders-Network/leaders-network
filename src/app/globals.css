@@ -1,27 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 :root {
-  --background: #040F4E;
-  --foreground: #171717;
+  --background: #0A0A0B;
+  --foreground: #F7FAFC;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  letter-spacing: -0.01em;
+  overflow-x: clip; /* stops the carousel/marquee causing sideways scroll */
+  font-family: var(--font-inter), Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+/* Fallback for when Google Fonts fails to load */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Inter'), local('Inter-Regular'), local('ui-sans-serif'), local('system-ui'), local('-apple-system'), local('BlinkMacSystemFont'), local('Segoe UI'), local('Roboto'), local('Helvetica Neue'), local('Arial'), local('Noto Sans'), local('sans-serif');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Ensure font loads gracefully */
+.font-sans {
+  font-family: var(--font-inter), 'Inter Fallback', Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1A1A1C; }
+::-webkit-scrollbar-thumb { background: #0066CC; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #0052A3; }
+
+::selection { background-color: #0066CC; color: white; }
+
+@layer utilities {
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-opacity-50;
+  }
+
+  /* Soft top glow, like the reference design's vignette */
+  .bg-page-glow {
+    background-image: radial-gradient(
+      ellipse 80% 40% at 50% 0%,
+      rgba(255, 255, 255, 0.06),
+      transparent 70%
+    );
+    background-repeat: no-repeat;
+  }
+
+  .animate-fade-up { animation: fadeUp 0.8s ease-out both; }
+  .animate-scroll-up { animation: scrollUp 30s linear infinite; will-change: transform; }
+  .animate-scroll-down { animation: scrollDown 35s linear infinite; will-change: transform; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollUp {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+
+@keyframes scrollDown {
+  from { transform: translateY(-50%); }
+  to   { transform: translateY(0); }
+}

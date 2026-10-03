@@ -1,0 +1,43 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import Link from 'next/link'
+
+export default function WebDevHeroSection() {
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-dark-950 dark:via-dark-900 dark:to-blue-950 px-4 py-24 sm:px-6 sm:py-32 lg:px-8 transition-colors duration-300">
+      <div className="relative mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center lg:text-left"
+          >
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl">
+              Professional{' '}
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
+                Web Development
+              </span>
+            </h1>
+
+            <p className="mb-8 text-lg leading-relaxed text-gray-600 dark:text-gray-300 sm:text-xl">
+              Custom web applications, responsive websites, and e-commerce solutions built with modern technologies.
+            </p>
+
+            <Link
+              href="/contactus"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105"
+            >
+              Start Project
+            </Link>
+          </motion.div>
+          <div className="relative aspect-square overflow-hidden rounded-3xl">
+            <Image src="/images/about-web-dev.jpg" alt="Web Development" fill className="object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
