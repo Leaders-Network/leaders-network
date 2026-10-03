@@ -185,7 +185,6 @@ export default function ParticleConstellation({ className = '' }: { className?: 
         drift: b.amb ? 14 : 2 + Math.random() * 4,
         delay: Math.random() * 900,
         bucket: pickBucket(),
-        amb: b.amb,
       }))
       parts.forEach(place)
     }
