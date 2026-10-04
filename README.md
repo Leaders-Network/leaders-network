@@ -36,7 +36,7 @@ Leaders Network is a modern, enterprise-grade website showcasing comprehensive t
 *Comprehensive services section showcasing Software Development, Consulting, and Staff Recruitment*
 
 ### Portfolio Showcase
-![Work Portfolio](https://res.cloudinary.com/yaovkmpi/image/upload/v1791067376/Screenshot3_tyhzwa.png)
+![Work Portfolio](https://res.cloudinary.com/yaovkmpi/image/upload/v1791151106/work_gymesv.png)
 *Featured projects including Resume Checker platform and Builders Liability insurance system*
 
 ### Company Values
