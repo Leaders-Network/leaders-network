@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { ExternalLink, ArrowRight } from 'lucide-react'
+import { IoOpenOutline, IoArrowForward } from 'react-icons/io5'
 
 const caseStudies = [
   {
@@ -108,7 +108,7 @@ export default function SDLCCaseStudiesSection() {
                     <ul className="space-y-2">
                       {study.results.map((result, i) => (
                         <li key={i} className="flex items-center text-green-600 dark:text-green-400">
-                          <ArrowRight size={16} className="mr-2 flex-shrink-0" />
+                          <IoArrowForward size={16} className="mr-2 flex-shrink-0" />
                           {result}
                         </li>
                       ))}
@@ -132,7 +132,7 @@ export default function SDLCCaseStudiesSection() {
 
                 <button className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
                   View Case Study
-                  <ExternalLink size={16} className="ml-2" />
+                  <IoOpenOutline size={16} className="ml-2" />
                 </button>
               </div>
             </motion.div>

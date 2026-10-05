@@ -1,16 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { 
-  Lightbulb, 
-  FileText, 
-  Palette, 
-  Code, 
-  TestTube, 
-  Rocket, 
-  Headphones,
-  CheckCircle 
-} from 'lucide-react'
+import { Lightbulb, FileText, Palette, IoCode, TestTube, Rocket, Headphones, IoCheckmarkCircle } from 'react-icons/io5'
 
 const processSteps = [
   {
@@ -135,7 +126,7 @@ export default function SDLCProcessSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {step.tasks.map((task, taskIndex) => (
                     <div key={taskIndex} className="flex items-center space-x-3">
-                      <CheckCircle size={16} className="text-green-500 flex-shrink-0" />
+                      <IoCheckmarkCircle size={16} className="text-green-500 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{task}</span>
                     </div>
                   ))}

@@ -13,6 +13,7 @@ const inter = Inter({
   weight: ["300", "400", "500", "600", "700", "800"],
   style: ["normal"],
   variable: "--font-inter",
+  fallback: ['system-ui', 'arial'],
 });
 
 const title = "Leaders Network - Technology Solutions That Deliver Results";

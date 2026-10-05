@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowLeft, BookOpen } from 'lucide-react'
+import { IoArrowBack, IoBookOutline } from 'react-icons/io5'
 import Navbar from '@/components/layout/Navbar'
 import FooterReveal from '@/components/layout/FooterReveal'
 
@@ -12,7 +12,7 @@ export default function BlogNotFound() {
         <div className="flex min-h-[60vh] items-center justify-center px-4 py-16">
           <div className="text-center">
             <div className="mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800">
-              <BookOpen className="h-12 w-12 text-gray-400" />
+              <IoBookOutline className="h-12 w-12 text-gray-400" />
             </div>
             
             <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
@@ -28,7 +28,7 @@ export default function BlogNotFound() {
                 href="/blogs"
                 className="inline-flex items-center gap-2 rounded-full bg-primary-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-primary-700"
               >
-                <ArrowLeft size={18} />
+                <IoArrowBack size={18} />
                 Back to Blog
               </Link>
               

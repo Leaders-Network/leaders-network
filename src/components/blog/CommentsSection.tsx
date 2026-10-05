@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Heart, MessageCircle, Share2, Flag, MoreVertical } from 'lucide-react'
+import { IoHeart, IoChatbubblesOutline, IoShareSocial, IoFlag, IoEllipsisVertical } from 'react-icons/io5'
 import CommentForm from './CommentForm'
 import CommentItem from './CommentItem'
 import CommentStats from './CommentStats'
@@ -60,7 +60,7 @@ export default function CommentsSection({
                 : 'text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400'
             }`}
           >
-            <Heart
+            <IoHeart
               size={20}
               className={`transition-transform hover:scale-110 ${
                 isPostLiked ? 'fill-current' : ''
@@ -74,13 +74,13 @@ export default function CommentsSection({
             onClick={() => setShowCommentForm(!showCommentForm)}
             className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
-            <MessageCircle size={20} />
+            <IoChatbubblesOutline size={20} />
             <span className="font-medium">{engagement.commentStats.totalComments}</span>
           </button>
 
           {/* Share Button */}
           <button className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors">
-            <Share2 size={20} />
+            <IoShareSocial size={20} />
             <span className="font-medium">{engagement.shares}</span>
           </button>
         </div>

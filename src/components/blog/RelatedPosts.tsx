@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Clock, Calendar } from 'lucide-react'
+import { IoTime, IoCalendar } from 'react-icons/io5'
 import type { BlogPost } from '@/types/blog'
 
 interface RelatedPostsProps {
@@ -24,7 +24,7 @@ export default function RelatedPosts({ posts }: RelatedPostsProps) {
             key={post.id}
             className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700"
           >
-            <Link href={`/blogs/${post.slug}`}>
+            <IoLink href={`/blogs/${post.slug}`}>
               {/* Image */}
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
@@ -59,7 +59,7 @@ export default function RelatedPosts({ posts }: RelatedPostsProps) {
                 <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-1">
-                      <Calendar size={12} />
+                      <IoCalendar size={12} />
                       <time dateTime={post.publishedDate}>
                         {new Date(post.publishedDate).toLocaleDateString('en-US', {
                           month: 'short',
@@ -69,7 +69,7 @@ export default function RelatedPosts({ posts }: RelatedPostsProps) {
                     </div>
                     
                     <div className="flex items-center gap-1">
-                      <Clock size={12} />
+                      <IoTime size={12} />
                       <span>{post.readTime} min</span>
                     </div>
                   </div>

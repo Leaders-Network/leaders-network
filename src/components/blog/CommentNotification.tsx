@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { CheckCircle, Heart, MessageCircle, X } from 'lucide-react'
+import { IoCheckmarkCircle, IoHeart, IoChatbubblesOutline, IoClose } from 'react-icons/io5'
 
 interface CommentNotificationProps {
   type: 'like' | 'comment' | 'reply'
@@ -33,13 +33,13 @@ export default function CommentNotification({
   const getIcon = () => {
     switch (type) {
       case 'like':
-        return <Heart className="w-5 h-5 text-red-500" />
+        return <IoHeart className="w-5 h-5 text-red-500" />
       case 'comment':
-        return <MessageCircle className="w-5 h-5 text-blue-500" />
+        return <IoChatbubblesOutline className="w-5 h-5 text-blue-500" />
       case 'reply':
-        return <MessageCircle className="w-5 h-5 text-green-500" />
+        return <IoChatbubblesOutline className="w-5 h-5 text-green-500" />
       default:
-        return <CheckCircle className="w-5 h-5 text-green-500" />
+        return <IoCheckmarkCircle className="w-5 h-5 text-green-500" />
     }
   }
 
@@ -69,7 +69,7 @@ export default function CommentNotification({
           onClick={onClose}
           className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
         >
-          <X className="w-4 h-4" />
+          <IoClose className="w-4 h-4" />
         </button>
       </div>
     </div>

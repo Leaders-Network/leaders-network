@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Zap, Shield, Users, TrendingUp, Clock, Award } from 'lucide-react'
+import { IoFlash, IoShield, IoPeople, IoTrendingUp, IoTime, IoTrophy } from 'react-icons/io5'
 
 const benefits = [
   {

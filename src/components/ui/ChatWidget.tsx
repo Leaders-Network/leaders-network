@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { X, MessageCircle, Send, ArrowLeft, Home, MessageSquare } from 'lucide-react'
+import { IoClose, IoChatbubblesOutline, IoSend, IoArrowBack, IoHome, IoChatboxOutline } from 'react-icons/io5'
 
 interface ChatMessage {
   id: string
@@ -146,7 +146,7 @@ export default function ChatWidget() {
           onClick={handleChatClick}
           className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 relative"
         >
-          <MessageCircle size={24} />
+          <IoChatbubblesOutline size={24} />
           {/* Notification badge */}
           <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
             1
@@ -167,12 +167,12 @@ export default function ChatWidget() {
               onClick={() => setCurrentView('conversations')}
               className="flex items-center space-x-2 hover:bg-brand-600 p-1 rounded"
             >
-              <ArrowLeft size={16} />
+              <IoArrowBack size={16} />
               <span className="font-medium">Messages</span>
             </button>
           ) : (
             <h3 className="font-semibold flex items-center space-x-2">
-              <MessageSquare size={18} />
+              <IoChatboxOutline size={18} />
               <span>Messages</span>
             </h3>
           )}
@@ -181,7 +181,7 @@ export default function ChatWidget() {
             onClick={() => setIsOpen(false)}
             className="hover:bg-brand-600 p-1 rounded transition-colors"
           >
-            <X size={18} />
+            <IoClose size={18} />
           </button>
         </div>
 
@@ -201,7 +201,7 @@ export default function ChatWidget() {
                       <div className="font-medium text-gray-900 dark:text-white">New Conversation</div>
                       <div className="text-sm text-gray-500 dark:text-gray-400">We typically reply in a few minutes</div>
                     </div>
-                    <Send size={16} className="text-gray-400 group-hover:text-brand-500 transition-colors" />
+                    <IoSend size={16} className="text-gray-400 group-hover:text-brand-500 transition-colors" />
                   </div>
                 </button>
               </div>
@@ -232,8 +232,8 @@ export default function ChatWidget() {
               {/* Footer */}
               <div className="p-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-dark-800">
                 <div className="flex items-center justify-center space-x-4">
-                  <Home size={20} className="text-gray-400" />
-                  <MessageSquare size={20} className="text-brand-500" />
+                  <IoHome size={20} className="text-gray-400" />
+                  <IoChatboxOutline size={20} className="text-brand-500" />
                 </div>
                 <div className="text-center mt-2">
                   <div className="text-xs text-gray-500 dark:text-gray-400 flex items-center justify-center space-x-1">
@@ -293,7 +293,7 @@ export default function ChatWidget() {
                     disabled={!newMessage.trim()}
                     className="bg-brand-500 hover:bg-brand-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white p-2 rounded-lg transition-colors"
                   >
-                    <Send size={16} />
+                    <IoSend size={16} />
                   </button>
                 </div>
               </div>

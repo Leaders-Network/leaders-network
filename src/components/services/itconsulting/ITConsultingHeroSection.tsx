@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Settings, Target, Users } from 'lucide-react'
+import { IoSettings, IoTarget, IoPeople } from 'react-icons/io5'
 
 export default function ITConsultingHeroSection() {
   return (
@@ -17,7 +17,7 @@ export default function ITConsultingHeroSection() {
             className="text-center lg:text-left"
           >
             <div className="mb-6 inline-flex items-center rounded-full border border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-900/20 px-4 py-2 text-sm font-medium text-purple-700 dark:text-purple-300">
-              <Settings size={16} className="mr-2" />
+              <IoSettings size={16} className="mr-2" />
               Strategic IT Consulting
             </div>
 
@@ -33,7 +33,7 @@ export default function ITConsultingHeroSection() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row lg:justify-start justify-center">
-              <Link
+              <IoLink
                 href="/contactus"
                 className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105"
               >

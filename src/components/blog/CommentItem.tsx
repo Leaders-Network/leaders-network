@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { Heart, MessageCircle, Flag, MoreVertical, Edit, Trash2, Shield } from 'lucide-react'
+import { IoHeart, IoChatbubblesOutline, IoFlag, IoEllipsisVertical, IoCreateOutline, IoTrash, IoShield } from 'react-icons/io5'
 import CommentForm from './CommentForm'
 import type { Comment, User } from '@/types/blog'
 
@@ -68,7 +68,7 @@ export default function CommentItem({
           {comment.author.verified && (
             <div className="relative -mt-2 ml-7">
               <div className="flex items-center justify-center w-5 h-5 bg-blue-500 rounded-full">
-                <Shield size={12} className="text-white" />
+                <IoShield size={12} className="text-white" />
               </div>
             </div>
           )}
@@ -108,7 +108,7 @@ export default function CommentItem({
                 onClick={() => setShowMenu(!showMenu)}
                 className="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >
-                <MoreVertical size={16} className="text-gray-400" />
+                <IoEllipsisVertical size={16} className="text-gray-400" />
               </button>
 
               {showMenu && (
@@ -116,17 +116,17 @@ export default function CommentItem({
                   {isAuthor ? (
                     <>
                       <button className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 dark:hover:bg-gray-700 flex items-center space-x-2">
-                        <Edit size={14} />
+                        <IoCreateOutline size={14} />
                         <span>Edit comment</span>
                       </button>
                       <button className="w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-gray-50 dark:hover:bg-gray-700 flex items-center space-x-2">
-                        <Trash2 size={14} />
+                        <IoTrash size={14} />
                         <span>Delete comment</span>
                       </button>
                     </>
                   ) : (
                     <button className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 dark:hover:bg-gray-700 flex items-center space-x-2">
-                      <Flag size={14} />
+                      <IoFlag size={14} />
                       <span>Report comment</span>
                     </button>
                   )}
@@ -150,7 +150,7 @@ export default function CommentItem({
                   : 'text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400'
               }`}
             >
-              <Heart
+              <IoHeart
                 size={14}
                 className={`${isLiked ? 'fill-current' : ''} transition-transform hover:scale-110`}
               />
@@ -162,7 +162,7 @@ export default function CommentItem({
                 onClick={() => setShowReplyForm(!showReplyForm)}
                 className="flex items-center space-x-1 text-xs text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
-                <MessageCircle size={14} />
+                <IoChatbubblesOutline size={14} />
                 <span>Reply</span>
               </button>
             )}

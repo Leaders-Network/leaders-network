@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Clock, Calendar, Eye, Heart, ArrowLeft } from 'lucide-react'
+import { IoTime, IoCalendar, IoEye, IoHeart, IoArrowBack } from 'react-icons/io5'
 import type { BlogPost } from '@/types/blog'
 
 interface BlogPostHeaderProps {
@@ -13,17 +13,17 @@ export default function BlogPostHeader({ post }: BlogPostHeaderProps) {
   return (
     <header className="space-y-6">
       {/* Back to Blog */}
-      <Link 
+      <IoLink 
         href="/blogs"
         className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors group"
       >
-        <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+        <IoArrowBack size={16} className="group-hover:-translate-x-1 transition-transform" />
         Back to Blog
       </Link>
 
       {/* Category Badge */}
       <div>
-        <Link
+        <IoLink
           href={`/blogs/category/${post.category.slug}`}
           className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium transition-colors"
           style={{ 
@@ -48,7 +48,7 @@ export default function BlogPostHeader({ post }: BlogPostHeaderProps) {
       {/* Meta Information */}
       <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
         <div className="flex items-center gap-2">
-          <Calendar size={16} />
+          <IoCalendar size={16} />
           <time dateTime={post.publishedDate}>
             {new Date(post.publishedDate).toLocaleDateString('en-US', {
               year: 'numeric',
@@ -59,20 +59,20 @@ export default function BlogPostHeader({ post }: BlogPostHeaderProps) {
         </div>
 
         <div className="flex items-center gap-2">
-          <Clock size={16} />
+          <IoTime size={16} />
           <span>{post.readTime} min read</span>
         </div>
 
         {post.views && (
           <div className="flex items-center gap-2">
-            <Eye size={16} />
+            <IoEye size={16} />
             <span>{post.views.toLocaleString()} views</span>
           </div>
         )}
 
         {post.likes && (
           <div className="flex items-center gap-2">
-            <Heart size={16} />
+            <IoHeart size={16} />
             <span>{post.likes} likes</span>
           </div>
         )}
