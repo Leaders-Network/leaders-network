@@ -13,7 +13,7 @@ export default function BlogPostHeader({ post }: BlogPostHeaderProps) {
   return (
     <header className="space-y-6">
       {/* Back to Blog */}
-      <IoLink 
+      <Link 
         href="/blogs"
         className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors group"
       >
@@ -23,7 +23,7 @@ export default function BlogPostHeader({ post }: BlogPostHeaderProps) {
 
       {/* Category Badge */}
       <div>
-        <IoLink
+        <Link
           href={`/blogs/category/${post.category.slug}`}
           className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium transition-colors"
           style={{ 

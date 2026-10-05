@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { IoShareSocial, IoBookmark, Link as LinkIcon } from 'react-icons/io5'
+import { IoShareSocial, IoBookmark, IoLink as LinkIcon } from 'react-icons/io5'
 import type { BlogPost } from '@/types/blog'
 
 interface BlogPostSidebarProps {
@@ -93,7 +93,7 @@ export default function BlogPostSidebar({ post }: BlogPostSidebarProps) {
         
         <div className="flex flex-wrap gap-2">
           {post.tags.map((tag) => (
-            <IoLink
+            <Link
               key={tag}
               href={`/blogs/tag/${tag.toLowerCase().replace(' ', '-')}`}
               className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"

@@ -136,7 +136,7 @@ export default function ServicesCategoriesSection() {
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {service.subServices.map((subService, subIndex) => (
-                          <IoLink
+                          <Link
                             key={subIndex}
                             href={subService.href}
                             className="inline-flex items-center rounded-full bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 px-3 py-1 text-xs font-medium text-gray-700 dark:text-gray-300 hover:border-blue-300 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
@@ -150,7 +150,7 @@ export default function ServicesCategoriesSection() {
 
                   {/* CTA */}
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <IoLink
+                    <Link
                       href={service.href}
                       className={`inline-flex items-center justify-center rounded-full bg-gradient-to-r ${service.color} px-6 py-3 text-base font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl`}
                     >
@@ -158,7 +158,7 @@ export default function ServicesCategoriesSection() {
                       <IoArrowForward size={16} className="ml-2" />
                     </Link>
                     
-                    <IoLink
+                    <Link
                       href="/contactus"
                       className="inline-flex items-center justify-center rounded-full border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-transparent px-6 py-3 text-base font-semibold text-gray-900 dark:text-white hover:border-gray-400 dark:hover:border-gray-500 transition-colors"
                     >

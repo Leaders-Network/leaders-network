@@ -8,7 +8,7 @@ export default function ServicesHeroSection() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-dark-950 dark:via-dark-900 dark:to-blue-950 px-4 py-24 sm:px-6 sm:py-32 lg:px-8 transition-colors duration-300">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-5 dark:opacity-10" />
+      <div className="absolute inset-0 bg-gray-50 dark:bg-gray-900 opacity-5 dark:opacity-10" />
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -92,7 +92,7 @@ export default function ServicesHeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col gap-4 sm:flex-row sm:justify-center"
           >
-            <IoLink
+            <Link
               href="/contactus"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30"
             >
@@ -100,7 +100,7 @@ export default function ServicesHeroSection() {
               <IoArrowForward size={18} className="ml-2" />
             </Link>
             
-            <IoLink
+            <Link
               href="#services"
               className="inline-flex items-center justify-center rounded-full border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-transparent px-8 py-4 text-base font-semibold text-gray-900 dark:text-white transition-all duration-200 hover:border-blue-600 dark:hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20"
             >

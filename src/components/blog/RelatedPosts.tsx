@@ -24,7 +24,7 @@ export default function RelatedPosts({ posts }: RelatedPostsProps) {
             key={post.id}
             className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700"
           >
-            <IoLink href={`/blogs/${post.slug}`}>
+            <Link href={`/blogs/${post.slug}`}>
               {/* Image */}
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image

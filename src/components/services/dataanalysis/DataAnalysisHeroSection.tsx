@@ -33,7 +33,7 @@ export default function DataAnalysisHeroSection() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row lg:justify-start justify-center">
-              <IoLink
+              <Link
                 href="/contactus"
                 className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105"
               >
