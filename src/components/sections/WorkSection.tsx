@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-
+// 
 const projects = [
     {
     id: 1,
@@ -15,27 +15,34 @@ const projects = [
   },
   {
     id: 2,
+    title: "Social Bridge",
+    subtitle: "Social Bridge ",
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791149657/social-bridge_uuufz8.png",
+    href: "https://socialbridge-orcin.vercel.app/",
+  },
+  {
+    id: 3,
     title: "Builders Liability",
     subtitle: " Builders Insurace platform",
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791063083/builders-liability_cu9esu.png",
     href: "https://www.ammcbuildersinsurance.com/", // TODO: replace with the real project page URL
   },
   {
-    id: 3,
+    id: 4,
     title: "Government Portal System",
     subtitle: "Digital government initiative", 
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355394/809a3ec9730cc3e650de40d95e201a74_qro9xu.webp",
     href: "/work/government-portal-system",
   },
   {
-    id: 4,
+    id: 5,
     title: "Healthcare Management Suite",
     subtitle: "Hospital operations optimization",
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355394/Analytics-footfall-UI-Macbook-_pofflp.webp", 
     href: "/work/healthcare-management-suite",
   },
   {
-    id: 5,
+    id: 6,
     title: "Smart Card Identity System", 
     subtitle: "Secure authentication platform",
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355115/hire_y78jar.webp",
