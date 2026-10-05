@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Share2, Bookmark, Link as LinkIcon } from 'lucide-react'
+import { IoShareSocial, IoBookmark, Link as LinkIcon } from 'react-icons/io5'
 import type { BlogPost } from '@/types/blog'
 
 interface BlogPostSidebarProps {
@@ -32,7 +32,7 @@ export default function BlogPostSidebar({ post }: BlogPostSidebarProps) {
       {/* Share Section */}
       <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-          <Share2 size={20} />
+          <IoShareSocial size={20} />
           Share this article
         </h3>
         
@@ -80,7 +80,7 @@ export default function BlogPostSidebar({ post }: BlogPostSidebarProps) {
       {/* Save Article */}
       <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
         <button className="w-full flex items-center justify-center gap-2 px-4 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-600 hover:text-white dark:hover:text-white transition-colors">
-          <Bookmark size={18} />
+          <IoBookmark size={18} />
           Save for later
         </button>
       </div>
@@ -93,7 +93,7 @@ export default function BlogPostSidebar({ post }: BlogPostSidebarProps) {
         
         <div className="flex flex-wrap gap-2">
           {post.tags.map((tag) => (
-            <Link
+            <IoLink
               key={tag}
               href={`/blogs/tag/${tag.toLowerCase().replace(' ', '-')}`}
               className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"

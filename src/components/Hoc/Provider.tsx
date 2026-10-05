@@ -9,8 +9,9 @@ const Provider = ({ children }: ProviderProps) => {
   return (
     <ThemeProvider
       attribute="class"
-      enableSystem
-      defaultTheme="system"
+      enableSystem={false}
+      defaultTheme="dark"
+      forcedTheme={undefined}
     >
       {children}
     </ThemeProvider>

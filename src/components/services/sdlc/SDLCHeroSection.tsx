@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Code, Users, Zap, Shield } from 'lucide-react'
+import { IoArrowForward, IoCode, IoPeople, IoFlash, IoShield } from 'react-icons/io5'
 
 export default function SDLCHeroSection() {
   return (
@@ -33,7 +33,7 @@ export default function SDLCHeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="mb-6 inline-flex items-center rounded-full border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20 px-4 py-2 text-sm font-medium text-blue-700 dark:text-blue-300"
             >
-              <Code size={16} className="mr-2" />
+              <IoCode size={16} className="mr-2" />
               SDLC Excellence
             </motion.div>
 
@@ -68,19 +68,19 @@ export default function SDLCHeroSection() {
               className="mb-8 grid grid-cols-2 gap-4 text-sm"
             >
               <div className="flex items-center text-gray-600 dark:text-gray-300">
-                <Users size={16} className="mr-2 text-blue-600 dark:text-blue-400" />
+                <IoPeople size={16} className="mr-2 text-blue-600 dark:text-blue-400" />
                 Agile Methodology
               </div>
               <div className="flex items-center text-gray-600 dark:text-gray-300">
-                <Shield size={16} className="mr-2 text-blue-600 dark:text-blue-400" />
+                <IoShield size={16} className="mr-2 text-blue-600 dark:text-blue-400" />
                 Quality Assurance
               </div>
               <div className="flex items-center text-gray-600 dark:text-gray-300">
-                <Zap size={16} className="mr-2 text-blue-600 dark:text-blue-400" />
+                <IoFlash size={16} className="mr-2 text-blue-600 dark:text-blue-400" />
                 Rapid Deployment
               </div>
               <div className="flex items-center text-gray-600 dark:text-gray-300">
-                <Code size={16} className="mr-2 text-blue-600 dark:text-blue-400" />
+                <IoCode size={16} className="mr-2 text-blue-600 dark:text-blue-400" />
                 Modern Tech Stack
               </div>
             </motion.div>
@@ -92,15 +92,15 @@ export default function SDLCHeroSection() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="flex flex-col gap-4 sm:flex-row lg:justify-start justify-center"
             >
-              <Link
+              <IoLink
                 href="/contactus"
                 className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30"
               >
                 Start Your Project
-                <ArrowRight size={18} className="ml-2" />
+                <IoArrowForward size={18} className="ml-2" />
               </Link>
               
-              <Link
+              <IoLink
                 href="#process"
                 className="inline-flex items-center justify-center rounded-full border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-transparent px-8 py-4 text-base font-semibold text-gray-900 dark:text-white transition-all duration-200 hover:border-blue-600 dark:hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20"
               >
@@ -130,7 +130,7 @@ export default function SDLCHeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 to-indigo-600/80 flex items-center justify-center">
                   <div className="text-center text-white">
                     <div className="mb-4 inline-flex h-20 w-20 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
-                      <Code size={40} />
+                      <IoCode size={40} />
                     </div>
                     <div className="text-lg font-semibold">Enterprise-Grade</div>
                     <div className="text-sm opacity-90">Development Solutions</div>
@@ -175,7 +175,7 @@ export default function SDLCHeroSection() {
               >
                 <div className="flex items-center space-x-3">
                   <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900">
-                    <Zap size={16} className="text-blue-600 dark:text-blue-400" />
+                    <IoFlash size={16} className="text-blue-600 dark:text-blue-400" />
                   </div>
                   <div>
                     <div className="text-xs font-semibold text-gray-900 dark:text-white">Fast Delivery</div>

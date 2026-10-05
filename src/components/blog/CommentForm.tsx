@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { Send, X } from 'lucide-react'
+import { IoSend, IoClose } from 'react-icons/io5'
 import type { User } from '@/types/blog'
 
 interface CommentFormProps {

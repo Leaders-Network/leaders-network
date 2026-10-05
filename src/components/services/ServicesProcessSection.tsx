@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { CheckCircle, ArrowRight } from 'lucide-react'
+import { IoCheckmarkCircle, IoArrowForward } from 'react-icons/io5'
 
 const processSteps = [
   {
@@ -82,7 +82,7 @@ export default function ServicesProcessSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {step.details.map((detail, i) => (
                     <div key={i} className="flex items-center space-x-3">
-                      <CheckCircle size={16} className="text-green-500 flex-shrink-0" />
+                      <IoCheckmarkCircle size={16} className="text-green-500 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{detail}</span>
                     </div>
                   ))}
@@ -107,7 +107,7 @@ export default function ServicesProcessSection() {
                   
                   {index < processSteps.length - 1 && (
                     <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2">
-                      <ArrowRight className="h-6 w-6 text-gray-400 rotate-90" />
+                      <IoArrowForward className="h-6 w-6 text-gray-400 rotate-90" />
                     </div>
                   )}
                 </div>

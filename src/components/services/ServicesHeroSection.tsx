@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { ArrowRight, Code, Database, Smartphone, TrendingUp, Users, Zap } from 'lucide-react'
+import { IoArrowForward, IoCode, IoServer, IoPhonePortrait, IoTrendingUp, IoPeople, IoFlash } from 'react-icons/io5'
 
 export default function ServicesHeroSection() {
   return (
@@ -25,7 +25,7 @@ export default function ServicesHeroSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-8 inline-flex items-center rounded-full border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20 px-6 py-3 text-sm font-medium text-blue-700 dark:text-blue-300"
           >
-            <Zap size={16} className="mr-2" />
+            <IoFlash size={16} className="mr-2" />
             Enterprise Technology Solutions
           </motion.div>
 
@@ -92,15 +92,15 @@ export default function ServicesHeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col gap-4 sm:flex-row sm:justify-center"
           >
-            <Link
+            <IoLink
               href="/contactus"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30"
             >
               Get Started Today
-              <ArrowRight size={18} className="ml-2" />
+              <IoArrowForward size={18} className="ml-2" />
             </Link>
             
-            <Link
+            <IoLink
               href="#services"
               className="inline-flex items-center justify-center rounded-full border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-transparent px-8 py-4 text-base font-semibold text-gray-900 dark:text-white transition-all duration-200 hover:border-blue-600 dark:hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20"
             >

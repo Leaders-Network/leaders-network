@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BarChart3, TrendingUp, Database, Brain } from 'lucide-react'
+import { IoBarChart, IoTrendingUp, IoServer, IoEllipse } from 'react-icons/io5'
 
 export default function DataAnalysisHeroSection() {
   return (
@@ -17,7 +17,7 @@ export default function DataAnalysisHeroSection() {
             className="text-center lg:text-left"
           >
             <div className="mb-6 inline-flex items-center rounded-full border border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20 px-4 py-2 text-sm font-medium text-green-700 dark:text-green-300">
-              <BarChart3 size={16} className="mr-2" />
+              <IoBarChart size={16} className="mr-2" />
               Data Analytics Excellence
             </div>
 
@@ -33,7 +33,7 @@ export default function DataAnalysisHeroSection() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row lg:justify-start justify-center">
-              <Link
+              <IoLink
                 href="/contactus"
                 className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105"
               >
