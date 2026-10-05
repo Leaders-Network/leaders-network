@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Provider from "@/components/Hoc/Provider";
 import ScrollToTop from "@/components/ui/ScrollToTop";
-// gi
+// import ChatWidget from "@/components/ui/ChatWidget";
 // import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import "./globals.css";
 
