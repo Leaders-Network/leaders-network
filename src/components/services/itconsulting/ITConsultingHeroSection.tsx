@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { IoSettings, IoTarget, IoPeople } from 'react-icons/io5'
+import { IoSettings, IoLocationOutline, IoPeople } from 'react-icons/io5'
 
 export default function ITConsultingHeroSection() {
   return (
