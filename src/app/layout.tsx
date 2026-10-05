@@ -9,11 +9,8 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
-  display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800"],
-  style: ["normal"],
   variable: "--font-inter",
-  fallback: ['system-ui', 'arial'],
+  display: "swap",
 });
 
 const title = "Leaders Network - Technology Solutions That Deliver Results";
