@@ -121,7 +121,7 @@ export default function CommentForm({
                 </>
               ) : (
                 <>
-                  <Send size={16} className="mr-2" />
+                  <IoSend size={16} className="mr-2" />
                   {isReply ? 'Reply' : 'Comment'}
                 </>
               )}

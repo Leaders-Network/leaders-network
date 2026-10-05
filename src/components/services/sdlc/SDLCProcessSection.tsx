@@ -1,14 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Lightbulb, FileText, Palette, IoCode, TestTube, Rocket, Headphones, IoCheckmarkCircle } from 'react-icons/io5'
+import { IoBulbOutline, IoDocumentTextOutline, IoColorPaletteOutline, IoCode, IoFlaskOutline, IoRocketOutline, IoHeadsetOutline, IoCheckmarkCircle } from 'react-icons/io5'
 
 const processSteps = [
   {
     id: 1,
     title: 'Requirements Analysis',
     description: 'Deep dive into business requirements, user needs, and technical specifications to create a comprehensive project roadmap.',
-    icon: Lightbulb,
+    icon: IoBulbOutline,
     color: 'from-purple-500 to-pink-500',
     tasks: ['Stakeholder interviews', 'Business analysis', 'Technical feasibility', 'Risk assessment']
   },
@@ -16,7 +16,7 @@ const processSteps = [
     id: 2,
     title: 'System Design',
     description: 'Create detailed system architecture, database design, and technical specifications that guide the development process.',
-    icon: FileText,
+    icon: IoDocumentTextOutline,
     color: 'from-blue-500 to-indigo-500',
     tasks: ['Architecture design', 'Database modeling', 'API specification', 'Security planning']
   },
@@ -24,7 +24,7 @@ const processSteps = [
     id: 3,
     title: 'UI/UX Design',
     description: 'Design intuitive user interfaces and experiences that align with user needs and business objectives.',
-    icon: Palette,
+    icon: IoColorPaletteOutline,
     color: 'from-green-500 to-emerald-500',
     tasks: ['User research', 'Wireframing', 'Prototyping', 'Design systems']
   },
@@ -32,7 +32,7 @@ const processSteps = [
     id: 4,
     title: 'Development',
     description: 'Agile development using modern technologies and best practices with continuous integration and collaboration.',
-    icon: Code,
+    icon: IoCode,
     color: 'from-orange-500 to-red-500',
     tasks: ['Sprint planning', 'Code development', 'Code reviews', 'Version control']
   },
@@ -40,7 +40,7 @@ const processSteps = [
     id: 5,
     title: 'Quality Assurance',
     description: 'Comprehensive testing including unit tests, integration tests, and user acceptance testing.',
-    icon: TestTube,
+    icon: IoFlaskOutline,
     color: 'from-cyan-500 to-blue-500',
     tasks: ['Unit testing', 'Integration testing', 'Performance testing', 'Security testing']
   },
@@ -48,7 +48,7 @@ const processSteps = [
     id: 6,
     title: 'Deployment',
     description: 'Seamless deployment to production environments with monitoring and performance optimization.',
-    icon: Rocket,
+    icon: IoRocketOutline,
     color: 'from-violet-500 to-purple-500',
     tasks: ['Environment setup', 'CI/CD pipeline', 'Production deployment', 'Performance monitoring']
   },
@@ -56,7 +56,7 @@ const processSteps = [
     id: 7,
     title: 'Maintenance',
     description: 'Ongoing support, updates, and enhancements to ensure optimal performance and user satisfaction.',
-    icon: Headphones,
+    icon: IoHeadsetOutline,
     color: 'from-teal-500 to-green-500',
     tasks: ['Bug fixes', 'Feature updates', 'Performance optimization', '24/7 support']
   }

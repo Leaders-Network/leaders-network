@@ -150,7 +150,7 @@ export default function CommentsSection({
           ))
         ) : (
           <div className="text-center py-12">
-            <MessageCircle className="mx-auto h-12 w-12 text-gray-400 mb-4" />
+            <IoChatbubblesOutline className="mx-auto h-12 w-12 text-gray-400 mb-4" />
             <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
               No comments yet
             </h3>
@@ -162,7 +162,7 @@ export default function CommentsSection({
                 onClick={() => setShowCommentForm(true)}
                 className="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
               >
-                <MessageCircle size={16} className="mr-2" />
+                <IoChatbubblesOutline size={16} className="mr-2" />
                 Start the discussion
               </button>
             )}
