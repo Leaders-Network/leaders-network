@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Provider from "@/components/Hoc/Provider";
 import ScrollToTop from "@/components/ui/ScrollToTop";
-// import ChatWidget from "@/components/ui/ChatWidget";
+import ChatWidget from "@/components/ui/ChatWidget";
 // import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import "./globals.css";
 
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} dark`} suppressHydrationWarning>
       <head>
         {/* Preconnect for better font loading performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -41,7 +41,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Provider>
           {children}
           <ScrollToTop />
-          {/* <ChatWidget /> */}
+          <ChatWidget />
         </Provider>
       </body>
     </html>
