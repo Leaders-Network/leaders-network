@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Provider from "@/components/Hoc/Provider";
 import ScrollToTop from "@/components/ui/ScrollToTop";
-import ChatWidget from "@/components/ui/ChatWidget";
+// import ChatWidget from "@/components/ui/ChatWidget";
 // import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import "./globals.css";
 
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Provider>
           {children}
           <ScrollToTop />
-          <ChatWidget />
+          {/* <ChatWidget /> */}
         </Provider>
       </body>
     </html>
