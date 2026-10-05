@@ -62,11 +62,11 @@ export default function ServicesHeroSection() {
             className="mb-12 flex flex-wrap items-center justify-center gap-8"
           >
             {[
-              { icon: Code, label: 'Software Development', color: 'text-blue-600' },
-              { icon: Database, label: 'Data Analytics', color: 'text-green-600' },
-              { icon: Users, label: 'IT Consulting', color: 'text-purple-600' },
-              { icon: Smartphone, label: 'Mobile Apps', color: 'text-indigo-600' },
-              { icon: TrendingUp, label: 'Digital Marketing', color: 'text-pink-600' }
+              { icon: IoCode, label: 'Software Development', color: 'text-blue-600' },
+              { icon: IoServer, label: 'Data Analytics', color: 'text-green-600' },
+              { icon: IoPeople, label: 'IT Consulting', color: 'text-purple-600' },
+              { icon: IoPhonePortrait, label: 'Mobile Apps', color: 'text-indigo-600' },
+              { icon: IoTrendingUp, label: 'Digital Marketing', color: 'text-pink-600' }
             ].map((service, index) => (
               <motion.div
                 key={service.label}

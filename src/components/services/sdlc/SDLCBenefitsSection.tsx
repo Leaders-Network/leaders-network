@@ -5,37 +5,37 @@ import { IoFlash, IoShield, IoPeople, IoTrendingUp, IoTime, IoTrophy } from 'rea
 
 const benefits = [
   {
-    icon: Zap,
+    icon: IoFlash,
     title: 'Faster Time to Market',
     description: 'Agile methodology and efficient processes reduce development time by up to 40%',
     color: 'from-yellow-500 to-orange-500'
   },
   {
-    icon: Shield,
+    icon: IoShield,
     title: 'Enhanced Security',
     description: 'Built-in security practices and regular audits ensure your application is protected',
     color: 'from-green-500 to-emerald-500'
   },
   {
-    icon: Users,
+    icon: IoPeople,
     title: 'Collaborative Approach',
     description: 'Transparent communication and regular updates keep you involved throughout',
     color: 'from-blue-500 to-indigo-500'
   },
   {
-    icon: TrendingUp,
+    icon: IoTrendingUp,
     title: 'Scalable Solutions',
     description: 'Architecture designed to grow with your business needs and user base',
     color: 'from-purple-500 to-pink-500'
   },
   {
-    icon: Clock,
+    icon: IoTime,
     title: 'Reduced Maintenance',
     description: 'Clean code and documentation minimize long-term maintenance costs',
     color: 'from-cyan-500 to-blue-500'
   },
   {
-    icon: Award,
+    icon: IoTrophy,
     title: 'Quality Assurance',
     description: 'Comprehensive testing ensures bug-free, reliable software delivery',
     color: 'from-red-500 to-pink-500'

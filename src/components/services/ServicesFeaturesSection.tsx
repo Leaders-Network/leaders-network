@@ -5,37 +5,37 @@ import { IoShield, IoFlash, IoPeople, IoTrophy, IoTime, IoTrendingUp } from 'rea
 
 const features = [
   {
-    icon: Shield,
+    icon: IoShield,
     title: 'Enterprise Security',
     description: 'Bank-level security with encryption, compliance, and regular audits.',
     color: 'from-green-500 to-emerald-500'
   },
   {
-    icon: Zap,
+    icon: IoFlash,
     title: 'Rapid Deployment',
     description: 'Agile methodologies ensure faster time-to-market without compromising quality.',
     color: 'from-yellow-500 to-orange-500'
   },
   {
-    icon: Users,
+    icon: IoPeople,
     title: 'Expert Team',
     description: 'Seasoned professionals with deep expertise in enterprise technologies.',
     color: 'from-blue-500 to-indigo-500'
   },
   {
-    icon: Award,
+    icon: IoTrophy,
     title: 'Quality Assurance',
     description: 'Rigorous testing and quality control processes ensure reliable solutions.',
     color: 'from-purple-500 to-pink-500'
   },
   {
-    icon: Clock,
+    icon: IoTime,
     title: '24/7 Support',
     description: 'Round-the-clock support and maintenance for mission-critical systems.',
     color: 'from-cyan-500 to-blue-500'
   },
   {
-    icon: TrendingUp,
+    icon: IoTrendingUp,
     title: 'Scalable Solutions',
     description: 'Future-proof architecture that grows with your business needs.',
     color: 'from-red-500 to-pink-500'
