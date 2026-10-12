@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -50,9 +50,13 @@ const projects = [
   }
 ]
 
+const AUTOPLAY_MS = 3500 // how long each card stays on screen (3000 to 4000 works well)
+
 export default function WorkSection() {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [direction, setDirection] = useState(1) // 1 = moving forward, -1 = moving backward
+  const [hovered, setHovered] = useState(false)
+  const [tabVisible, setTabVisible] = useState(true)
   const n = projects.length
 
   const scrollPrev = useCallback(() => {
@@ -73,7 +77,22 @@ export default function WorkSection() {
     [selectedIndex]
   )
 
-  // No autoplay - users navigate manually with buttons and dots
+  // Track whether the browser tab is visible (browsers throttle timers in background tabs)
+  useEffect(() => {
+    const onVisibility = () => setTabVisible(document.visibilityState === 'visible')
+    document.addEventListener('visibilitychange', onVisibility)
+    return () => document.removeEventListener('visibilitychange', onVisibility)
+  }, [])
+
+  const paused = hovered || !tabVisible
+
+  // Autoplay: move to the next card after AUTOPLAY_MS.
+  // The timer restarts on every change, so clicking a card or dot resets the clock.
+  useEffect(() => {
+    if (paused) return
+    const timer = setTimeout(scrollNext, AUTOPLAY_MS)
+    return () => clearTimeout(timer)
+  }, [selectedIndex, paused, scrollNext])
 
   // Position of each card relative to the selected one
   const half = Math.floor(n / 2)
@@ -122,8 +141,13 @@ export default function WorkSection() {
         </motion.p>
       </div>
 
-      {/* Carousel: full width so the side cards run off the edges */}
-      <div className="relative">
+      {/* Carousel: full width so the side cards run off the edges.
+          Pauses on mouse hover only (touch taps are ignored so phones never get stuck paused). */}
+      <div
+        className="relative"
+        onPointerEnter={(e) => e.pointerType === 'mouse' && setHovered(true)}
+        onPointerLeave={(e) => e.pointerType === 'mouse' && setHovered(false)}
+      >
         {/* Cards (masked so the outer edges fade out) */}
         <div
           className="relative h-[320px] overflow-hidden sm:h-[380px] lg:h-[460px]"
@@ -151,17 +175,13 @@ export default function WorkSection() {
                     scale: isCenter ? 1 : 0.88,
                     opacity: !isVisible ? 0 : isCenter ? 1 : 0.6,
                   }}
-                  transition={{ 
-                    duration: 0.5, 
-                    ease: [0.4, 0, 0.2, 1],
-                    type: "tween"
-                  }}
-                  style={{ 
-                    zIndex: isCenter ? 20 : 10, 
-                    willChange: 'transform, opacity'
+                  transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
+                  style={{
+                    zIndex: isCenter ? 20 : 10,
+                    willChange: 'transform, opacity',
                   }}
                   onClick={() => !isCenter && isVisible && goTo(i)}
-                  className={`relative aspect-[3/2] w-[90vw] overflow-hidden rounded-3xl bg-white dark:bg-dark-900 shadow-[0_20px_60px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.5)] sm:w-[500px] lg:w-[600px] transition-all duration-300 ${
+                  className={`relative aspect-[3/2] w-[90vw] overflow-hidden rounded-3xl bg-white dark:bg-dark-900 shadow-[0_20px_60px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.5)] sm:w-[500px] lg:w-[600px] transform-gpu ${
                     isVisible ? 'pointer-events-auto' : ''
                   } ${!isCenter && isVisible ? 'cursor-pointer' : ''}`}
                 >
@@ -171,12 +191,12 @@ export default function WorkSection() {
                     fill
                     sizes="(max-width: 640px) 90vw, (max-width: 1024px) 500px, 600px"
                     className="object-cover"
-                    priority={isCenter}
-                    quality={85}
+                    loading="eager"
+                    quality={80}
                   />
 
                   {/* Glass caption bar */}
-                  <div className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-2xl border border-white/20 dark:border-white/10 bg-white/90 dark:bg-black/40 px-4 py-3 shadow-lg dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-xl sm:inset-x-5 sm:bottom-5 sm:rounded-3xl sm:px-6 sm:py-4 transition-colors duration-300">
+                  <div className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-2xl border border-white/20 dark:border-white/10 bg-white/90 dark:bg-black/40 px-4 py-3 shadow-lg dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-md sm:inset-x-5 sm:bottom-5 sm:rounded-3xl sm:px-6 sm:py-4 transition-colors duration-300">
                     <div className="min-w-0 pr-3">
                       <h3 className="truncate text-sm font-semibold leading-tight text-gray-900 dark:text-white sm:text-lg lg:text-xl transition-colors duration-300">
                         {project.title}
