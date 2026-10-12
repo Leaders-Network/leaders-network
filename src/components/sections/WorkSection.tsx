@@ -138,7 +138,7 @@ export default function WorkSection() {
       >
         {/* Cards (masked so the outer edges fade out) */}
         <div
-          className="relative h-[300px] overflow-hidden sm:h-[380px] lg:h-[460px]"
+          className="relative h-[320px] overflow-hidden sm:h-[380px] lg:h-[460px]"
           style={{
             maskImage:
               'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
@@ -166,7 +166,7 @@ export default function WorkSection() {
                   transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
                   style={{ zIndex: isCenter ? 20 : 10, willChange: 'transform, opacity' }}
                   onClick={() => !isCenter && isVisible && goTo(i)}
-                  className={`relative aspect-[3/2] w-[72vw] overflow-hidden rounded-3xl bg-white dark:bg-dark-900 shadow-[0_20px_60px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.5)] sm:w-[500px] lg:w-[600px] transition-all duration-300 ${
+                  className={`relative aspect-[3/2] w-[90vw] overflow-hidden rounded-3xl bg-white dark:bg-dark-900 shadow-[0_20px_60px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.5)] sm:w-[500px] lg:w-[600px] transition-all duration-300 ${
                     isVisible ? 'pointer-events-auto' : ''
                   } ${!isCenter && isVisible ? 'cursor-pointer' : ''}`}
                 >
@@ -174,7 +174,7 @@ export default function WorkSection() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    sizes="(max-width: 640px) 72vw, (max-width: 1024px) 500px, 600px"
+                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 500px, 600px"
                     className="object-cover"
                   />
 
@@ -230,11 +230,11 @@ export default function WorkSection() {
           })}
         </div>
 
-        {/* Nav buttons: hidden on mobile (dots below handle it there), shown from md up */}
+        {/* Nav buttons: visible on all screen sizes with better mobile positioning */}
         <button
           onClick={scrollPrev}
           aria-label="Previous project"
-          className="absolute left-3 top-1/2 z-30 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-lg transition-all hover:scale-105 hover:border-gray-300 dark:border-transparent dark:bg-white dark:text-black dark:shadow-glow-white md:flex sm:left-[5%] sm:h-11 sm:w-11 duration-200"
+          className="absolute left-2 top-1/2 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200/80 bg-white/90 text-gray-700 shadow-lg backdrop-blur-sm transition-all hover:scale-105 hover:border-gray-300 hover:bg-white dark:border-white/20 dark:bg-black/60 dark:text-white dark:hover:bg-black/80 sm:left-4 sm:h-11 sm:w-11 md:left-[5%] duration-200"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M15 18L9 12L15 6" />
@@ -244,12 +244,28 @@ export default function WorkSection() {
         <button
           onClick={scrollNext}
           aria-label="Next project"
-          className="absolute right-3 top-1/2 z-30 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-lg transition-all hover:scale-105 hover:border-gray-300 dark:border-transparent dark:bg-white dark:text-black dark:shadow-glow-white md:flex sm:right-[5%] sm:h-11 sm:w-11 duration-200"
+          className="absolute right-2 top-1/2 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200/80 bg-white/90 text-gray-700 shadow-lg backdrop-blur-sm transition-all hover:scale-105 hover:border-gray-300 hover:bg-white dark:border-white/20 dark:bg-black/60 dark:text-white dark:hover:bg-black/80 sm:right-4 sm:h-11 sm:w-11 md:right-[5%] duration-200"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M9 18L15 12L9 6" />
           </svg>
         </button>
+      </div>
+
+      {/* Dot indicators for navigation */}
+      <div className="mt-8 flex justify-center gap-2">
+        {projects.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => goTo(i)}
+            aria-label={`Go to project ${i + 1}`}
+            className={`h-2 w-2 rounded-full transition-all duration-300 ${
+              i === selectedIndex
+                ? 'bg-blue-600 dark:bg-white w-8'
+                : 'bg-gray-300 dark:bg-white/30 hover:bg-gray-400 dark:hover:bg-white/50'
+            }`}
+          />
+        ))}
       </div>
     </section>
   )
