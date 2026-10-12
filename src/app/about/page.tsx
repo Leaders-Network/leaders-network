@@ -137,7 +137,35 @@ const aboutPageData: AboutPageData = {
       image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791810936/oyin_isvkiq.jpg",
       linkedIn: "https://linkedin.com/in/sarahchen",
       email: "o.oyindamola@leadersnetwork.africa"
+    },
+    {
+      id: "jude-rotimi",
+      name: "Rotimi Jude",
+      role: "Frontend Development Lead",
+      bio: "Leads frontend development, focusing on building responsive, accessible, and user-friendly web interfaces. Supports frontend architecture, code quality, and collaboration to deliver reliable digital experiences.",
+      image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791829331/jude_pnmtv1.jpg",
+      linkedIn: "https://www.linkedin.com/in/rotimijude",
+      email: "excel.rotimi@gmail.com"
+    },
+    {
+      id: "andrew-gold",
+      name: "Ayemo Andrew",
+      role: "Frontend Engineer & Product Manager",
+      bio: "Bridges frontend engineering and product strategy to turn business requirements into practical digital solutions. Focuses on building intuitive user experiences, aligning product functionality with user needs, and collaborating across teams to deliver meaningful results.",
+      image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791830478/Andrewgold_mrm0hn.jpg",
+      linkedIn: "https://www.linkedin.com/in/andrew-gold-5094861b5/",
+      email: "ayemoandrewgold@gmail.com"
+    },
+    {
+      id: "lawal-seun",
+      name: "Lawal Ab Oluwaseun",
+      role: "Frontend Engineer",
+      bio: "Develops responsive and interactive web interfaces with a focus on usability, performance, and maintainable code. Works to translate design concepts into functional digital experiences that meet user needs and product requirements.",
+      image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791829331/seun_gvd8rm.jpg",
+      linkedIn: "https://www.linkedin.com/in/seun",
+      email: "Seunlawal18@gmail.com"
     }
+
   ],
   values: [
     {
