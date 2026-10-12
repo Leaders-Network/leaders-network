@@ -17,7 +17,7 @@ function LeaderPhoto({ src, name, role }: { src: string; name: string; role: str
 
   // Get appropriate role abbreviation
   const getRoleAbbreviation = (role: string) => {
-    if (role === "Chief Executive Officer") return "CEO"
+    if (role === "Chief Executive Officer") return "C.E.O"
     return role.split(' ')[0] // Default to first word
   }
 
