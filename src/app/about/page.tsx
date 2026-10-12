@@ -103,31 +103,40 @@ const aboutPageData: AboutPageData = {
   ],
   leadership: [
     {
-      id: "andrew-gold",
-      name: "Andrew Gold",
+      id: "ademoye-olatunde",
+      name: "Ademoye Olatunde",
       role: "Chief Executive Officer",
-      bio: "Visionary leader with 20+ years driving digital transformation across enterprise, government, and financial sectors. Andrew's strategic leadership has positioned Leaders Network as Africa's premier technology consultancy.",
+      bio: "Visionary leader with 20+ years driving digital transformation across enterprise, government, and financial sectors. Ademoye's strategic leadership has positioned Leaders Network as Africa's premier technology consultancy.",
       image: "/images/team-andrew-gold.jpg",
       linkedIn: "https://linkedin.com/in/andrewgold",
       email: "andrew@leadersnetwork.africa"
     },
     {
-      id: "sarah-chen",
-      name: "Dr. Sarah Chen",
-      role: "Chief Technology Officer",
-      bio: "Technical architect specializing in scalable cloud solutions, enterprise software, and emerging technology integration. Sarah leads our innovation initiatives and ensures technical excellence across all projects.",
-      image: "/images/team-sarah-chen.jpg",
-      linkedIn: "https://linkedin.com/in/sarahchen",
-      email: "sarah@leadersnetwork.africa"
+      id: "abimbola-olatunji",
+      name: "Abimbola Olatunji",
+      role: "Lead Tech",
+      bio: "Technical architect specializing in scalable cloud solutions, enterprise software, and emerging technology integration. Abimbola leads our innovation initiatives and ensures technical excellence across all projects.",
+      image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791805116/abimbola_hwqbfn.jpg",
+      linkedIn: "https://linkedin.com/in/abimbola-olatunj-535841285",
+      email: "a.olatunji@leadersnetwork.com"
     },
     {
-      id: "michael-rodriguez",
-      name: "Michael Rodriguez", 
-      role: "Head of Operations",
-      bio: "Operations expert ensuring seamless project delivery, client success, and organizational excellence across all initiatives. Michael's leadership drives our 98% client satisfaction rate.",
-      image: "/images/team-michael-rodriguez.jpg",
-      linkedIn: "https://linkedin.com/in/michaelrodriguez",
-      email: "michael@leadersnetwork.africa"
+      id: "omobolaji-ibrahim",
+      name: "Omobolaji Ibrahim", 
+      role: "Assistant Lead Tech",
+      bio: "Operations expert ensuring seamless project delivery, client success, and organizational excellence across all initiatives. Omobolaji's leadership drives our 98% client satisfaction rate.",
+      image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791804705/mobolaji_cv8q44.jpg",
+      linkedIn: "https://linkedin.com/in/bolajeeedr",
+      email: "Bolajeee@leadersnetwork.com"
+    },
+    {
+      id: "oyindamola-ojubanire",
+      name: "Oyindamola Ojubanire",
+      role: "Human Resources Officer",
+      bio: "HR specialist focused on talent acquisition, team development, and organizational culture. Oyindamola ensures we attract and retain top talent to drive our continued growth and success.",
+      image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791810936/oyin_isvkiq.jpg",
+      linkedIn: "https://linkedin.com/in/sarahchen",
+      email: "o.oyindamola@leadersnetwork.africa"
     }
   ],
   values: [

@@ -33,7 +33,7 @@ function LeaderPhoto({ src, name, role }: { src: string; name: string; role: str
   )
 }
 
-function LeaderCard({ leader, index }: { leader: TeamMember; index: number }) {
+function LeaderCard({ leader, index, isCEO = false }: { leader: TeamMember; index: number; isCEO?: boolean }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -47,8 +47,21 @@ function LeaderCard({ leader, index }: { leader: TeamMember; index: number }) {
       className="group relative"
     >
       {/* Card container */}
-      <div className="overflow-hidden rounded-3xl border border-gray-200 dark:border-white/[0.05] bg-gradient-to-br from-white to-gray-50 dark:from-white/[0.05] dark:to-white/[0.015] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] transition-all duration-300 hover:shadow-[0_25px_70px_rgba(0,0,0,0.12)] dark:hover:shadow-[0_25px_70px_rgba(0,0,0,0.6)] sm:p-8">
+      <div className={`overflow-hidden rounded-3xl border ${
+        isCEO 
+          ? 'border-orange-200 dark:border-orange-500/20 bg-gradient-to-br from-orange-50 to-white dark:from-orange-500/[0.08] dark:to-orange-500/[0.02] shadow-[0_25px_80px_rgba(234,88,12,0.15)] dark:shadow-[0_25px_80px_rgba(234,88,12,0.3)] hover:shadow-[0_30px_90px_rgba(234,88,12,0.2)] dark:hover:shadow-[0_30_90px_rgba(234,88,12,0.4)]'
+          : 'border-gray-200 dark:border-white/[0.05] bg-gradient-to-br from-white to-gray-50 dark:from-white/[0.05] dark:to-white/[0.015] shadow-[0_20px_60px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] hover:shadow-[0_25px_70px_rgba(0,0,0,0.12)] dark:hover:shadow-[0_25px_70px_rgba(0,0,0,0.6)]'
+      } p-6 transition-all duration-300 sm:p-8`}>
         
+        {/* CEO Badge */}
+        {isCEO && (
+          <div className="absolute -right-2 -top-2 flex h-8 w-8 items-center justify-center rounded-full bg-orange-600 text-white shadow-lg">
+            <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+        )}
+
         {/* Photo */}
         <div className="mb-6">
           <LeaderPhoto src={leader.image} name={leader.name} role={leader.role} />
@@ -56,10 +69,18 @@ function LeaderCard({ leader, index }: { leader: TeamMember; index: number }) {
 
         {/* Name and Role */}
         <div className="mb-4">
-          <h3 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white transition-colors duration-300">
+          <h3 className={`text-xl font-semibold tracking-tight ${
+            isCEO 
+              ? 'text-gray-900 dark:text-white'
+              : 'text-gray-900 dark:text-white'
+          } transition-colors duration-300`}>
             {leader.name}
           </h3>
-          <p className="mt-1 text-sm font-medium text-orange-600 dark:text-orange-400 transition-colors duration-300">
+          <p className={`mt-1 text-sm font-medium ${
+            isCEO 
+              ? 'text-orange-700 dark:text-orange-300'
+              : 'text-orange-600 dark:text-orange-400'
+          } transition-colors duration-300`}>
             {leader.role}
           </p>
         </div>
@@ -104,7 +125,11 @@ function LeaderCard({ leader, index }: { leader: TeamMember; index: number }) {
         )}
 
         {/* Subtle hover effect */}
-        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/5 to-orange-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+        <div className={`absolute inset-0 rounded-3xl ${
+          isCEO 
+            ? 'bg-gradient-to-br from-orange-500/5 to-yellow-500/5'
+            : 'bg-gradient-to-br from-blue-500/5 to-orange-500/5'
+        } opacity-0 transition-opacity duration-500 group-hover:opacity-100`} />
       </div>
     </motion.div>
   )
@@ -151,10 +176,24 @@ export default function LeadershipTeamSection({ leaders }: LeadershipTeamSection
         </div>
 
         {/* Leadership Grid */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {leaders.map((leader, index) => (
-            <LeaderCard key={leader.id} leader={leader} index={index} />
-          ))}
+        <div className="space-y-12">
+          {/* CEO Section - Prominently displayed on larger screens */}
+          {leaders.length > 0 && (
+            <div className="flex justify-center">
+              <div className="w-full max-w-md lg:max-w-lg">
+                <LeaderCard key={leaders[0].id} leader={leaders[0]} index={0} isCEO={true} />
+              </div>
+            </div>
+          )}
+
+          {/* Other Team Members Grid */}
+          {leaders.length > 1 && (
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {leaders.slice(1).map((leader, index) => (
+                <LeaderCard key={leader.id} leader={leader} index={index + 1} isCEO={false} />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>
