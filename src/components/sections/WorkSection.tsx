@@ -1,12 +1,12 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-// 
+
 const projects = [
-    {
+  {
     id: 1,
     title: "Resume Checker",
     subtitle: "Resume Checker Site",
@@ -16,21 +16,21 @@ const projects = [
   {
     id: 2,
     title: "Social Bridge",
-    subtitle: "Social Bridge ",
+    subtitle: "Social Bridge",
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791149657/social-bridge_uuufz8.png",
     href: "https://socialbridge-orcin.vercel.app/",
   },
   {
     id: 3,
     title: "Builders Liability",
-    subtitle: " Builders Insurace platform",
+    subtitle: "Builders Insurance platform",
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791063083/builders-liability_cu9esu.png",
-    href: "https://www.ammcbuildersinsurance.com/", // TODO: replace with the real project page URL
+    href: "https://www.ammcbuildersinsurance.com/",
   },
   {
     id: 4,
     title: "Government Portal System",
-    subtitle: "Digital government initiative", 
+    subtitle: "Digital government initiative",
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355394/809a3ec9730cc3e650de40d95e201a74_qro9xu.webp",
     href: "/work/government-portal-system",
   },
@@ -38,12 +38,12 @@ const projects = [
     id: 5,
     title: "Healthcare Management Suite",
     subtitle: "Hospital operations optimization",
-    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355394/Analytics-footfall-UI-Macbook-_pofflp.webp", 
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355394/Analytics-footfall-UI-Macbook-_pofflp.webp",
     href: "/work/healthcare-management-suite",
   },
   {
     id: 6,
-    title: "Smart Card Identity System", 
+    title: "Smart Card Identity System",
     subtitle: "Secure authentication platform",
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355115/hire_y78jar.webp",
     href: "/work/smart-card-identity-system",
@@ -51,49 +51,39 @@ const projects = [
 ]
 
 export default function WorkSection() {
-  const [selectedIndex, setSelectedIndex] = useState(0)
-  const [direction, setDirection] = useState(1) // 1 = moving forward, -1 = moving backward
-  const [paused, setPaused] = useState(false)
-  const n = projects.length
-
-  const scrollPrev = useCallback(() => {
-    setDirection(-1)
-    setSelectedIndex((prev) => (prev - 1 + n) % n)
-  }, [n])
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isTransitioning, setIsTransitioning] = useState(false)
 
   const scrollNext = useCallback(() => {
-    setDirection(1)
-    setSelectedIndex((prev) => (prev + 1) % n)
-  }, [n])
+    if (isTransitioning) return
+    setIsTransitioning(true)
+    setCurrentIndex((prev) => (prev + 1) % projects.length)
+    setTimeout(() => setIsTransitioning(false), 400)
+  }, [isTransitioning])
 
-  const goTo = useCallback(
-    (i: number) => {
-      setDirection(i > selectedIndex ? 1 : -1)
-      setSelectedIndex(i)
-    },
-    [selectedIndex]
-  )
+  const scrollPrev = useCallback(() => {
+    if (isTransitioning) return
+    setIsTransitioning(true)
+    setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length)
+    setTimeout(() => setIsTransitioning(false), 400)
+  }, [isTransitioning])
 
-  // Autoplay, paused while the mouse is over the carousel
+  const goTo = useCallback((index: number) => {
+    if (isTransitioning || index === currentIndex) return
+    setIsTransitioning(true)
+    setCurrentIndex(index)
+    setTimeout(() => setIsTransitioning(false), 400)
+  }, [currentIndex, isTransitioning])
+
+  // Autoplay
   useEffect(() => {
-    if (paused) return
-    const autoplay = setInterval(scrollNext, 4500) // Reduced interval for better rhythm
+    const autoplay = setInterval(scrollNext, 4000)
     return () => clearInterval(autoplay)
-  }, [scrollNext, paused])
+  }, [scrollNext])
 
-  // Position of each card relative to the selected one. The one hidden card is
-  // parked on whichever side it's about to enter from, so it only ever slides
-  // one slot into view instead of jumping across the whole carousel.
-  const half = Math.floor(n / 2)
-  const getOffset = (i: number) => {
-    let raw = ((i - selectedIndex) % n + n) % n // normalize to 0..n-1
-    if (direction === 1) {
-      if (raw > half) raw -= n // range: (-half, half]
-    } else {
-      if (raw >= half) raw -= n // range: [-half, half)
-    }
-    return raw
-  }
+  const currentProject = projects[currentIndex]
+  const nextProject = projects[(currentIndex + 1) % projects.length]
+  const prevProject = projects[(currentIndex - 1 + projects.length) % projects.length]
 
   return (
     <section id="work" className="relative scroll-mt-28 bg-gray-50 dark:bg-dark-950 py-10 sm:py-24 transition-colors duration-300">
@@ -130,128 +120,111 @@ export default function WorkSection() {
         </motion.p>
       </div>
 
-      {/* Carousel: full width so the side cards run off the edges */}
-      <div
-        className="relative"
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
-      >
-        {/* Cards (masked so the outer edges fade out) */}
-        <div
-          className="relative h-[320px] overflow-hidden sm:h-[380px] lg:h-[460px]"
-          style={{
-            maskImage:
-              'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
-            WebkitMaskImage:
-              'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
-            transform: 'translateZ(0)', // Force hardware acceleration
-            backfaceVisibility: 'hidden', // Prevent flickering
-            perspective: 1000, // Enable 3D rendering context
-          }}
-        >
-          {projects.map((project, i) => {
-            const offset = getOffset(i)
-            const isCenter = offset === 0
-            const isVisible = Math.abs(offset) <= 1
+      {/* Simple, smooth carousel */}
+      <div className="relative">
+        {/* Main carousel container */}
+        <div className="relative h-[320px] sm:h-[380px] lg:h-[460px] flex items-center justify-center px-4">
+          {/* Side cards for context */}
+          <div className="absolute left-0 right-0 flex items-center justify-center">
+            {/* Previous card (left) */}
+            <motion.div
+              key={`prev-${currentIndex}`}
+              initial={{ opacity: 0, x: -100, scale: 0.8 }}
+              animate={{ opacity: 0.4, x: -120, scale: 0.85 }}
+              exit={{ opacity: 0, x: -200, scale: 0.7 }}
+              transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+              className="absolute left-4 w-[70vw] sm:w-[280px] lg:w-[320px] aspect-[3/2] rounded-2xl overflow-hidden bg-white dark:bg-dark-900 shadow-lg cursor-pointer hidden sm:block"
+              onClick={scrollPrev}
+            >
+              <Image
+                src={prevProject.image}
+                alt={prevProject.title}
+                fill
+                className="object-cover"
+                sizes="320px"
+              />
+              <div className="absolute inset-0 bg-black/20" />
+            </motion.div>
 
-            return (
-              <div
-                key={project.id}
-                className="pointer-events-none absolute inset-0 flex items-center justify-center"
-                style={{
-                  transform: 'translateZ(0)', // Force hardware acceleration
-                  backfaceVisibility: 'hidden', // Prevent flickering
-                }}
+            {/* Main/Center card */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentProject.id}
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: -20 }}
+                transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                className="relative w-[90vw] sm:w-[450px] lg:w-[520px] aspect-[3/2] rounded-3xl overflow-hidden bg-white dark:bg-dark-900 shadow-2xl z-10"
               >
-                <motion.div
-                  initial={false}
-                  animate={{
-                    x: `${offset * 106}%`, // % of the card's own width, so it scales on every screen
-                    scale: isCenter ? 1 : 0.88,
-                    opacity: !isVisible ? 0 : isCenter ? 1 : 0.6,
-                  }}
-                  transition={{ 
-                    duration: 0.6, 
-                    ease: [0.4, 0, 0.2, 1],
-                    type: "tween"
-                  }}
-                  style={{ 
-                    zIndex: isCenter ? 20 : 10, 
-                    willChange: 'transform, opacity',
-                    transform: 'translateZ(0)' // Force hardware acceleration
-                  }}
-                  onClick={() => !isCenter && isVisible && goTo(i)}
-                  className={`relative aspect-[3/2] w-[90vw] overflow-hidden rounded-3xl bg-white dark:bg-dark-900 shadow-[0_20px_60px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.5)] sm:w-[500px] lg:w-[600px] transition-all duration-300 ${
-                    isVisible ? 'pointer-events-auto' : ''
-                  } ${!isCenter && isVisible ? 'cursor-pointer' : ''}`}
-                >
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 500px, 600px"
-                    className="object-cover transition-transform duration-300"
-                    priority={isCenter} // Prioritize loading the center image
-                    quality={85} // Optimize image quality vs file size
-                  />
+                <Image
+                  src={currentProject.image}
+                  alt={currentProject.title}
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 450px, 520px"
+                />
 
-                  {/* Glass caption bar */}
-                  <div className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-2xl border border-white/20 dark:border-white/10 bg-white/90 dark:bg-black/40 px-4 py-3 shadow-lg dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-xl sm:inset-x-5 sm:bottom-5 sm:rounded-3xl sm:px-6 sm:py-4 transition-colors duration-300">
-                    <div className="min-w-0 pr-3">
-                      <h3 className="truncate text-sm font-semibold leading-tight text-gray-900 dark:text-white sm:text-lg lg:text-xl transition-colors duration-300">
-                        {project.title}
-                      </h3>
-                      <p className="mt-0.5 truncate text-xs text-gray-600 dark:text-white/80 sm:text-sm transition-colors duration-300">
-                        {project.subtitle}
-                      </p>
-                    </div>
-
-                    {isCenter ? (
-                      <Link
-                        href={project.href}
-                        aria-label={`View ${project.title} case study`}
-                        onClick={(e) => e.stopPropagation()}
-                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg transition-transform duration-200 hover:scale-110 dark:bg-white dark:text-black dark:shadow-glow-white sm:h-10 sm:w-10"
-                      >
-                        <svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="h-3.5 w-3.5 sm:h-4 sm:w-4"
-                        >
-                          <path d="M7 17L17 7M17 7H8M17 7V16" />
-                        </svg>
-                      </Link>
-                    ) : (
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-200/80 text-gray-600 dark:bg-white/20 dark:text-white/60 sm:h-10 sm:w-10">
-                        <svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="h-3.5 w-3.5 sm:h-4 sm:w-4"
-                        >
-                          <path d="M7 17L17 7M17 7H8M17 7V16" />
-                        </svg>
-                      </span>
-                    )}
+                {/* Glass caption bar */}
+                <div className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-2xl border border-white/20 dark:border-white/10 bg-white/90 dark:bg-black/40 px-4 py-3 shadow-lg dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-xl sm:inset-x-5 sm:bottom-5 sm:rounded-3xl sm:px-6 sm:py-4 transition-colors duration-300">
+                  <div className="min-w-0 pr-3">
+                    <h3 className="truncate text-sm font-semibold leading-tight text-gray-900 dark:text-white sm:text-lg lg:text-xl transition-colors duration-300">
+                      {currentProject.title}
+                    </h3>
+                    <p className="mt-0.5 truncate text-xs text-gray-600 dark:text-white/80 sm:text-sm transition-colors duration-300">
+                      {currentProject.subtitle}
+                    </p>
                   </div>
-                </motion.div>
-              </div>
-            )
-          })}
+
+                  <Link
+                    href={currentProject.href}
+                    aria-label={`View ${currentProject.title} case study`}
+                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg transition-transform duration-200 hover:scale-110 dark:bg-white dark:text-black dark:shadow-glow-white sm:h-10 sm:w-10"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-3.5 w-3.5 sm:h-4 sm:w-4"
+                    >
+                      <path d="M7 17L17 7M17 7H8M17 7V16" />
+                    </svg>
+                  </Link>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Next card (right) */}
+            <motion.div
+              key={`next-${currentIndex}`}
+              initial={{ opacity: 0, x: 100, scale: 0.8 }}
+              animate={{ opacity: 0.4, x: 120, scale: 0.85 }}
+              exit={{ opacity: 0, x: 200, scale: 0.7 }}
+              transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+              className="absolute right-4 w-[70vw] sm:w-[280px] lg:w-[320px] aspect-[3/2] rounded-2xl overflow-hidden bg-white dark:bg-dark-900 shadow-lg cursor-pointer hidden sm:block"
+              onClick={scrollNext}
+            >
+              <Image
+                src={nextProject.image}
+                alt={nextProject.title}
+                fill
+                className="object-cover"
+                sizes="320px"
+              />
+              <div className="absolute inset-0 bg-black/20" />
+            </motion.div>
+          </div>
         </div>
 
-        {/* Nav buttons: visible on all screen sizes with better mobile positioning */}
+        {/* Navigation buttons */}
         <button
           onClick={scrollPrev}
+          disabled={isTransitioning}
           aria-label="Previous project"
-          className="absolute left-2 top-1/2 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200/80 bg-white/90 text-gray-700 shadow-lg backdrop-blur-sm transition-all hover:scale-105 hover:border-gray-300 hover:bg-white dark:border-white/20 dark:bg-black/60 dark:text-white dark:hover:bg-black/80 sm:left-4 sm:h-11 sm:w-11 md:left-[5%] duration-200"
+          className="absolute left-2 top-1/2 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200/80 bg-white/90 text-gray-700 shadow-lg backdrop-blur-sm transition-all hover:scale-105 hover:border-gray-300 hover:bg-white disabled:opacity-50 disabled:cursor-not-allowed dark:border-white/20 dark:bg-black/60 dark:text-white dark:hover:bg-black/80 sm:left-4 sm:h-11 sm:w-11 md:left-[5%] duration-200"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M15 18L9 12L15 6" />
@@ -260,8 +233,9 @@ export default function WorkSection() {
 
         <button
           onClick={scrollNext}
+          disabled={isTransitioning}
           aria-label="Next project"
-          className="absolute right-2 top-1/2 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200/80 bg-white/90 text-gray-700 shadow-lg backdrop-blur-sm transition-all hover:scale-105 hover:border-gray-300 hover:bg-white dark:border-white/20 dark:bg-black/60 dark:text-white dark:hover:bg-black/80 sm:right-4 sm:h-11 sm:w-11 md:right-[5%] duration-200"
+          className="absolute right-2 top-1/2 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200/80 bg-white/90 text-gray-700 shadow-lg backdrop-blur-sm transition-all hover:scale-105 hover:border-gray-300 hover:bg-white disabled:opacity-50 disabled:cursor-not-allowed dark:border-white/20 dark:bg-black/60 dark:text-white dark:hover:bg-black/80 sm:right-4 sm:h-11 sm:w-11 md:right-[5%] duration-200"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M9 18L15 12L9 6" />
@@ -269,28 +243,19 @@ export default function WorkSection() {
         </button>
       </div>
 
-      {/* Dot indicators for navigation */}
+      {/* Dot indicators */}
       <div className="mt-8 flex justify-center gap-2">
         {projects.map((_, i) => (
-          <motion.button
+          <button
             key={i}
             onClick={() => goTo(i)}
+            disabled={isTransitioning}
             aria-label={`Go to project ${i + 1}`}
-            className={`h-2 rounded-full transition-all duration-300 ease-out ${
-              i === selectedIndex
+            className={`h-2 rounded-full transition-all duration-300 ease-out disabled:cursor-not-allowed ${
+              i === currentIndex
                 ? 'bg-blue-600 dark:bg-white w-8'
                 : 'bg-gray-300 dark:bg-white/30 hover:bg-gray-400 dark:hover:bg-white/50 w-2'
             }`}
-            animate={{
-              width: i === selectedIndex ? 32 : 8,
-              backgroundColor: i === selectedIndex 
-                ? 'rgb(37 99 235)' // blue-600
-                : 'rgb(209 213 219)', // gray-300
-            }}
-            transition={{
-              duration: 0.3,
-              ease: [0.4, 0, 0.2, 1],
-            }}
           />
         ))}
       </div>
