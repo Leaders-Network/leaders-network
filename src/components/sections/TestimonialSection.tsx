@@ -7,8 +7,8 @@ import { motion } from 'framer-motion'
 const testimonials = [
   {
     quote: "Leaders Network completely transformed our digital infrastructure. Their expertise in enterprise solutions helped us modernize our operations and improve efficiency by 60%. The team's professionalism and technical depth exceeded our expectations.",
-    author: "Dr. Adebayo Ogundimu",
-    role: "CTO, First Bank Nigeria",
+    author: "Dr. Daniel Adeolola",
+    role: "CTO, LandBridge",
     avatar: "/images/Picture-1.jpg"
   },
   {
@@ -147,7 +147,7 @@ export default function TestimonialSection() {
         </motion.div>
 
         {/* Your other two testimonials */}
-        <div className="mx-auto mt-20 grid max-w-4xl gap-6 md:grid-cols-2">
+        {/* <div className="mx-auto mt-20 grid max-w-4xl gap-6 md:grid-cols-2">
           {testimonials.slice(1).map((testimonial, index) => (
             <motion.div
               key={testimonial.author}
@@ -178,7 +178,7 @@ export default function TestimonialSection() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   )

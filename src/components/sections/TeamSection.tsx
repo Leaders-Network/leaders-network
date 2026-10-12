@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 
 const teamMembers = [
   {
-    id: "andrew-gold",
+    id: "ademoye-olatunde",
     name: "Ademoye Olatunde",
     role: "Chief Executive Officer",
     bio: "Visionary leader with 20+ years driving digital transformation across enterprise, government, and financial sectors.",
@@ -16,16 +16,23 @@ const teamMembers = [
   {
     id: "cto-member",
     name: "Ambimbola",
-    role: "Chief Technology Officer",
+    role: "Lead Tech",
     bio: "Technical architect specializing in scalable cloud solutions, enterprise software, and emerging technology integration.",
-    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790354810/Free-Elegant-Interior-Laptop-Website-Mockup_skyxkk.jpg"
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791812179/abimbola1_ewuipt.jpg"
   },
   {
-    id: "operations-head",
+    id: "omobolaji-ibrahim",
     name: "Ibrahim Ibrahim",
     role: "Head of Operations",
     bio: "Operations expert ensuring seamless project delivery, client success, and organizational excellence across all initiatives.",
-    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355509/analytics-on-display-stockcake_nzpyen.jpg"
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791804705/mobolaji_cv8q44.jpg"
+  },
+  {
+    id: "oyindamola-ojubanire",
+    name: "Oyindamola Ojubanire",
+    role: "Human Resources Officer",
+    bio: "HR specialist focused on talent acquisition, team development, and organizational culture.",
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791810936/oyin_isvkiq.jpg"
   }
 ]
 
@@ -51,6 +58,47 @@ function Photo({ src, name, role }: { src: string; name: string; role: string })
         />
       )}
     </div>
+  )
+}
+
+/* Special CEO Card Component */
+function CEOCard({ member }: { member: typeof teamMembers[0] }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ 
+        duration: 0.7, 
+        ease: [0.22, 1, 0.36, 1] 
+      }}
+      className="group relative mx-auto w-full max-w-sm lg:max-w-md"
+    >
+      {/* CEO Badge */}
+      <div className="absolute -right-2 -top-2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white shadow-lg">
+        <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      </div>
+
+      {/* Enhanced ring with orange accent for CEO */}
+      <motion.div
+        whileHover={{ scale: 1.04 }}
+        transition={{ duration: 0.3 }}
+        className="rounded-full border-2 border-orange-200 dark:border-orange-500/30 bg-gradient-to-br from-orange-50 to-white dark:from-orange-500/10 dark:bg-[#111112] p-4 shadow-[0_25px_80px_rgba(234,88,12,0.2)] dark:shadow-[0_25px_80px_rgba(234,88,12,0.4)] transition-all duration-300"
+      >
+        <Photo src={member.image} name={member.name} role={member.role} />
+      </motion.div>
+
+      {/* Name, role and bio */}
+      <div className="mx-auto mt-8 max-w-[280px] text-center">
+        <h3 className="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white transition-colors duration-300">
+          {member.name}
+        </h3>
+        <p className="mt-2 text-base font-medium text-orange-600 dark:text-orange-400 transition-colors duration-300">{member.role}</p>
+        <p className="mt-4 text-sm leading-relaxed text-gray-600 dark:text-white/70 transition-colors duration-300">{member.bio}</p>
+      </div>
+    </motion.div>
   )
 }
 
@@ -94,38 +142,50 @@ export default function TeamSection() {
           </motion.p>
         </div>
 
-        {/* Overlapping circles with text underneath each one */}
-        <div className="flex flex-col items-center gap-12 md:flex-row md:items-start md:justify-center md:gap-0">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={member.id}
-              className="group relative w-[220px] cursor-pointer md:w-[280px] md:-ml-10 md:first:ml-0"
-              style={{ zIndex: index + 1 }}
-              initial={{ opacity: 0, scale: 0.9, y: 30 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.7, delay: index * 0.2, ease: [0.22, 1, 0.36, 1] }}
-              whileHover={{ zIndex: 20 }}
-            >
-              {/* Thick dark ring around the photo */}
-              <motion.div
-                whileHover={{ scale: 1.04 }}
-                transition={{ duration: 0.3 }}
-                className="rounded-full border border-gray-200 dark:border-white/[0.06] bg-white dark:bg-[#111112] p-3 shadow-[0_20px_60px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.6)] transition-all duration-300"
-              >
-                <Photo src={member.image} name={member.name} role={member.role} />
-              </motion.div>
+        {/* Team Layout */}
+        <div className="space-y-16">
+          {/* CEO Section - Prominently displayed on larger screens */}
+          {teamMembers.length > 0 && (
+            <div className="flex justify-center">
+              <CEOCard member={teamMembers[0]} />
+            </div>
+          )}
 
-              {/* Name, role and bio */}
-              <div className="mx-auto mt-6 max-w-[210px] text-center">
-                <h3 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white sm:text-xl transition-colors duration-300">
-                  {member.name}
-                </h3>
-                <p className="mt-1 text-sm text-gray-600 dark:text-white/70 transition-colors duration-300">{member.role}</p>
-                <p className="mt-3 text-xs leading-relaxed text-gray-500 dark:text-white/50 transition-colors duration-300">{member.bio}</p>
-              </div>
-            </motion.div>
-          ))}
+          {/* Other Team Members - Overlapping circles layout */}
+          {teamMembers.length > 1 && (
+            <div className="flex flex-col items-center gap-12 md:flex-row md:items-start md:justify-center md:gap-0">
+              {teamMembers.slice(1).map((member, index) => (
+                <motion.div
+                  key={member.id}
+                  className="group relative w-[220px] cursor-pointer md:w-[280px] md:-ml-10 md:first:ml-0"
+                  style={{ zIndex: index + 1 }}
+                  initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-60px' }}
+                  transition={{ duration: 0.7, delay: (index + 1) * 0.2, ease: [0.22, 1, 0.36, 1] }}
+                  whileHover={{ zIndex: 20 }}
+                >
+                  {/* Thick dark ring around the photo */}
+                  <motion.div
+                    whileHover={{ scale: 1.04 }}
+                    transition={{ duration: 0.3 }}
+                    className="rounded-full border border-gray-200 dark:border-white/[0.06] bg-white dark:bg-[#111112] p-3 shadow-[0_20px_60px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.6)] transition-all duration-300"
+                  >
+                    <Photo src={member.image} name={member.name} role={member.role} />
+                  </motion.div>
+
+                  {/* Name, role and bio */}
+                  <div className="mx-auto mt-6 max-w-[210px] text-center">
+                    <h3 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white sm:text-xl transition-colors duration-300">
+                      {member.name}
+                    </h3>
+                    <p className="mt-1 text-sm text-gray-600 dark:text-white/70 transition-colors duration-300">{member.role}</p>
+                    <p className="mt-3 text-xs leading-relaxed text-gray-500 dark:text-white/50 transition-colors duration-300">{member.bio}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Careers call to action */}

@@ -57,7 +57,7 @@ const aboutPageData: AboutPageData = {
   timeline: [
     {
       id: "founding",
-      year: "2007",
+      year: "2005",
       title: "Company Founded",
       description: "Leaders Network was established with a vision to transform how businesses leverage technology for growth and competitive advantage.",
       icon: "rocket",
@@ -107,7 +107,7 @@ const aboutPageData: AboutPageData = {
       name: "Ademoye Olatunde",
       role: "Chief Executive Officer",
       bio: "Visionary leader with 20+ years driving digital transformation across enterprise, government, and financial sectors. Ademoye's strategic leadership has positioned Leaders Network as Africa's premier technology consultancy.",
-      image: "/images/team-andrew-gold.jpg",
+      image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790354810/images_1_nfjqho.jpg",
       linkedIn: "https://linkedin.com/in/andrewgold",
       email: "andrew@leadersnetwork.africa"
     },
@@ -116,7 +116,7 @@ const aboutPageData: AboutPageData = {
       name: "Abimbola Olatunji",
       role: "Lead Tech",
       bio: "Technical architect specializing in scalable cloud solutions, enterprise software, and emerging technology integration. Abimbola leads our innovation initiatives and ensures technical excellence across all projects.",
-      image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791805116/abimbola_hwqbfn.jpg",
+      image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791812179/abimbola1_ewuipt.jpg",
       linkedIn: "https://linkedin.com/in/abimbola-olatunj-535841285",
       email: "a.olatunji@leadersnetwork.com"
     },
