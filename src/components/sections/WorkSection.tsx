@@ -77,7 +77,7 @@ export default function WorkSection() {
   // Autoplay, paused while the mouse is over the carousel
   useEffect(() => {
     if (paused) return
-    const autoplay = setInterval(scrollNext, 6000)
+    const autoplay = setInterval(scrollNext, 4500) // Reduced interval for better rhythm
     return () => clearInterval(autoplay)
   }, [scrollNext, paused])
 
@@ -144,6 +144,9 @@ export default function WorkSection() {
               'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
             WebkitMaskImage:
               'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+            transform: 'translateZ(0)', // Force hardware acceleration
+            backfaceVisibility: 'hidden', // Prevent flickering
+            perspective: 1000, // Enable 3D rendering context
           }}
         >
           {projects.map((project, i) => {
@@ -155,6 +158,10 @@ export default function WorkSection() {
               <div
                 key={project.id}
                 className="pointer-events-none absolute inset-0 flex items-center justify-center"
+                style={{
+                  transform: 'translateZ(0)', // Force hardware acceleration
+                  backfaceVisibility: 'hidden', // Prevent flickering
+                }}
               >
                 <motion.div
                   initial={false}
@@ -163,8 +170,16 @@ export default function WorkSection() {
                     scale: isCenter ? 1 : 0.88,
                     opacity: !isVisible ? 0 : isCenter ? 1 : 0.6,
                   }}
-                  transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
-                  style={{ zIndex: isCenter ? 20 : 10, willChange: 'transform, opacity' }}
+                  transition={{ 
+                    duration: 0.6, 
+                    ease: [0.4, 0, 0.2, 1],
+                    type: "tween"
+                  }}
+                  style={{ 
+                    zIndex: isCenter ? 20 : 10, 
+                    willChange: 'transform, opacity',
+                    transform: 'translateZ(0)' // Force hardware acceleration
+                  }}
                   onClick={() => !isCenter && isVisible && goTo(i)}
                   className={`relative aspect-[3/2] w-[90vw] overflow-hidden rounded-3xl bg-white dark:bg-dark-900 shadow-[0_20px_60px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.5)] sm:w-[500px] lg:w-[600px] transition-all duration-300 ${
                     isVisible ? 'pointer-events-auto' : ''
@@ -175,7 +190,9 @@ export default function WorkSection() {
                     alt={project.title}
                     fill
                     sizes="(max-width: 640px) 90vw, (max-width: 1024px) 500px, 600px"
-                    className="object-cover"
+                    className="object-cover transition-transform duration-300"
+                    priority={isCenter} // Prioritize loading the center image
+                    quality={85} // Optimize image quality vs file size
                   />
 
                   {/* Glass caption bar */}
@@ -255,15 +272,25 @@ export default function WorkSection() {
       {/* Dot indicators for navigation */}
       <div className="mt-8 flex justify-center gap-2">
         {projects.map((_, i) => (
-          <button
+          <motion.button
             key={i}
             onClick={() => goTo(i)}
             aria-label={`Go to project ${i + 1}`}
-            className={`h-2 w-2 rounded-full transition-all duration-300 ${
+            className={`h-2 rounded-full transition-all duration-300 ease-out ${
               i === selectedIndex
                 ? 'bg-blue-600 dark:bg-white w-8'
-                : 'bg-gray-300 dark:bg-white/30 hover:bg-gray-400 dark:hover:bg-white/50'
+                : 'bg-gray-300 dark:bg-white/30 hover:bg-gray-400 dark:hover:bg-white/50 w-2'
             }`}
+            animate={{
+              width: i === selectedIndex ? 32 : 8,
+              backgroundColor: i === selectedIndex 
+                ? 'rgb(37 99 235)' // blue-600
+                : 'rgb(209 213 219)', // gray-300
+            }}
+            transition={{
+              duration: 0.3,
+              ease: [0.4, 0, 0.2, 1],
+            }}
           />
         ))}
       </div>
