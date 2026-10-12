@@ -107,7 +107,7 @@ const aboutPageData: AboutPageData = {
       name: "Ademoye Olatunde",
       role: "Chief Executive Officer",
       bio: "Visionary leader with 20+ years driving digital transformation across enterprise, government, and financial sectors. Ademoye's strategic leadership has positioned Leaders Network as Africa's premier technology consultancy.",
-      image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790354810/images_1_nfjqho.jpg",
+      image: "", // Placeholder - CEO photo will be added later
       linkedIn: "https://linkedin.com/in/andrewgold",
       email: "andrew@leadersnetwork.africa"
     },

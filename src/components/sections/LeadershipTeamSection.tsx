@@ -11,10 +11,13 @@ interface LeadershipTeamSectionProps {
 
 function LeaderPhoto({ src, name, role }: { src: string; name: string; role: string }) {
   const [failed, setFailed] = useState(false)
+  
+  // Show placeholder immediately if no src provided
+  const showPlaceholder = !src || failed
 
   return (
     <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-gradient-to-br from-gray-200/80 to-gray-300/40 dark:from-white/20 dark:to-white/[0.03] transition-colors duration-300">
-      {failed ? (
+      {showPlaceholder ? (
         <div className="flex h-full w-full flex-col items-center justify-center text-gray-700 dark:text-white transition-colors duration-300">
           <span className="text-4xl font-semibold md:text-5xl">{name.charAt(0)}</span>
           <span className="mt-1 text-xs text-gray-500 dark:text-white/70">{role.split(' ')[0]}</span>
