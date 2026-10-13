@@ -123,7 +123,7 @@ const aboutPageData: AboutPageData = {
     {
       id: "omobolaji-ibrahim",
       name: "Omobolaji Ibrahim", 
-      role: "Full-Stack Developer and Assistant Technical Lead",
+      role: "Co-Lead and Full-Stack Developer",
       bio: "Specializing in scalable web applications, backend systems, and AI-driven solutions. With an engineering mindset and a passion for innovation, he helps transform ideas into intuitive digital products while contributing to technical leadership and collaborative product development",
       image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791804705/mobolaji_cv8q44.jpg",
       linkedIn: "https://linkedin.com/in/bolajeeedr",
