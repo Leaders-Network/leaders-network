@@ -21,9 +21,9 @@ const teamMembers = [
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791812179/abimbola1_ewuipt.jpg"
   },
   {
-    id: "omobolaji-ibrahim",
+    id: "omobolaji-ibrahim", 
     name: "Omobolaji Ibrahim",
-    role: "Full-Stack Developer and Assistant Technical Lead",
+    role: "Co-Lead Tech and Full-Stack Developer",
     bio: " Full-stack developer and technical lead driving software delivery and product quality through collaborative leadership and hands-on expertise.",
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791804705/mobolaji_cv8q44.jpg"
   },
