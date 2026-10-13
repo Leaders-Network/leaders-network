@@ -39,7 +39,7 @@ export default function ContactUsPage() {
                         </svg>
                       </div>
                       <div className="ml-4 text-base font-medium text-gray-600 dark:text-white/80">
-                        info@leadersnetwork.com
+                        eleadersnetworkng1@gmail.com
                       </div>
                     </div>
                   </div>

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const results = [
   {
-    number: "500+",
+    number: "50+",
     label: "Projects Delivered",
     checklist: [
       "Enterprise software solutions",
@@ -25,7 +25,7 @@ const results = [
     ]
   },
   {
-    number: "19+",
+    number: "20+",
     label: "Years of Excellence",
     checklist: [
       "Industry expertise & innovation",

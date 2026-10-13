@@ -208,11 +208,11 @@ export default function Footer() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           © {new Date().getFullYear()} Leaders Network. All Rights Reserved |{' '}
-          <Link href="/privacy" className="underline underline-offset-2 hover:text-white">
+          <Link href="/privacy-policy" className="underline underline-offset-2 hover:text-white">
             Privacy Policy
           </Link>{' '}
           |{' '}
-          <Link href="/terms" className="underline underline-offset-2 hover:text-white">
+          <Link href="/terms-of-service" className="underline underline-offset-2 hover:text-white">
             Terms of Service
           </Link>
         </motion.div>
