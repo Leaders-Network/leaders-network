@@ -1,0 +1,13 @@
+{
+  "name": "Leaders Network",
+  "short_name": "Leaders Network",
+  "description": "Enterprise technology solutions — software development, IT consulting, digital transformation across Nigeria and Africa.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A1F44",
+  "theme_color": "#0A1F44",
+  "icons": [
+    { "src": "/images/logo.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/logo.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

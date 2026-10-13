@@ -2,13 +2,20 @@ import Navbar from '@/components/layout/Navbar'
 import FooterReveal from '@/components/layout/FooterReveal'
 import React from 'react'
 
+export const metadata = {
+  title: 'Privacy Policy | Leaders Network',
+  description: 'Read the Leaders Network Privacy Policy to understand how we collect, use, and protect your personal information.',
+  alternates: { canonical: 'https://leadersnetwork.africa/privacy-policy' },
+  robots: { index: false, follow: true }
+}
+
 export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen">
       {/* Page content sits above the footer */}
       <div className="relative z-10 bg-white dark:bg-dark-950 transition-colors duration-300">
         <Navbar />
-        <main className="pt-20">
+        <main id="main-content" className="pt-20">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="text-center mb-12">

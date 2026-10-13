@@ -9,12 +9,14 @@ import SDLCCaseStudiesSection from '@/components/services/sdlc/SDLCCaseStudiesSe
 import ContactCTASection from '@/components/sections/ContactCTASection'
 
 export const metadata: Metadata = {
-  title: 'SDLC Software Development | Leaders Network',
-  description: 'Comprehensive software development lifecycle services from planning to deployment. Custom software solutions, web applications, and enterprise systems.',
-  keywords: 'SDLC, software development, web development, mobile apps, enterprise software, agile development, DevOps',
+  title: 'SDLC Software Development Services | Leaders Network',
+  description: 'Comprehensive software development lifecycle services from planning to deployment. Custom software solutions, web applications, and enterprise systems for Nigerian businesses.',
+  keywords: 'SDLC Nigeria, software development Lagos, web development, mobile apps, enterprise software, agile development, DevOps',
+  alternates: { canonical: 'https://leadersnetwork.africa/ourservices/sdlc' },
   openGraph: {
     title: 'SDLC Software Development | Leaders Network',
     description: 'Comprehensive software development lifecycle services from planning to deployment.',
+    url: 'https://leadersnetwork.africa/ourservices/sdlc',
     images: ['/images/about-software.jpg'],
   },
 }
@@ -24,7 +26,7 @@ export default function SDLCPage() {
     <div className="min-h-screen">
       <div className="relative z-10 bg-white dark:bg-dark-950 transition-colors duration-300">
         <Navbar />
-        <main>
+        <main id="main-content">
           <SDLCHeroSection />
           <SDLCProcessSection />
           <SDLCTechnologiesSection />

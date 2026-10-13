@@ -8,6 +8,20 @@ import AboutCTASection from '@/components/sections/AboutCTASection'
 import FooterReveal from "@/components/layout/FooterReveal"
 import type { AboutPageData } from '@/types/about'
 
+export const metadata = {
+  title: 'About Leaders Network | 20 Years of Enterprise Technology Excellence',
+  description: 'Discover Leaders Network — Africa\'s leading technology consultancy since 2005. Meet our leadership team, explore our mission, and see 50+ enterprise projects delivered.',
+  keywords: 'about leaders network, enterprise technology Africa, digital transformation company Nigeria, software consultancy Lagos, technology leadership',
+  alternates: { canonical: 'https://leadersnetwork.africa/about' },
+  openGraph: {
+    title: 'About Leaders Network | Two Decades of Innovation',
+    description: 'From startup to Africa\'s premier technology partner — discover our 20-year journey, leadership team, and enterprise track record.',
+    url: 'https://leadersnetwork.africa/about',
+    images: [{ url: '/images/about-leaders-network.jpg', width: 1200, height: 630, alt: 'Leaders Network team and leadership' }]
+  },
+  twitter: { card: 'summary_large_image', title: 'About Leaders Network', description: 'Africa\'s leading technology consultancy since 2005. 50+ enterprise projects, 98% client satisfaction.' }
+}
+
 // About page data
 const aboutPageData: AboutPageData = {
   hero: {
@@ -246,7 +260,7 @@ export default function AboutPage() {
       {/* Page content sits above the footer */}
       <div className="relative z-10 bg-white dark:bg-dark-950 transition-colors duration-300">
         <Navbar />
-        <main>
+        <main id="main-content">
           <AboutHeroSection
             pillBadge={aboutPageData.hero.pillBadge}
             headline={aboutPageData.hero.headline}
@@ -273,15 +287,4 @@ export default function AboutPage() {
       <FooterReveal />
     </div>
   )
-}
-
-export const metadata = {
-  title: 'About Us - Leaders Network | Enterprise Technology Solutions',
-  description: 'Learn about Leaders Network\'s 20+ year journey as Africa\'s leading technology consultancy. Meet our leadership team and discover the values driving our 50+ successful enterprise projects.',
-  keywords: 'about leaders network, enterprise technology, digital transformation, african technology company, software development company',
-  openGraph: {
-    title: 'About Leaders Network - Two Decades of Innovation',
-    description: 'From startup to industry leader: discover how Leaders Network became Africa\'s premier technology partner for enterprise digital transformation.',
-    images: ['/images/about-leaders-network.jpg']
-  }
 }

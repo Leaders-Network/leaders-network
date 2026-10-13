@@ -3,13 +3,25 @@ import FooterReveal from '@/components/layout/FooterReveal'
 import WhatsAppWidget from '@/components/ui/WhatsAppWidget'
 import React from 'react'
 
+export const metadata = {
+  title: 'Contact Leaders Network | Get in Touch',
+  description: 'Contact Leaders Network for enterprise technology solutions, software development, IT consulting, and digital transformation services in Nigeria and Africa.',
+  keywords: 'contact leaders network, technology consulting Nigeria, software development inquiry, enterprise solutions Lagos',
+  alternates: { canonical: 'https://leadersnetwork.africa/contactus' },
+  openGraph: {
+    title: 'Contact Leaders Network',
+    description: 'Reach out to our team for enterprise technology solutions, consulting, and digital transformation services.',
+    url: 'https://leadersnetwork.africa/contactus'
+  }
+}
+
 export default function ContactUsPage() {
     return (
       <div className="min-h-screen">
         {/* Page content sits above the footer */}
         <div className="relative z-10 bg-white dark:bg-dark-950 transition-colors duration-300">
           <Navbar />
-          <main className="pt-20">
+          <main id="main-content" className="pt-20">
             <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
               <div className="mx-auto max-w-lg md:max-w-none md:grid md:grid-cols-2 md:gap-12">
                 <div className="overflow-hidden rounded-3xl border border-gray-200 dark:border-white/[0.05] bg-gradient-to-br from-white to-gray-50 dark:from-white/[0.05] dark:to-white/[0.015] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
@@ -45,7 +57,7 @@ export default function ContactUsPage() {
                   </div>
                 </div>
                 <div className="mt-12 md:mt-0">
-                  <form className="overflow-hidden rounded-3xl border border-gray-200 dark:border-white/[0.05] bg-gradient-to-br from-white to-gray-50 dark:from-white/[0.05] dark:to-white/[0.015] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] space-y-6">
+                  <form className="overflow-hidden rounded-3xl border border-gray-200 dark:border-white/[0.05] bg-gradient-to-br from-white to-gray-50 dark:from-white/[0.05] dark:to-white/[0.015] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] space-y-6" aria-label="Contact Leaders Network">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-900 dark:text-white">Full Name</label>
                       <div className="mt-2">
@@ -53,6 +65,7 @@ export default function ContactUsPage() {
                           type="text" 
                           name="name" 
                           id="name" 
+                          autoComplete="name"
                           className="block w-full rounded-xl border border-gray-300 dark:border-white/20 bg-white dark:bg-white/[0.05] px-4 py-3 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/50 shadow-sm transition-all duration-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
                           placeholder="Enter your name"
                         />
@@ -65,6 +78,7 @@ export default function ContactUsPage() {
                           type="email" 
                           name="email" 
                           id="email" 
+                          autoComplete="email"
                           className="block w-full rounded-xl border border-gray-300 dark:border-white/20 bg-white dark:bg-white/[0.05] px-4 py-3 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/50 shadow-sm transition-all duration-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
                           placeholder="Enter your email"
                         />

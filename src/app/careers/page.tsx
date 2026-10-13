@@ -8,9 +8,15 @@ import OpenPositionsSection from '@/components/sections/OpenPositionsSection'
 import TalentPoolSection from '@/components/sections/TalentPoolSection'
 
 export const metadata: Metadata = {
-  title: 'Careers - Leaders Network | Join Our Team',
-  description: 'Join Leaders Network and help build the future of enterprise technology. Explore exciting career opportunities with 19+ years of industry-leading innovation.',
-  keywords: 'careers, jobs, software development, enterprise technology, Nigeria, remote work, full-time positions',
+  title: 'Careers at Leaders Network | Join Our Team',
+  description: 'Explore career opportunities at Leaders Network — Nigeria\'s leading enterprise technology consultancy. Find roles in software development, consulting, and digital transformation.',
+  keywords: 'careers leaders network, technology jobs Nigeria, software developer jobs Lagos, IT consulting careers, digital transformation jobs',
+  alternates: { canonical: 'https://leadersnetwork.africa/careers' },
+  openGraph: {
+    title: 'Careers at Leaders Network',
+    description: 'Join Africa\'s leading enterprise technology consultancy. We are hiring software developers, IT consultants, and digital transformation specialists.',
+    url: 'https://leadersnetwork.africa/careers'
+  }
 }
 
 export default function CareersPage() {
@@ -19,7 +25,7 @@ export default function CareersPage() {
       {/* Page content sits above the footer */}
       <div className="relative z-10 bg-white dark:bg-dark-950 transition-colors duration-300">
         <Navbar />
-        <main>
+        <main id="main-content">
           <CareersHeroSection />
           <CompanyCultureSection />
           <PerksAndBenefitsSection />

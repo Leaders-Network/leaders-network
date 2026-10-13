@@ -9,12 +9,14 @@ import SocialMediaCaseStudiesSection from '@/components/services/socialmedia/Soc
 import ContactCTASection from '@/components/sections/ContactCTASection'
 
 export const metadata: Metadata = {
-  title: 'Social Media Advertising | Leaders Network',
-  description: 'Professional social media advertising and marketing services. Grow your business with targeted campaigns across all major platforms.',
-  keywords: 'social media advertising, digital marketing, Facebook ads, Instagram marketing, LinkedIn campaigns, social media strategy',
+  title: 'Social Media Advertising & Digital Marketing | Leaders Network',
+  description: 'Professional social media advertising and digital marketing services. Grow your business with targeted campaigns across all major platforms in Nigeria and Africa.',
+  keywords: 'social media advertising Nigeria, digital marketing Lagos, Facebook ads, Instagram marketing, LinkedIn campaigns, social media strategy',
+  alternates: { canonical: 'https://leadersnetwork.africa/ourservices/social-media-advert' },
   openGraph: {
     title: 'Social Media Advertising | Leaders Network',
-    description: 'Grow your business with targeted social media campaigns.',
+    description: 'Grow your business with targeted social media campaigns across all major platforms.',
+    url: 'https://leadersnetwork.africa/ourservices/social-media-advert',
     images: ['/images/social-media.jpg'],
   },
 }
@@ -24,7 +26,7 @@ export default function SocialMediaAdvertPage() {
     <div className="min-h-screen">
       <div className="relative z-10 bg-white dark:bg-dark-950 transition-colors duration-300">
         <Navbar />
-        <main>
+        <main id="main-content">
           <SocialMediaHeroSection />
           <SocialMediaServicesSection />
           <SocialMediaPlatformsSection />

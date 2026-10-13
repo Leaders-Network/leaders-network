@@ -6,19 +6,19 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navigation = [
-  { name: "Solutions", href: "#solutions" },
-  { name: "Industries", href: "#industries" },
-  { name: "Insights", href: "#insights" },
-  { name: "About", href: "/about" },
+  { name: "Services", href: "/ourservices" },
   { name: "Careers", href: "/careers" },
+  { name: "Blog", href: "/blogs" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contactus" },
 ];
 
 const solutionsMenu = [
-  { name: "Strategic Consulting", href: "/services" },
-  { name: "Software Development", href: "/services" },
-  { name: "Digital Transformation", href: "/services" },
-  { name: "Quality Assurance", href: "/services" },
-  { name: "IT Consulting & Strategy", href: "/services" },
+  { name: "SDLC Software Development", href: "/ourservices/sdlc" },
+  { name: "IT Consulting", href: "/ourservices/it-consulting" },
+  { name: "Data Analysis", href: "/ourservices/data-analysis" },
+  { name: "Social Media Advertising", href: "/ourservices/social-media-advert" },
+  { name: "Enterprise Solutions", href: "/ourservices" },
 ];
 
 export default function Header() {
@@ -48,7 +48,7 @@ export default function Header() {
               alt="Leaders Network"
               width={240}
               height={80}
-              className="h-12 sm:h-14 lg:h-16 w-auto mb-5"
+              className="h-12 sm:h-14 lg:h-16 w-auto"
               priority
             />
           </Link>
@@ -166,7 +166,7 @@ export default function Header() {
                 transition={{ duration: 0.3, delay: 0.7 }}
                 className="mb-12"
               >
-                <h3 className="text-lg sm:text-xl font-semibold text-white/60 mb-6">Solutions</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-white/60 mb-6">Services</h3>
                 <div className="space-y-3 sm:space-y-4">
                   {solutionsMenu.map((item, index) => (
                     <Link

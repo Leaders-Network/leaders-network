@@ -16,7 +16,7 @@ export default function HomePage() {
       {/* Page content sits above the footer */}
       <div className="relative z-10 bg-white dark:bg-dark-950 transition-colors duration-300">
         <Navbar />
-        <main>
+        <main id="main-content">
           <HeroSection />
           <ServicesSection />
           <WorkSection />

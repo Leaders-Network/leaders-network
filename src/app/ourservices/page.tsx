@@ -10,12 +10,14 @@ import ServicesStatsSection from '@/components/services/ServicesStatsSection'
 import ContactCTASection from '@/components/sections/ContactCTASection'
 
 export const metadata: Metadata = {
-  title: 'Our Services | Leaders Network - Enterprise Technology Solutions',
-  description: 'Comprehensive technology services including SDLC software development, IT consulting, data analysis, and digital transformation solutions for enterprises.',
-  keywords: 'enterprise software, IT consulting, data analysis, web development, mobile apps, digital transformation, technology services',
+  title: 'Our Services | Enterprise Technology Solutions — Leaders Network',
+  description: 'Leaders Network offers enterprise software development, IT consulting, digital transformation, data analysis, and staff recruitment services in Nigeria and across Africa.',
+  keywords: 'enterprise technology services Nigeria, software development Lagos, IT consulting Africa, digital transformation, data analysis, staff recruitment',
+  alternates: { canonical: 'https://leadersnetwork.africa/ourservices' },
   openGraph: {
-    title: 'Our Services | Leaders Network',
-    description: 'Enterprise technology solutions that convert and scale with your business.',
+    title: 'Enterprise Technology Services | Leaders Network',
+    description: 'Full-spectrum technology services: software development, IT consulting, digital transformation, data analysis, and recruitment across Africa.',
+    url: 'https://leadersnetwork.africa/ourservices',
     images: ['/images/about-software.jpg'],
   },
 }
@@ -25,7 +27,7 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       <div className="relative z-10 bg-white dark:bg-dark-950 transition-colors duration-300">
         <Navbar />
-        <main>
+        <main id="main-content">
           <ServicesHeroSection />
           <ServicesCategoriesSection />
           <ServicesProcessSection />
