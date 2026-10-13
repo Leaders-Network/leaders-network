@@ -9,18 +9,6 @@ import RecentPostsSection from '@/components/sections/RecentPostsSection'
 import NewsletterSection from '@/components/sections/NewsletterSection'
 import type { BlogPageData } from '@/types/blog'
 
-export const metadata = {
-  title: 'Technology Insights & Blog | Leaders Network',
-  description: 'Explore thought leadership articles, technology insights, and industry expertise from Leaders Network — enterprise technology consultants in Nigeria and Africa.',
-  keywords: 'technology blog Nigeria, enterprise software insights, digital transformation articles, IT consulting blog Africa',
-  alternates: { canonical: 'https://leadersnetwork.africa/blogs' },
-  openGraph: {
-    title: 'Leaders Network Blog | Technology Insights',
-    description: 'Expert insights on enterprise software, digital transformation, and technology consulting from Leaders Network.',
-    url: 'https://leadersnetwork.africa/blogs'
-  }
-}
-
 // Sample blog data - replace with actual data from CMS/API
 const blogPageData: BlogPageData = {
   hero: {

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.eleadersnetwork.net/'
+  const baseUrl = 'https://leadersnetwork.africa'
   const lastModified = new Date()
 
   const staticRoutes: MetadataRoute.Sitemap = [

@@ -1,17 +1,23 @@
-import type { Metadata } from 'next'
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Blog - Leaders Network | Technology Insights & Innovation',
-  description: 'Discover the latest insights on enterprise technology, AI, cloud solutions, fintech innovations, and digital transformation from Leaders Network experts.',
-  keywords: 'technology blog, enterprise software, AI insights, cloud computing, fintech, digital transformation, cybersecurity, data analytics',
+  title: 'Technology Insights & Blog | Leaders Network',
+  description: 'Explore thought leadership articles, technology insights, and industry expertise from Leaders Network — enterprise technology consultants in Nigeria and Africa.',
+  keywords: 'technology blog Nigeria, enterprise software insights, digital transformation articles, IT consulting blog Africa',
+  alternates: { canonical: 'https://leadersnetwork.africa/blogs' },
   openGraph: {
-    title: 'Leaders Network Blog - Technology Insights & Innovation Hub',
-    description: 'Stay ahead with expert insights on AI, cloud computing, fintech, and enterprise technology solutions from industry leaders.',
-    images: ['/images/blog-featured.jpg']
+    title: 'Leaders Network Blog | Technology Insights',
+    description: 'Expert insights on enterprise software, digital transformation, and technology consulting from Leaders Network.',
+    url: 'https://leadersnetwork.africa/blogs'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Leaders Network Blog | Technology Insights',
+    description: 'Expert insights on enterprise software, digital transformation, and technology consulting from Leaders Network.'
   }
 }
 
-export default function BlogLayout({
+export default function BlogsLayout({
   children,
 }: {
   children: React.ReactNode

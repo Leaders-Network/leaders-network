@@ -1,19 +1,26 @@
+import { Metadata } from 'next'
 import Navbar from '@/components/layout/Navbar'
 import FooterReveal from '@/components/layout/FooterReveal'
 import WhatsAppWidget from '@/components/ui/WhatsAppWidget'
 import React from 'react'
 
-export const metadata = {
-  title: 'Contact Leaders Network | Get in Touch',
-  description: 'Contact Leaders Network for enterprise technology solutions, software development, IT consulting, and digital transformation services in Nigeria and Africa.',
-  keywords: 'contact leaders network, technology consulting Nigeria, software development inquiry, enterprise solutions Lagos',
+export const metadata: Metadata = {
+  title: 'Contact Us - Leaders Network | Get In Touch',
+  description: 'Contact Leaders Network for enterprise technology solutions, IT consulting, and digital transformation services. Reach out via phone, email, or WhatsApp.',
+  keywords: 'contact leaders network, IT consulting contact, software development Nigeria contact, enterprise technology support',
   alternates: { canonical: 'https://leadersnetwork.africa/contactus' },
   openGraph: {
-    title: 'Contact Leaders Network',
-    description: 'Reach out to our team for enterprise technology solutions, consulting, and digital transformation services.',
+    title: 'Contact Leaders Network | Enterprise Technology Solutions',
+    description: 'Get in touch with Leaders Network for enterprise technology solutions, IT consulting, and digital transformation services.',
     url: 'https://leadersnetwork.africa/contactus'
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Contact Leaders Network | Enterprise Technology Solutions',
+    description: 'Get in touch with Leaders Network for enterprise technology solutions, IT consulting, and digital transformation services.'
   }
 }
+
 
 export default function ContactUsPage() {
     return (

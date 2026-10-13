@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.eleadersnetwork.net/"),
+  metadataBase: new URL("https://leadersnetwork.africa/"),
   title: {
     default: "Leaders Network | Enterprise Technology Solutions Nigeria",
     template: "%s | Leaders Network"
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_NG",
-    url: "https://www.eleadersnetwork.net/",
+    url: "https://leadersnetwork.africa/",
     siteName: "Leaders Network",
     title: "Leaders Network | Enterprise Technology Solutions Nigeria",
     description: "Since 2005, Leaders Network has been empowering organizations with enterprise-grade software, strategic consulting, and digital transformation solutions across Nigeria and beyond.",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   alternates: {
-    canonical: "https://www.eleadersnetwork.net/"
+    canonical: "https://leadersnetwork.africa/"
   }
 };
 
@@ -100,7 +100,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Leaders Network",
-              "url": "https://www.eleadersnetwork.net/",
+              "url": "https://leadersnetwork.africa/",
               "logo": "https://res.cloudinary.com/yaovkmpi/image/upload/v1791924405/logo_dqu9kp.png",
               "description": "Enterprise technology solutions company delivering software development, digital transformation, IT consulting, and recruitment services across Nigeria and Africa since 2005.",
               "foundingDate": "2005",
