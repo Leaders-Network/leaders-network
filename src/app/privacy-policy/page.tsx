@@ -140,7 +140,7 @@ export default function PrivacyPolicyPage() {
                   <li><strong>Withdraw Consent:</strong> Withdraw previously given consent</li>
                 </ul>
                 <p className="text-gray-600 dark:text-white/80 leading-relaxed">
-                  To exercise these rights, please contact us at <a href="mailto:privacy@leadersnetwork.com" className="text-blue-600 dark:text-blue-400 hover:underline">privacy@leadersnetwork.com</a>.
+                  To exercise these rights, please contact us at <a href="mailto:eleadersnetworkng1@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">eleadersnetworkng1@gmail.com</a>.
                 </p>
               </section>
 
@@ -214,9 +214,9 @@ export default function PrivacyPolicyPage() {
                 <div className="bg-gray-50 dark:bg-white/5 rounded-lg p-6 border border-gray-200 dark:border-white/10">
                   <div className="space-y-2 text-gray-600 dark:text-white/80">
                     <p><strong className="text-gray-900 dark:text-white">Leaders Network</strong></p>
-                    <p>Email: <a href="mailto:privacy@leadersnetwork.com" className="text-blue-600 dark:text-blue-400 hover:underline">privacy@leadersnetwork.com</a></p>
+                    <p>Email: <a href="mailto:eleadersnetworkng1@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">privacy@leadersnetwork.com</a></p>
                     <p>Phone: <a href="tel:+2347087013213" className="text-blue-600 dark:text-blue-400 hover:underline">(234) 708-701-3213</a></p>
-                    <p>Address: [Your Business Address]</p>
+                    <p>Address: Suite 213, Block A, 2-4 Sura Complex, Abule ijesha, Lagos 101245, Lagos</p>
                   </div>
                 </div>
               </section>

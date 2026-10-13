@@ -116,7 +116,8 @@ export default function Footer() {
             />
             <p className="text-sm leading-relaxed text-white/80 max-w-sm break-words">
               Leaders Network has been delivering trusted technology solutions
-              for Corporate Bodies, Government, Telecommunication, Educational.
+              for Corporate Bodies, Government, Telecommunication, Educational. <br />
+              <b>Address:</b> Suite 213, Block A, 2-4 Sura Complex, Abule ijesha, Lagos 101245, Lagos
             </p>
 
             <h3 className="mt-8 mb-4 text-base font-semibold text-white">Follow Us</h3>
