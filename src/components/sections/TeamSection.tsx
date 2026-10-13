@@ -23,8 +23,8 @@ const teamMembers = [
   {
     id: "omobolaji-ibrahim", 
     name: "Omobolaji Ibrahim",
-    role: "Co-Lead Tech and Full-Stack Developer",
-    bio: " Full-stack developer and technical lead driving software delivery and product quality through collaborative leadership and hands-on expertise.",
+    role: "Co-Lead Tech",
+    bio: " Specificialuzed in cross platform scalable web and mobile software",
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791804705/mobolaji_cv8q44.jpg"
   },
   {

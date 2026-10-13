@@ -123,7 +123,7 @@ const aboutPageData: AboutPageData = {
     {
       id: "omobolaji-ibrahim",
       name: "Omobolaji Ibrahim", 
-      role: "Co-Lead and Full-Stack Developer",
+      role: "Co-Lead Tech",
       bio: "Specializing in scalable web applications, backend systems, and AI-driven solutions. With an engineering mindset and a passion for innovation, he helps transform ideas into intuitive digital products while contributing to technical leadership and collaborative product development",
       image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791804705/mobolaji_cv8q44.jpg",
       linkedIn: "https://linkedin.com/in/bolajeeedr",
@@ -150,8 +150,8 @@ const aboutPageData: AboutPageData = {
     {
       id: "andrew-gold",
       name: "Ayemo Andrew",
-      role: "Frontend Engineer & Product Manager",
-      bio: "Bridges frontend engineering and product strategy to turn business requirements into practical digital solutions. Focuses on building intuitive user experiences, aligning product functionality with user needs, and collaborating across teams to deliver meaningful results.",
+      role: "Software Project Management Lead",
+      bio: "Bridges software engineering and product strategy to turn business requirements into practical digital solutions. Focuses on building intuitive user experiences, aligning product functionality with user needs, and collaborating across teams to deliver meaningful results.",
       image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791830478/Andrewgold_mrm0hn.jpg",
       linkedIn: "https://www.linkedin.com/in/andrew-gold-5094861b5/",
       email: "ayemoandrewgold@gmail.com"
@@ -169,7 +169,7 @@ const aboutPageData: AboutPageData = {
       id: "dowudu-pelumi",
       name: "Dawodu A. Oluwapelumi",
       role: "Social-Media Manager",
-      bio: "Develops responsive and interactive web interfaces with a focus on usability, performance, and maintainable code. Works to translate design concepts into functional digital experiences that meet user needs and product requirements.",
+      bio: "Social-media manager crafting engaging digital content and online campaigns to build brand presence, drive audience growth, and boost engagement across platforms.",
       image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791895169/pelumi_buyazi.jpg",
       linkedIn: "https://www.linkedin.com/in/pelzy",
       email: "Adetolaolatunde58@gmail.com"
