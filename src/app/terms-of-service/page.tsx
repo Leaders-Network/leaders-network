@@ -278,7 +278,7 @@ export default function TermsOfServicePage() {
                     <p><strong className="text-gray-900 dark:text-white">Leaders Network</strong></p>
                     <p>Email: <a href="mailto:eleadersnetworkng1@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">eleadersnetworkng1@gmail.com</a></p>
                     <p>Phone: <a href="tel:+2347087013213" className="text-blue-600 dark:text-blue-400 hover:underline">(234) 708-701-3213</a></p>
-                    <p>Address: Suite 213, Block A, 2-4 Sura Complex, Abule ijesha, Lagos 101245, Lagos</p>
+                    <p>Address: Suite 213 Block A 2-4 sura shopping complex, Lagos Island Lagos</p>
                   </div>
                 </div>
               </section>
