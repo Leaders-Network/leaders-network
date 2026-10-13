@@ -46,9 +46,9 @@ export default function Header() {
             <Image
               src="/images/logo.png"
               alt="Leaders Network"
-              width={120}
-              height={40}
-              className="h-6 w-auto sm:h-7 md:h-8 lg:h-9 xl:h-10"
+              width={160}
+              height={50}
+              className="h-20 w-auto sm:h-7 md:h-8 lg:h-9 xl:h-10"
               priority
             />
           </Link>

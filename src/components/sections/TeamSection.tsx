@@ -22,9 +22,9 @@ const teamMembers = [
   },
   {
     id: "omobolaji-ibrahim",
-    name: "Ibrahim Ibrahim",
-    role: "Head of Operations",
-    bio: "Operations expert ensuring seamless project delivery, client success, and organizational excellence across all initiatives.",
+    name: "Omobolaji Ibrahim",
+    role: "Full-Stack Developer and Assistant Technical Lead",
+    bio: " Full-stack developer and technical lead driving software delivery and product quality through collaborative leadership and hands-on expertise.",
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791804705/mobolaji_cv8q44.jpg"
   },
   {

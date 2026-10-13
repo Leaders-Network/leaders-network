@@ -24,13 +24,9 @@ export default function CareersHeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {/* Badge */}
-            <div className="mb-6 inline-flex items-center rounded-full border border-gray-200 dark:border-white/[0.06] bg-gray-100 dark:bg-white/[0.04] px-4 py-1.5 text-xs font-medium text-gray-700 dark:text-white/90 sm:text-sm transition-colors duration-300">
-              Join Our Team
-            </div>
             
             {/* Main Headline */}
-            <h1 className="mb-6 text-4xl font-semibold leading-[1.1] tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl lg:text-7xl transition-colors duration-300">
+            <h1 className="mb-6 pt-10 text-4xl font-semibold leading-[1.1] tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl lg:text-7xl transition-colors duration-300">
               Build the Future of
               <br />
               <span className="bg-gradient-to-r from-orange-500 to-blue-600 bg-clip-text text-transparent">
@@ -46,7 +42,7 @@ export default function CareersHeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Join our team of innovators and help shape the digital transformation of 
-            enterprises across Nigeria, Africa, and beyond. With 19+ years of excellence, 
+            enterprises across Nigeria, Africa, and beyond. With 20+ years of excellence, 
             we're looking for passionate professionals ready to make a lasting impact.
           </motion.p>
 
@@ -83,15 +79,15 @@ export default function CareersHeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">19+</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">20+</div>
               <div className="text-sm text-gray-600 dark:text-white/60 transition-colors duration-300">Years of Excellence</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">500+</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">50+</div>
               <div className="text-sm text-gray-600 dark:text-white/60 transition-colors duration-300">Projects Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">50+</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">20+</div>
               <div className="text-sm text-gray-600 dark:text-white/60 transition-colors duration-300">Team Members</div>
             </div>
           </motion.div>

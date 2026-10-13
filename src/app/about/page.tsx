@@ -13,10 +13,10 @@ const aboutPageData: AboutPageData = {
   hero: {
     pillBadge: "About Leaders Network",
     headline: "Engineered for Impact. Built on Nearly Two Decades of Excellence.",
-    subtitle: "Since 2007, we've been the trusted technology partner for corporate bodies, government agencies, telecommunications giants, and financial institutions across continents. Our journey from a small startup to Africa's leading technology consultancy reflects our unwavering commitment to delivering solutions that truly convert and scale.",
+    subtitle: "Since 2005, we've been the trusted technology partner for corporate bodies, government agencies, telecommunications giants, and financial institutions across continents. Our journey from a small startup to Africa's leading technology consultancy reflects our unwavering commitment to delivering solutions that truly convert and scale.",
     stats: [
       {
-        number: "500+",
+        number: "50+",
         label: "Projects Delivered",
         description: "Enterprise solutions worldwide"
       },
@@ -26,7 +26,7 @@ const aboutPageData: AboutPageData = {
         description: "Consistent excellence rating"
       },
       {
-        number: "19+",
+        number: "20+",
         label: "Years of Excellence",
         description: "Industry leadership & innovation"
       }
@@ -95,8 +95,8 @@ const aboutPageData: AboutPageData = {
     {
       id: "present",
       year: "Present",
-      title: "500+ Enterprise Projects",
-      description: "Today we stand as a trusted technology partner with over 500 successful projects, maintaining 98% client satisfaction and industry leadership.",
+      title: "50+ Enterprise Projects",
+      description: "Today we stand as a trusted technology partner with over 50 successful projects, maintaining 98% client satisfaction and industry leadership.",
       icon: "star",
       isHighlight: true
     }
@@ -123,8 +123,8 @@ const aboutPageData: AboutPageData = {
     {
       id: "omobolaji-ibrahim",
       name: "Omobolaji Ibrahim", 
-      role: "Assistant Lead Tech",
-      bio: "Operations expert ensuring seamless project delivery, client success, and organizational excellence across all initiatives. Omobolaji's leadership drives our 98% client satisfaction rate.",
+      role: "Full-Stack Developer and Assistant Technical Lead",
+      bio: "Specializing in scalable web applications, backend systems, and AI-driven solutions. With an engineering mindset and a passion for innovation, he helps transform ideas into intuitive digital products while contributing to technical leadership and collaborative product development",
       image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791804705/mobolaji_cv8q44.jpg",
       linkedIn: "https://linkedin.com/in/bolajeeedr",
       email: "Bolajeee@leadersnetwork.com"
@@ -142,7 +142,7 @@ const aboutPageData: AboutPageData = {
       id: "jude-rotimi",
       name: "Rotimi Jude",
       role: "Frontend Development Lead",
-      bio: "Leads frontend development, focusing on building responsive, accessible, and user-friendly web interfaces. Supports frontend architecture, code quality, and collaboration to deliver reliable digital experiences.",
+      bio: "As Frontend Development Lead, he oversee's frontend development, assign and coordinate tasks, guide implementation, review code quality, ensure responsive and accessible interfaces, and collaborate with the team to deliver reliable user experiences.",
       image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791829331/jude_pnmtv1.jpg",
       linkedIn: "https://www.linkedin.com/in/rotimijude",
       email: "excel.rotimi@gmail.com"
@@ -164,6 +164,15 @@ const aboutPageData: AboutPageData = {
       image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791829331/seun_gvd8rm.jpg",
       linkedIn: "https://www.linkedin.com/in/seun",
       email: "Seunlawal18@gmail.com"
+    },
+        {
+      id: "dowudu-pelumi",
+      name: "Dawodu A. Oluwapelumi",
+      role: "Social-Media Manager",
+      bio: "Develops responsive and interactive web interfaces with a focus on usability, performance, and maintainable code. Works to translate design concepts into functional digital experiences that meet user needs and product requirements.",
+      image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791895169/pelumi_buyazi.jpg",
+      linkedIn: "https://www.linkedin.com/in/pelzy",
+      email: "Adetolaolatunde58@gmail.com"
     }
 
   ],
@@ -268,7 +277,7 @@ export default function AboutPage() {
 
 export const metadata = {
   title: 'About Us - Leaders Network | Enterprise Technology Solutions',
-  description: 'Learn about Leaders Network\'s 19+ year journey as Africa\'s leading technology consultancy. Meet our leadership team and discover the values driving our 500+ successful enterprise projects.',
+  description: 'Learn about Leaders Network\'s 20+ year journey as Africa\'s leading technology consultancy. Meet our leadership team and discover the values driving our 50+ successful enterprise projects.',
   keywords: 'about leaders network, enterprise technology, digital transformation, african technology company, software development company',
   openGraph: {
     title: 'About Leaders Network - Two Decades of Innovation',

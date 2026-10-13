@@ -102,7 +102,7 @@ export default function AboutCTASection({
             >
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-green-500" />
-                <span>500+ Projects Delivered</span>
+                <span>50+ Projects Delivered</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-blue-500" />
@@ -110,7 +110,7 @@ export default function AboutCTASection({
               </div>
               <div className="hidden sm:flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-orange-500" />
-                <span>19+ Years Experience</span>
+                <span>20+ Years Experience</span>
               </div>
             </motion.div>
           </div>

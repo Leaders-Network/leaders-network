@@ -1,5 +1,6 @@
 import Navbar from '@/components/layout/Navbar'
 import FooterReveal from '@/components/layout/FooterReveal'
+import WhatsAppWidget from '@/components/ui/WhatsAppWidget'
 import React from 'react'
 
 export default function ContactUsPage() {
@@ -96,6 +97,12 @@ export default function ContactUsPage() {
           </main>
         </div>
         <FooterReveal />
+        
+        {/* WhatsApp Customer Service Widget */}
+        <WhatsAppWidget 
+          phoneNumber="2347087013213" 
+          message="Hi Leaders Network! I'm interested in learning more about your services. Can you help me?" 
+        />
       </div>
     )
 }

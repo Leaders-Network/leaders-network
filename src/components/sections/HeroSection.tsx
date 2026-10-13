@@ -16,14 +16,14 @@ const leftColumnProjects = [
   },
   {
     id: 2,
-    title: "Latest Shot", 
+    title: "Latest Shot",
     projectName: "Banking Platform",
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355115/hire_y78jar.webp"
   },
   {
     id: 3,
     title: "Latest Shot",
-    projectName: "Analytics Suite", 
+    projectName: "Analytics Suite",
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355394/Analytics-footfall-UI-Macbook-_pofflp.webp"
   },
   {
@@ -53,7 +53,7 @@ const rightColumnProjects = [
     projectName: "Glad Web Site",
     image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790359962/Screenshot_2026-09-25_180322_ghni75.png"
   },
-    {
+  {
     id: 8,
     title: "Latest Shot",
     projectName: "Government Portal",
@@ -77,8 +77,6 @@ function useIsMobile() {
   return isMobile
 }
 
-
-
 /* Per-image tuning, keyed by project id. Bigger zoom crops more of the edges.
    position picks which part of the image stays visible. */
 const DEFAULT_ZOOM = 1.12
@@ -91,7 +89,7 @@ function ProjectCard({ project }: { project: typeof leftColumnProjects[0] }) {
   const zoom = tune.zoom ?? DEFAULT_ZOOM
 
   return (
-    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border-[6px] border-gray-200/50 dark:border-white/[0.06] bg-gray-100 dark:bg-dark-900 shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-gray-300/70 dark:hover:border-white/15 hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] dark:hover:shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
+    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border-[6px] border-gray-200/70 dark:border-white/[0.06] bg-gray-100 dark:bg-dark-900 dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-gray-300 dark:hover:border-white/15 dark:hover:shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
       {/* Zoom layer: scaled from the centre, clipped by the card */}
       <div className="absolute inset-0" style={{ transform: `scale(${zoom})` }}>
         <Image
@@ -129,8 +127,8 @@ function Column({
   const list = 'space-y-3 pb-3 sm:space-y-4 sm:pb-4 md:space-y-6 md:pb-6'
   return (
     <div className={`relative flex-1 overflow-hidden ${className}`}>
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-16 bg-gradient-to-b from-white/100 dark:from-dark-950/100 via-white/80 dark:via-dark-950/80 to-white/0 dark:to-dark-950/0 md:h-24" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-16 bg-gradient-to-t from-white/100 dark:from-dark-950/100 via-white/80 dark:via-dark-950/80 to-white/0 dark:to-dark-950/0 md:h-24" />
+      {/* Short bottom fade only. No top fade, so cards show under the nav */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-8 bg-gradient-to-t from-white to-transparent dark:from-dark-950 md:h-12" />
       <div className={keyPrefix === 'left' ? 'animate-scroll-up' : 'animate-scroll-down'}>
         {[1, 2].map((copy) => (
           <div key={copy} className={list}>
@@ -149,8 +147,20 @@ export default function HeroSection() {
 
   return (
     <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-black pb-12 pt-28 transition-colors duration-300 sm:pt-32 md:bg-white md:dark:bg-dark-950">
+      {/* Background glow */}
       <div className="absolute inset-0 hidden bg-[radial-gradient(ellipse_at_top_left,_rgba(0,0,0,0.03),_transparent_55%)] md:block dark:bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.06),_transparent_55%)]" />
 
+      {/* Desktop: full-height project columns.
+          Direct child of <section> so they fill the whole hero and
+          scroll under the fixed nav. */}
+      <div className="absolute bottom-0 top-14 right-4 hidden w-[46%] md:block lg:right-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:w-[44%]">
+        <div className="flex h-full gap-3 sm:gap-4 md:gap-6">
+          <Column projects={leftColumnProjects} keyPrefix="left" className="" />
+          <Column projects={rightColumnProjects} keyPrefix="right" className="" />
+        </div>
+      </div>
+
+      {/* Content wrapper */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8">
         <div className="grid items-center justify-items-center gap-10 sm:gap-12 md:grid-cols-2 md:justify-items-stretch lg:gap-16">
           {/* Left content */}
@@ -207,14 +217,6 @@ export default function HeroSection() {
               <ParticleConstellation />
             </div>
           )}
-
-          {/* Desktop: project images (unchanged), shown from md up */}
-          <div className="relative mx-auto hidden h-[460px] w-full max-w-xl md:block md:h-[540px] lg:mx-0 lg:h-[min(640px,72svh)] lg:max-w-none">
-            <div className="flex h-full gap-3 sm:gap-4 md:gap-6">
-              <Column projects={leftColumnProjects} keyPrefix="left" className="" />
-              <Column projects={rightColumnProjects} keyPrefix="right" className="mt-10" />
-            </div>
-          </div>
         </div>
       </div>
     </section>

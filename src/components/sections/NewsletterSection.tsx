@@ -69,7 +69,7 @@ export default function NewsletterSection() {
             className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-gray-600 dark:text-white/80 sm:text-lg"
           >
             Get exclusive insights, industry trends, and expert analysis delivered straight to your inbox. 
-            Join 10,000+ technology leaders who trust our weekly newsletter.
+            Join our technology leaders who trust our weekly newsletter.
           </motion.p>
 
           {/* Newsletter Form */}
@@ -138,12 +138,12 @@ export default function NewsletterSection() {
               </svg>
               <span>Weekly insights</span>
             </div>
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <svg className="h-4 w-4 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/>
               </svg>
               <span>10,000+ subscribers</span>
-            </div>
+            </div> */}
           </motion.div>
         </motion.div>
       </div>
