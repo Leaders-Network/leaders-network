@@ -6,18 +6,18 @@ import ServicesCategoriesSection from '@/components/services/ServicesCategoriesS
 import ServicesProcessSection from '@/components/services/ServicesProcessSection'
 import ServicesFeaturesSection from '@/components/services/ServicesFeaturesSection'
 import ServicesIndustriesSection from '@/components/services/ServicesIndustriesSection'
-import ServicesStatsSection from '@/components/services/ServicesStatsSection'
+// import ServicesStatsSection from '@/components/services/ServicesStatsSection'
 import ContactCTASection from '@/components/sections/ContactCTASection'
 
 export const metadata: Metadata = {
   title: 'Our Services | Enterprise Technology Solutions — Leaders Network',
   description: 'Leaders Network offers enterprise software development, IT consulting, digital transformation, data analysis, and staff recruitment services in Nigeria and across Africa.',
   keywords: 'enterprise technology services Nigeria, software development Lagos, IT consulting Africa, digital transformation, data analysis, staff recruitment',
-  alternates: { canonical: 'https://leadersnetwork.africa/ourservices' },
+  alternates: { canonical: 'https://eleadersnetwork.net/ourservices' },
   openGraph: {
     title: 'Enterprise Technology Services | Leaders Network',
     description: 'Full-spectrum technology services: software development, IT consulting, digital transformation, data analysis, and recruitment across Africa.',
-    url: 'https://leadersnetwork.africa/ourservices',
+    url: 'https://eleadersnetwork.net/ourservices',
     images: ['/images/about-software.jpg'],
   },
 }
@@ -33,7 +33,7 @@ export default function ServicesPage() {
           <ServicesProcessSection />
           <ServicesFeaturesSection />
           <ServicesIndustriesSection />
-          <ServicesStatsSection />
+          {/* <ServicesStatsSection /> */}
           <ContactCTASection />
         </main>
       </div>

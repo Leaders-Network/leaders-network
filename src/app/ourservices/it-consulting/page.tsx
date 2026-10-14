@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   title: 'IT Consulting & Strategic Advisory Services | Leaders Network',
   description: 'Strategic IT consulting services for digital transformation, technology strategy, cloud migration, and enterprise architecture solutions in Nigeria and Africa.',
   keywords: 'IT consulting Nigeria, digital transformation services Lagos, technology strategy, cloud migration, enterprise architecture, IT advisory',
-  alternates: { canonical: 'https://leadersnetwork.africa/ourservices/it-consulting' },
+  alternates: { canonical: 'https://eleadersnetwork.net/ourservices/it-consulting' },
   openGraph: {
     title: 'IT Consulting Services | Leaders Network',
     description: 'Strategic IT consulting for modern business transformation and technology optimization.',
-    url: 'https://leadersnetwork.africa/ourservices/it-consulting',
+    url: 'https://eleadersnetwork.net/ourservices/it-consulting',
     images: ['/images/architecture.jpg'],
   },
 }

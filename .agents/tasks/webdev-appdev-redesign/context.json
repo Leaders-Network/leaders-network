@@ -1,0 +1,24 @@
+{
+  "project_type": "Next.js 15 + TypeScript website with Tailwind CSS, Framer Motion animations",
+  "language": "TypeScript",
+  "build_system": "Next.js 15 with npm - builds successfully but has a TypeScript error in ServicesHeroSection.tsx that needs fixing",
+  "test_framework": "None detected - no test files found in repository",
+  "build_command": "npm run build",
+  "test_command": "npm run lint (ESLint via Next.js)",
+  "verification_instructions": "Run npm run build to verify TypeScript compilation and component integration. No automated tests available.",
+  "snapshot_or_generated_files": "Next.js builds static assets in .next/ directory but these are not committed",
+  "environment_constraints": "Windows PowerShell environment, no specific server restart requirements mentioned",
+  "contribution_requirements": "No CONTRIBUTING.md or .kiro/steering files found - follow existing code patterns and design system",
+  "key_patterns": "GlowCard component with mouse-following effects, Tilt wrapper for 3D transforms, custom SVG icons, orange-to-amber gradient CTAs, consistent border-radius of 2rem for cards, consistent spacing and typography scale, dark mode support",
+  "relevant_files": [
+    "src/components/sections/HeroSection.tsx", 
+    "src/components/services/ServicesHeroSection.tsx", 
+    "src/components/services/ServicesCategoriesSection.tsx", 
+    "src/components/services/ServicesFeaturesSection.tsx", 
+    "src/components/services/ServicesIndustriesSection.tsx", 
+    "src/app/globals.css",
+    "src/components/services/webdev/*.tsx",
+    "src/components/services/appdev/*.tsx"
+  ],
+  "directory_structure": "src/components/services/webdev/ and src/components/services/appdev/ contain the target files. Design patterns established in src/components/services/ main sections and src/components/sections/HeroSection.tsx"
+}

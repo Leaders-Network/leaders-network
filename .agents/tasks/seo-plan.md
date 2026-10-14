@@ -4,12 +4,12 @@
 
 After conducting a comprehensive SEO audit of the Leaders Network website, I've identified 28 critical issues that need immediate attention to optimize for search engines and web algorithms. The site has a solid foundation but lacks essential SEO infrastructure and metadata optimization.
 
-**Domain:** `https://leadersnetwork.africa`
+**Domain:** `https://eleadersnetwork.net`
 
 ## Summary of Findings
 
 ### Critical Issues (Must Fix)
-1. **Placeholder metadataBase** - Still using `https://your-domain.com` instead of real domain
+1. **Placeholder metadataBase** - Still using `https://eleadersnetwork.net` instead of real domain
 2. **Missing robots.txt** - No robots file present (static or dynamic)
 3. **Missing sitemap.xml** - No sitemap generation implemented
 4. **Missing metadata exports** - No page-specific metadata on home page
@@ -45,7 +45,7 @@ After conducting a comprehensive SEO audit of the Leaders Network website, I've 
 
 #### Task 1: Fix Root Layout Metadata
 **Files:** `src/app/layout.tsx`
-- Update `metadataBase` from `https://your-domain.com` to `https://leadersnetwork.africa`
+- Update `metadataBase` from `https://your-domain.com` to `https://eleadersnetwork.net`
 - Add `robots: { index: true, follow: true }` to metadata
 - Add `verification: { google: 'your-google-verification-code' }` (placeholder for now)
 - Add `icons: { icon: '/favicon.ico', apple: '/apple-touch-icon.png' }` to metadata
@@ -57,7 +57,7 @@ After conducting a comprehensive SEO audit of the Leaders Network website, I've 
 #### Task 2: Create Dynamic Robots.txt
 **Files:** `src/app/robots.ts` (new file)
 - Create dynamic robots.ts that exports proper robots configuration
-- Include sitemap URL pointing to `https://leadersnetwork.africa/sitemap.xml`
+- Include sitemap URL pointing to `https://eleadersnetwork.net/sitemap.xml`
 - Allow all user agents with proper crawl delays
 **Verification:** Visit `/robots.txt` in browser and confirm proper content
 
@@ -67,7 +67,7 @@ After conducting a comprehensive SEO audit of the Leaders Network website, I've 
 - Include all service pages: main services, data-analysis, it-consulting, sdlc, etc.
 - Include blog pages and dynamic blog posts
 - Set proper lastModified, changeFrequency, and priority values
-- Use `https://leadersnetwork.africa` as base URL
+- Use `https://eleadersnetwork.net` as base URL
 **Verification:** Visit `/sitemap.xml` in browser and validate XML structure
 
 #### Task 4: Add Missing Page Metadata
@@ -77,7 +77,7 @@ After conducting a comprehensive SEO audit of the Leaders Network website, I've 
 - Description: "Leaders Network delivers enterprise-grade software development, IT consulting, and digital transformation solutions across Africa. 19+ years of proven results."
 - Keywords: "enterprise software development, IT consulting Nigeria, digital transformation Africa, business technology solutions"
 - Add proper Open Graph and Twitter meta tags
-- Add canonical URL: `https://leadersnetwork.africa/`
+- Add canonical URL: `https://eleadersnetwork.net/`
 **Verification:** Check page source and social media preview tools
 
 #### Task 5: Fix Blog Page Metadata Issue
@@ -93,7 +93,7 @@ After conducting a comprehensive SEO audit of the Leaders Network website, I've 
 
 #### Task 6: Add Canonical URLs to All Pages
 **Files:** All page.tsx files in `src/app/`
-- Add `canonical: 'https://leadersnetwork.africa[page-path]'` to metadata export of each page
+- Add `canonical: 'https://eleadersnetwork.net[page-path]'` to metadata export of each page
 - Ensure consistent trailing slash policy (recommend no trailing slashes)
 **Verification:** Check page source of each page for canonical link tags
 
@@ -195,7 +195,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/adminn/', '/api/'],
     },
-    sitemap: 'https://leadersnetwork.africa/sitemap.xml',
+    sitemap: 'https://eleadersnetwork.net/sitemap.xml',
   }
 }
 ```
@@ -205,7 +205,7 @@ export default function robots(): MetadataRoute.Robots {
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://leadersnetwork.africa'
+  const baseUrl = 'https://eleadersnetwork.net'
   
   // Static routes
   const routes = [
@@ -277,8 +277,8 @@ export const organizationSchema = {
   "@type": "Organization",
   "name": "Leaders Network",
   "description": "Enterprise-grade software development, IT consulting, and digital transformation solutions",
-  "url": "https://leadersnetwork.africa",
-  "logo": "https://leadersnetwork.africa/images/logo.png",
+  "url": "https://eleadersnetwork.net",
+  "logo": "https://eleadersnetwork.net/images/logo.png",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+234-708-701-3213",

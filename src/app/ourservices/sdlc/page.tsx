@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   title: 'SDLC Software Development Services | Leaders Network',
   description: 'Comprehensive software development lifecycle services from planning to deployment. Custom software solutions, web applications, and enterprise systems for Nigerian businesses.',
   keywords: 'SDLC Nigeria, software development Lagos, web development, mobile apps, enterprise software, agile development, DevOps',
-  alternates: { canonical: 'https://leadersnetwork.africa/ourservices/sdlc' },
+  alternates: { canonical: 'https://eleadersnetwork.net/ourservices/sdlc' },
   openGraph: {
     title: 'SDLC Software Development | Leaders Network',
     description: 'Comprehensive software development lifecycle services from planning to deployment.',
-    url: 'https://leadersnetwork.africa/ourservices/sdlc',
+    url: 'https://eleadersnetwork.net/ourservices/sdlc',
     images: ['/images/about-software.jpg'],
   },
 }

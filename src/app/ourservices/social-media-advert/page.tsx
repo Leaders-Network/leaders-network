@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   title: 'Social Media Advertising & Digital Marketing | Leaders Network',
   description: 'Professional social media advertising and digital marketing services. Grow your business with targeted campaigns across all major platforms in Nigeria and Africa.',
   keywords: 'social media advertising Nigeria, digital marketing Lagos, Facebook ads, Instagram marketing, LinkedIn campaigns, social media strategy',
-  alternates: { canonical: 'https://leadersnetwork.africa/ourservices/social-media-advert' },
+  alternates: { canonical: 'https://eleadersnetwork.net/ourservices/social-media-advert' },
   openGraph: {
     title: 'Social Media Advertising | Leaders Network',
     description: 'Grow your business with targeted social media campaigns across all major platforms.',
-    url: 'https://leadersnetwork.africa/ourservices/social-media-advert',
+    url: 'https://eleadersnetwork.net/ourservices/social-media-advert',
     images: ['/images/social-media.jpg'],
   },
 }

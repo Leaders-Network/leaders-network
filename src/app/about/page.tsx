@@ -12,11 +12,11 @@ export const metadata = {
   title: 'About Leaders Network | 20 Years of Enterprise Technology Excellence',
   description: 'Discover Leaders Network — Africa\'s leading technology consultancy since 2005. Meet our leadership team, explore our mission, and see 50+ enterprise projects delivered.',
   keywords: 'about leaders network, enterprise technology Africa, digital transformation company Nigeria, software consultancy Lagos, technology leadership',
-  alternates: { canonical: 'https://leadersnetwork.africa/about' },
+  alternates: { canonical: 'https://eleadersnetwork.net/about' },
   openGraph: {
     title: 'About Leaders Network | Two Decades of Innovation',
     description: 'From startup to Africa\'s premier technology partner — discover our 20-year journey, leadership team, and enterprise track record.',
-    url: 'https://leadersnetwork.africa/about',
+    url: 'https://eleadersnetwork.net/about',
     images: [{ url: '/images/about-leaders-network.jpg', width: 1200, height: 630, alt: 'Leaders Network team and leadership' }]
   },
   twitter: { card: 'summary_large_image', title: 'About Leaders Network', description: 'Africa\'s leading technology consultancy since 2005. 50+ enterprise projects, 98% client satisfaction.' }
@@ -123,7 +123,7 @@ const aboutPageData: AboutPageData = {
       bio: "Visionary leader with 20+ years driving digital transformation across enterprise, government, and financial sectors. Ademoye's strategic leadership has positioned Leaders Network as Africa's premier technology consultancy.",
       image: "", // Placeholder - CEO photo will be added later
       linkedIn: "https://linkedin.com/in/andrewgold",
-      email: "andrew@leadersnetwork.africa"
+      email: "ademoyeolleadersnetwork.com"
     },
     {
       id: "abimbola-olatunji",
@@ -150,7 +150,7 @@ const aboutPageData: AboutPageData = {
       bio: "HR specialist focused on talent acquisition, team development, and organizational culture. Oyindamola ensures we attract and retain top talent to drive our continued growth and success.",
       image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791810936/oyin_isvkiq.jpg",
       linkedIn: "https://linkedin.com/in/sarahchen",
-      email: "o.oyindamola@leadersnetwork.africa"
+      email: "o.oyindamola@leadersnetwork.com"
     },
     {
       id: "jude-rotimi",

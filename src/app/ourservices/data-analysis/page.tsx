@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   title: 'Data Analysis & Analytics Services | Leaders Network',
   description: 'Professional data analysis, business intelligence, and data science services. Transform your enterprise data into actionable business insights.',
   keywords: 'data analysis Nigeria, business intelligence Lagos, data science services, machine learning, data visualization, analytics, big data',
-  alternates: { canonical: 'https://leadersnetwork.africa/ourservices/data-analysis' },
+  alternates: { canonical: 'https://eleadersnetwork.net/ourservices/data-analysis' },
   openGraph: {
     title: 'Data Analysis & Analytics | Leaders Network',
     description: 'Transform your data into actionable business insights with professional analytics services.',
-    url: 'https://leadersnetwork.africa/ourservices/data-analysis',
+    url: 'https://eleadersnetwork.net/ourservices/data-analysis',
     images: ['/images/data-analysis.jpg'],
   },
 }

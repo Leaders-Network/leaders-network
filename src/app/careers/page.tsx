@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   title: 'Careers at Leaders Network | Join Our Team',
   description: 'Explore career opportunities at Leaders Network — Nigeria\'s leading enterprise technology consultancy. Find roles in software development, consulting, and digital transformation.',
   keywords: 'careers leaders network, technology jobs Nigeria, software developer jobs Lagos, IT consulting careers, digital transformation jobs',
-  alternates: { canonical: 'https://leadersnetwork.africa/careers' },
+  alternates: { canonical: 'https://eleadersnetwork.net/careers' },
   openGraph: {
     title: 'Careers at Leaders Network',
     description: 'Join Africa\'s leading enterprise technology consultancy. We are hiring software developers, IT consultants, and digital transformation specialists.',
-    url: 'https://leadersnetwork.africa/careers'
+    url: 'https://eleadersnetwork.net/careers'
   }
 }
 

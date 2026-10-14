@@ -5,7 +5,7 @@ import React from 'react'
 export const metadata = {
   title: 'Terms of Service | Leaders Network',
   description: 'Read the Leaders Network Terms of Service governing use of our website and services.',
-  alternates: { canonical: 'https://leadersnetwork.africa/terms-of-service' },
+  alternates: { canonical: 'https://eleadersnetwork.net/terms-of-service' },
   robots: { index: false, follow: true }
 }
 

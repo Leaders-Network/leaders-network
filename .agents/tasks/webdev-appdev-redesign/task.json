@@ -1,0 +1,7 @@
+{
+  "task_id": "webdev-appdev-redesign",
+  "task_description": "Redesign all components in the web-development and app-development service pages to eliminate their generic/AI-generated appearance and match the professional design quality established in the homepage and recently redesigned services sections",
+  "status": "pending",
+  "feature_order": ["FEAT-001", "FEAT-002"],
+  "blocked_reason": null
+}

@@ -5,7 +5,7 @@ import React from 'react'
 export const metadata = {
   title: 'Privacy Policy | Leaders Network',
   description: 'Read the Leaders Network Privacy Policy to understand how we collect, use, and protect your personal information.',
-  alternates: { canonical: 'https://leadersnetwork.africa/privacy-policy' },
+  alternates: { canonical: 'https://eleadersnetwork.net/privacy-policy' },
   robots: { index: false, follow: true }
 }
 
