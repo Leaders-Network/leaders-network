@@ -45,7 +45,7 @@ After conducting a comprehensive SEO audit of the Leaders Network website, I've 
 
 #### Task 1: Fix Root Layout Metadata
 **Files:** `src/app/layout.tsx`
-- Update `metadataBase` from `https://your-domain.com` to `https://eleadersnetwork.net`
+- Update `metadataBase` from `https://eleadersnetwork.net` to `https://eleadersnetwork.net`
 - Add `robots: { index: true, follow: true }` to metadata
 - Add `verification: { google: 'your-google-verification-code' }` (placeholder for now)
 - Add `icons: { icon: '/favicon.ico', apple: '/apple-touch-icon.png' }` to metadata

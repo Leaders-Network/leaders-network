@@ -39,7 +39,7 @@ function CodeDevelopmentVisual() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveLines(prev => {
-        const newLines = []
+        const newLines: number[] = []
         while (newLines.length < 3) {
           const randomLine = Math.floor(Math.random() * 8)
           if (!newLines.includes(randomLine)) {
