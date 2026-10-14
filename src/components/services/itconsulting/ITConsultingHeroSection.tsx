@@ -43,7 +43,7 @@ function ITInfrastructureVisual() {
 
     const connectionInterval = setInterval(() => {
       setConnections(prev => {
-        const newConnections = []
+        const newConnections: number[] = []
         while (newConnections.length < 3) {
           const randomIdx = Math.floor(Math.random() * 6)
           if (!newConnections.includes(randomIdx)) {
