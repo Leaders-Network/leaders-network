@@ -59,11 +59,30 @@ export const metadata: Metadata = {
     creator: "@leadersnetwork",
     images: ["https://res.cloudinary.com/yaovkmpi/image/upload/v1791924405/logo_dqu9kp.png"]
   },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png"
-  },
+  icons: [
+    {
+      rel: "icon",
+      type: "image/svg+xml",
+      url: "/icon.svg",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "32x32",
+      url: "https://res.cloudinary.com/yaovkmpi/image/upload/c_scale,w_32,h_32,f_png/v1791924405/logo_dqu9kp.png",
+    },
+    {
+      rel: "icon",
+      type: "image/png", 
+      sizes: "16x16",
+      url: "https://res.cloudinary.com/yaovkmpi/image/upload/c_scale,w_16,h_16,f_png/v1791924405/logo_dqu9kp.png",
+    },
+    {
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      url: "https://res.cloudinary.com/yaovkmpi/image/upload/c_scale,w_180,h_180,f_png/v1791924405/logo_dqu9kp.png",
+    },
+  ],
   manifest: "/site.webmanifest",
   alternates: {
     canonical: "https://www.eleadersnetwork.net/"
@@ -77,6 +96,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* Preconnect for better font loading performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Favicon fallback for maximum compatibility */}
+        <link rel="shortcut icon" href="https://res.cloudinary.com/yaovkmpi/image/upload/c_scale,w_32,h_32,f_ico/v1791924405/logo_dqu9kp.png" />
       </head>
       <body className={`${inter.className} antialiased transition-colors duration-300 bg-white dark:bg-dark-950 text-gray-900 dark:text-white`}>
         <a
