@@ -93,7 +93,7 @@ After conducting a comprehensive SEO audit of the Leaders Network website, I've 
 
 #### Task 6: Add Canonical URLs to All Pages
 **Files:** All page.tsx files in `src/app/`
-- Add `canonical: 'https://eleadersnetwork.net[page-path]'` to metadata export of each page
+- Add `canonical: 'https://eleadersnetwork.net'` to metadata export of each page
 - Ensure consistent trailing slash policy (recommend no trailing slashes)
 **Verification:** Check page source of each page for canonical link tags
 
