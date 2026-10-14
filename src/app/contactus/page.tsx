@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   title: 'Contact Us - Leaders Network | Get In Touch',
   description: 'Contact Leaders Network for enterprise technology solutions, IT consulting, and digital transformation services. Reach out via phone, email, or WhatsApp.',
   keywords: 'contact leaders network, IT consulting contact, software development Nigeria contact, enterprise technology support',
-  alternates: { canonical: 'https://leadersnetwork.africa/contactus' },
+  alternates: { canonical: 'https://www.eleadersnetwork.net/contactus' },
   openGraph: {
     title: 'Contact Leaders Network | Enterprise Technology Solutions',
     description: 'Get in touch with Leaders Network for enterprise technology solutions, IT consulting, and digital transformation services.',
-    url: 'https://leadersnetwork.africa/contactus'
+    url: 'https://www.eleadersnetwork.net/contactus'
   },
   twitter: {
     card: 'summary',

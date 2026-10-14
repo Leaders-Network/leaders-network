@@ -15,14 +15,14 @@ export const metadata: Metadata = {
   title: "Leaders Network - Enterprise Technology Solutions | Transform Your Business",
   description: "Leaders Network delivers enterprise-grade software development, IT consulting, and digital transformation solutions across Africa. 19+ years of proven results.",
   keywords: "enterprise software development, IT consulting Nigeria, digital transformation Africa, business technology solutions, leaders network, software development Lagos",
-  alternates: { canonical: "https://leadersnetwork.africa/" },
+  alternates: { canonical: "https://www.eleadersnetwork.net/" },
   openGraph: {
     title: "Leaders Network - Enterprise Technology Solutions",
     description: "Leaders Network delivers enterprise-grade software development, IT consulting, and digital transformation solutions across Africa. 19+ years of proven results.",
-    url: "https://leadersnetwork.africa/",
+    url: "https://www.eleadersnetwork.net/",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791924405/logo_dqu9kp.png",
         width: 1200,
         height: 630,
         alt: "Leaders Network - Enterprise Technology Solutions"

@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://leadersnetwork.africa/"),
+  metadataBase: new URL("https://www.eleadersnetwork.net/"),
   title: {
     default: "Leaders Network | Enterprise Technology Solutions Nigeria",
     template: "%s | Leaders Network"
@@ -39,13 +39,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_NG",
-    url: "https://leadersnetwork.africa/",
+    url: "https://www.eleadersnetwork.net/",
     siteName: "Leaders Network",
     title: "Leaders Network | Enterprise Technology Solutions Nigeria",
     description: "Since 2005, Leaders Network has been empowering organizations with enterprise-grade software, strategic consulting, and digital transformation solutions across Nigeria and beyond.",
     images: [
       {
-        url: "/images/logo.png",
+        url: "https://res.cloudinary.com/yaovkmpi/image/upload/v1791924405/logo_dqu9kp.png",
         width: 1200,
         height: 630,
         alt: "Leaders Network - Enterprise Technology Solutions"
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Leaders Network | Enterprise Technology Solutions Nigeria",
     description: "Since 2005, Leaders Network has been empowering organizations with enterprise-grade software, strategic consulting, and digital transformation solutions across Nigeria and beyond.",
     creator: "@leadersnetwork",
-    images: ["/images/logo.png"]
+    images: ["https://res.cloudinary.com/yaovkmpi/image/upload/v1791924405/logo_dqu9kp.png"]
   },
   icons: {
     icon: "/favicon.ico",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   alternates: {
-    canonical: "https://leadersnetwork.africa/"
+    canonical: "https://www.eleadersnetwork.net/"
   }
 };
 
@@ -100,7 +100,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Leaders Network",
-              "url": "https://leadersnetwork.africa/",
+              "url": "https://www.eleadersnetwork.net/",
               "logo": "https://res.cloudinary.com/yaovkmpi/image/upload/v1791924405/logo_dqu9kp.png",
               "description": "Enterprise technology solutions company delivering software development, digital transformation, IT consulting, and recruitment services across Nigeria and Africa since 2005.",
               "foundingDate": "2005",

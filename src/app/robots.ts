@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/adminn/', '/api/'],
       },
     ],
-    sitemap: 'https://leadersnetwork.africa/sitemap.xml',
-    host: 'https://leadersnetwork.africa/',
+    sitemap: 'https://www.eleadersnetwork.net/sitemap.xml',
+    host: 'https://www.eleadersnetwork.net/',
   }
 }
