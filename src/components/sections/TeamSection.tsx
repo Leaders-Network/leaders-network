@@ -11,7 +11,7 @@ const teamMembers = [
     name: "Ademoye Olatunde",
     role: "Chief Executive Officer",
     bio: "Visionary leader with 20+ years driving digital transformation across enterprise, government, and financial sectors.",
-    image: ""
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1792058140/Oga_onv9bc.jpg"
   },
   {
     id: "cto-member",

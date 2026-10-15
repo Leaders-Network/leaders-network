@@ -10,55 +10,63 @@ import ParticleConstellation from '../ui/ParticleConstellation'
 const leftColumnProjects = [
   {
     id: 1,
-    title: "Latest Shot",
-    projectName: "Enterprise Dashboard",
-    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355509/analytics-on-display-stockcake_nzpyen.jpg"
+    title: "",
+    projectName: "",
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1792059811/resume-checker_cowxpq.jpg"
   },
   {
     id: 2,
-    title: "Latest Shot",
-    projectName: "Banking Platform",
-    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355115/hire_y78jar.webp"
+    title: "",
+    projectName: "",
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1792062861/leaders_tutors_mm1e1n.jpg"
   },
   {
     id: 3,
-    title: "Latest Shot",
-    projectName: "Analytics Suite",
-    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355394/Analytics-footfall-UI-Macbook-_pofflp.webp"
+    title: "",
+    projectName: "",
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1792075424/social-bridg_c634ym.jpg"
   },
   {
     id: 4,
-    title: "Latest Shot",
-    projectName: "Mobile App",
-    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355394/809a3ec9730cc3e650de40d95e201a74_qro9xu.webp"
+    title: "",
+    projectName: "",
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1792060090/glad_faith_uida6u.jpg"
   }
 ]
 
 const rightColumnProjects = [
   {
     id: 5,
-    title: "Insurace",
-    projectName: "Builders Liability",
-    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790355642/Screenshot_2026-09-25_180020_lvyj7p.png"
+    title: "",
+    projectName: "",
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1792076421/vl_pay_etpevq.jpg"
+    
   },
   {
     id: 6,
-    title: "Latest Shot",
-    projectName: "Fintech App",
-    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790356439/fintech_qfvoou.webp"
+    title: "",
+    projectName: "",
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1792072319/Ride-deliva_divliw.jpg"
   },
+
   {
     id: 7,
-    title: "Glad Faith Website",
-    projectName: "Glad Web Site",
-    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790359962/Screenshot_2026-09-25_180322_ghni75.png"
+    title: "",
+    projectName: "",
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1792062881/nigeria-royalties_zw5znl.jpg"
   },
   {
     id: 8,
-    title: "Latest Shot",
-    projectName: "Government Portal",
-    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1790354947/images_2_blq6er.jpg"
+    title: "",
+    projectName: "",
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1792064393/leaders-mart_hadq9q.jpg"
   },
+   {
+    id: 9,
+    title: "",
+    projectName: "",
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1792063294/bulders_e6k2xm.jpg"
+  }
 ]
 
 // True only below the md breakpoint (768px), so desktop never mounts the
