@@ -24,7 +24,7 @@ const leftColumnProjects = [
     id: 3,
     title: "",
     projectName: "",
-    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1792075424/social-bridg_c634ym.jpg"
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1792072319/Ride-deliva_divliw.jpg"
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const rightColumnProjects = [
     id: 6,
     title: "",
     projectName: "",
-    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1792072319/Ride-deliva_divliw.jpg"
+    image: "https://res.cloudinary.com/yaovkmpi/image/upload/v1792075424/social-bridg_c634ym.jpg"
   },
 
   {
