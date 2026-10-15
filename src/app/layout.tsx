@@ -12,6 +12,8 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  preload: true,
+  fallback: ["ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif"],
 });
 
 export const metadata: Metadata = {
@@ -96,6 +98,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* Preconnect for better font loading performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Direct Inter font loading */}
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" 
+          rel="stylesheet" 
+        />
         
         {/* Favicon fallback for maximum compatibility */}
         <link rel="shortcut icon" href="https://res.cloudinary.com/yaovkmpi/image/upload/c_scale,w_32,h_32,f_ico/v1791924405/logo_dqu9kp.png" />
